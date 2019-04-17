@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.controllersFXML.Controllers.ProfileSettingsController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Settings" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.84" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.49161073825503354" layoutX="207.0" layoutY="34.0" prefHeight="270.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="95.0" layoutY="34.0" prefHeight="268.0" prefWidth="290.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use Password">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Include Unowned">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Include Decks">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="100.0" layoutY="34.0" prefHeight="268.0" prefWidth="300.0" spacing="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <CheckBox fx:id="passwordCheck" mnemonicParsing="false" text="Disabled">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="unownedCheck" mnemonicParsing="false" text="Disabled">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="deckCheck" mnemonicParsing="false" text="Disabled">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="598.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button onAction="#cancel" fx:id="cancel" mnemonicParsing="false" prefWidth="75.0" text="Cancel" />
+                              <Button onAction="#delete" fx:id="delete" mnemonicParsing="false" prefWidth="75.0" text="Delete" />
+                              <Button onAction="#changePassword" fx:id="changePass" mnemonicParsing="false" prefWidth="150.0" text="Change Password" />
+                              <Button onAction="#rename" fx:id="rename" mnemonicParsing="false" prefWidth="75.0" text="Rename" />
+                              <Button onAction="#apply" fx:id="apply" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Apply" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem onAction="#newProfile" fx:id="newProf" mnemonicParsing="false" text="New Profile" />
+                  <MenuItem onAction="#loadProfile" fx:id="loadProf" mnemonicParsing="false" text="Load Profile" />
+                  <MenuItem onAction="#settings" fx:id="setting" mnemonicParsing="false" text="Settings" />
+              <MenuItem onAction="#exit" fx:id="exit" mnemonicParsing="false" text="Exit..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem onAction="#about" fx:id="about" mnemonicParsing="false" text="About..." />
+                  <MenuItem onAction="#check" fx:id="checkForUpdates" mnemonicParsing="false" text="Check for Updates..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
