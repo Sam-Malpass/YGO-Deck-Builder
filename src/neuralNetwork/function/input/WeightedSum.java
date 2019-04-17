@@ -4,8 +4,9 @@
  * @since 0.0.0.d
  */
 package neuralNetwork.function.input;
+import neuralNetwork.mlp.Connection;
 import java.util.List;
-public class WeightedSum {
+public class WeightedSum implements InputSummingFunction {
     /**
      * Function definition for collectOutput()
      * <p>

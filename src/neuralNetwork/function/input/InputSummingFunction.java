@@ -4,6 +4,7 @@
  * @since 0.0.0.d
  */
 package neuralNetwork.function.input;
+import neuralNetwork.mlp.Connection;
 import java.util.List;
 public interface InputSummingFunction {
     /**
