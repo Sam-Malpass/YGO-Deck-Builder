@@ -56,12 +56,12 @@ public class DeckBuilderController implements Initializable {
         test = resourceBundle;
         contentsList.getItems().removeAll();
         ObservableList<String> checkers = contentsList.getItems();
-        for(String C : ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().listCardsString()) {
+        for(String C : ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()) {
             checkers.add(C);
         }
         suggestionList = new ArrayList<>();
-        if(ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
-            suggestionList = ProgramFunctions.getGUI().getData().getCardSuggestor().getSuggestions();
+        if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
+            suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
         String exe = "";
         for(Card c  : suggestionList) {
@@ -70,24 +70,24 @@ public class DeckBuilderController implements Initializable {
         suggestionText.setText(exe);
         suggestionText.setWrapText(true);
         String info;
-        if(ProgramFunctions.getGUI().getData().getCardSuggestor().getStatusFlag() == 0) {
+        if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 0) {
             info = "DECK NOT AT MINIMUM LIMIT";
         }
-        else if(ProgramFunctions.getGUI().getData().getCardSuggestor().getStatusFlag() == 1) {
+        else if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 1) {
             info = "DECK CONTAINS LIMITED CARDS";
         }
         else {
             info = "OKAY";
         }
-        info = info + "\nNumber of cards in deck: " + ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getOnlyDeck().size();
-        info = info + "\nNumber of cards in extra deck: " + ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getExtraDeck().size();
+        info = info + "\nNumber of cards in deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size();
+        info = info + "\nNumber of cards in extra deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getExtraDeck().size();
         infoText.setText(info);
-        ProgramFunctions.getGUI().getData().getCardSuggestor().handleSuggestion(ProgramFunctions.getGUI().getData().getCardSuggestor().determineNextCard());
+        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().handleSuggestion(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().determineNextCard());
     }
     private void suggest() {
         suggestionList = new ArrayList<>();
-        if(ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
-            suggestionList = ProgramFunctions.getGUI().getData().getCardSuggestor().getSuggestions();
+        if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
+            suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
         String exe = "";
         for(Card c  : suggestionList) {
@@ -104,9 +104,9 @@ public class DeckBuilderController implements Initializable {
      */
     @FXML
     private void cancel() {
-        if (ProgramFunctions.getGUI().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
-            ProgramFunctions.getGUI().getData().setCardSuggestor(null);
-            ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+        if (ProgramFunctions.getProgramData().getUserInterface().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
+            ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
+            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
         } else {
             return;
         }
@@ -120,44 +120,25 @@ public class DeckBuilderController implements Initializable {
     @FXML
     private void save() {
         ArrayList<Container> containers = new ArrayList<>();
-        for(Container c : ProgramFunctions.getCurrentProfile().getUserContainers()) {
+        for(Container c : ProgramFunctions.getProgramData().getCurrentProfile().getUserContainers()) {
             if(c instanceof Album) {
-                for(Album a : ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().getAlbums()) {
+                for(Album a : ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getAlbums()) {
                     if(a.getContainerName().equals(c.getContainerName())) {
                         containers.add(a);
                     }
                 }
             }
             else {
-                for(Deck a : ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().getDecks()) {
+                for(Deck a : ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getDecks()) {
                     if(a.getContainerName().equals(c.getContainerName())) {
                         containers.add(a);
                     }
                 }
             }
         }
-        ProgramFunctions.getCurrentProfile().setContainers(containers);
-        ProgramFunctions.saveUser(ProgramFunctions.getCurrentProfile());
-        ProgramFunctions.getCache().updateCache();
-    }
-    /**
-     * Function definition for refresh()
-     * <p>
-     *     Attempts to refresh the suggestions made by the suggestor
-     * </p>
-     */
-    @FXML
-    private void refresh() {
-        ProgramFunctions.getTerminal().println("[SYSTEM] Refreshing Suggestion...");
-        ProgramFunctions.getGUI().getData().getCardSuggestor().refresh();
-        if(ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
-            suggestionList = ProgramFunctions.getGUI().getData().getCardSuggestor().getSuggestions();
-        }
-        String exe = "";
-        for(Card c  : suggestionList) {
-            exe = exe + c.getCardName() + "\n-> " +  "\"" + c.getCardDescription() + "\n";
-        }
-        suggestionText.setText(exe);
+        ProgramFunctions.getProgramData().getCurrentProfile().setContainers(containers);
+        ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+        ProgramFunctions.getProgramData().getCache().updateCache();
     }
     /**
      * Function definition for add()
@@ -168,20 +149,20 @@ public class DeckBuilderController implements Initializable {
     @FXML
     private void add() {
         ArrayList<String> command = new ArrayList<>();
-        command = ProgramFunctions.showResultsDeckBuilder(ProgramFunctions.getGUI().getData().getCardSuggestor().searchCard(ProgramFunctions.showInput("Search for Card", "Search:")));
+        command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult(DeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for Card", "Search:")));
         if(command.size() > 0) {
-            if(ProgramFunctions.getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
-                for(Card c : ProgramFunctions.getCurrentProfile().determineContainer(command.get(0)).getCards()) {
+            if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
+                for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
                     if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
-                        ProgramFunctions.getGUI().getData().getCardSuggestor().addCard(c);
-                        ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().determineContainer(command.get(0)),ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().determineContainer(ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().getContainerName()),c);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(command.get(0)),ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName()),c);
                     }
                 }
             }
             else {
-                ProgramFunctions.getGUI().getData().getCardSuggestor().addCard(ProgramFunctions.getGUI().getData().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
+                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
             }
-            contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getGUI().getData().getCardSuggestor().getTmpDeck().listCardsString()));
+            contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
             contentsList.refresh();
             suggest();
         }
@@ -194,16 +175,16 @@ public class DeckBuilderController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -211,14 +192,14 @@ public class DeckBuilderController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -226,6 +207,6 @@ public class DeckBuilderController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
     }
 }

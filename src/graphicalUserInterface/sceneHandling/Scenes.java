@@ -4,9 +4,12 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling;
+import graphicalUserInterface.sceneHandling.controllers.BeginningController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import programFunctions.ProgramFunctions;
+
 public class Scenes {
     /**
      * dataCache holds all scene related data
@@ -146,7 +149,7 @@ public class Scenes {
      */
     public Scene profileSettingScene() {
         if(dataCache.getTmpProfSettings() == null) {
-            dataCache.tmpProfSettings = ProgramFunctions.getCurrentProfile().getProfileSettings();
+            dataCache.tmpProfSettings = ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings();
         }
         scene = null;
         try {

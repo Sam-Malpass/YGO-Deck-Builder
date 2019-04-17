@@ -4,6 +4,11 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
+import dataStructure.cardHierarchy.MonsterCard;
+import dataStructure.cardHierarchy.enumerators.MonsterAttribute;
+import dataStructure.cardHierarchy.enumerators.MonsterType;
+import dataStructure.cardHierarchy.enumerators.SpellType;
+import dataStructure.cardHierarchy.enumerators.TrapType;
 import dataStructure.containerHierarchy.Album;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,6 +19,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.TextArea;
 import programFunctions.ProgramFunctions;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 public class AlbumAnalysisController implements Initializable {
     /**
@@ -80,7 +86,7 @@ public class AlbumAnalysisController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        album = ProgramFunctions.getGUI().getData().getAlbum();
+        album = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAlbum();
         getOverviewData();
         getSpellData();
         getTrapData();
@@ -269,7 +275,7 @@ public class AlbumAnalysisController implements Initializable {
      */
     @FXML
     private void back() {
-        ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     /**
      * COLLECTION FOR MENUBAR
@@ -277,16 +283,16 @@ public class AlbumAnalysisController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -294,14 +300,14 @@ public class AlbumAnalysisController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -309,6 +315,6 @@ public class AlbumAnalysisController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }

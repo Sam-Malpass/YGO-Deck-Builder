@@ -76,30 +76,30 @@ public class BeginningController implements Initializable {
                     }));
                 }
                 else if(sortBox.getValue().equals("Set ID")) {
-                    ArrayList<Card> tmp = ProgramFunctions.getCache().getAlbumCards();
-                    tmp.addAll(ProgramFunctions.getCache().getDeckCards());
+                    ArrayList<Card> tmp = ProgramFunctions.getProgramData().getCache().getAlbumCards();
+                    tmp.addAll(ProgramFunctions.getProgramData().getCache().getDeckCards());
                     ProgramFunctions.getUtilities().getSorter().sortBySet(tmp);
                     cardList.setItems(FXCollections.observableArrayList(ProgramFunctions.getUtilities().getOutputter().outputCardList(tmp)));
                 }
                 else if(sortBox.getValue().equals("Value High-Low")) {
-                    ArrayList<Card> tmp = ProgramFunctions.getCache().getAlbumCards();
-                    tmp.addAll(ProgramFunctions.getCache().getDeckCards());
+                    ArrayList<Card> tmp = ProgramFunctions.getProgramData().getCache().getAlbumCards();
+                    tmp.addAll(ProgramFunctions.getProgramData().getCache().getDeckCards());
                     ProgramFunctions.getUtilities().getSorter().sortByValue(tmp);
                     cardList.setItems(FXCollections.observableList(ProgramFunctions.getUtilities().getOutputter().outputCardList(tmp)));
                 }
                 else if(sortBox.getValue().equals("Value Low-High")) {
-                    ArrayList<Card> tmp = ProgramFunctions.getCache().getAlbumCards();
-                    tmp.addAll(ProgramFunctions.getCache().getDeckCards());
+                    ArrayList<Card> tmp = ProgramFunctions.getProgramData().getCache().getAlbumCards();
+                    tmp.addAll(ProgramFunctions.getProgramData().getCache().getDeckCards());
                     ProgramFunctions.getUtilities().getSorter().invertedSortByValue(tmp);
                     cardList.setItems(FXCollections.observableList(ProgramFunctions.getUtilities().getOutputter().outputCardList(tmp)));
                 }
                 else if(sortBox.getValue().equals("-")) {
-                    cardList.setItems(FXCollections.observableList(ProgramFunctions.getCurrentProfile().listAllCards()));
+                    cardList.setItems(FXCollections.observableList(ProgramFunctions.getProgramData().getCurrentProfile().listAllCards()));
                 }
             }
         });
         ObservableList<String> containers = containerList.getItems();
-        for(String C : ProgramFunctions.getCurrentProfile().listContainers()) {
+        for(String C : ProgramFunctions.getProgramData().getCurrentProfile().listContainers()) {
             containers.add(C);
         }
         containerList.setCellFactory(lv -> {
@@ -115,14 +115,14 @@ public class BeginningController implements Initializable {
             open.setOnAction(event -> {
                 /*Get the cell contents*/
                 String item = cell.getItem();
-                if (ProgramFunctions.getCurrentProfile().determineContainer(item) instanceof Deck) {
-                    deck = (Deck) ProgramFunctions.getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getGUI().getData().setCardSuggestor(new CardSuggestor(deck, 2, 1, 1));
-                    ProgramFunctions.updateGUI(ProgramFunctions.getDeckBuilderScene());
+                if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
+                    deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
+                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new CardSuggestor(deck, 2, 1, 1));
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getDeckBuilderScene());
                 } else {
-                    album = (Album) ProgramFunctions.getCurrentProfile().determineContainer(item);
+                    album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
                     ProgramFunctions.getUtilities().getOutputter().outputStringList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards()));
-                    ProgramFunctions.updateGUI(ProgramFunctions.getAlbumBuilder());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getAlbumBuilder());
                 }
             });
             /*Create a MenuItem*/
@@ -134,7 +134,7 @@ public class BeginningController implements Initializable {
                 /*Get the cell contents*/
                 String item = cell.getItem();
                 /*Get a container name*/
-                String temp = ProgramFunctions.showInput("Rename Container...", "Input New Name: ");
+                String temp = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Rename Container...", "Input New Name: ");
                 /*If the name is available*/
                 ProgramFunctions.renameContainer(item, temp);
                 /*Return*/
@@ -147,12 +147,12 @@ public class BeginningController implements Initializable {
             analyze.setOnAction(event -> {
                 /*Get the cell contents*/
                 String item = cell.getItem();
-                if (ProgramFunctions.getCurrentProfile().determineContainer(item) instanceof Deck) {
-                    deck = (Deck) ProgramFunctions.getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.updateGUI(ProgramFunctions.getDeckAnalyzerScene());
+                if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
+                    deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getDeckAnalyzerScene());
                 } else {
-                    album = (Album) ProgramFunctions.getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.updateGUI(ProgramFunctions.getAlbumAnalyzer());
+                    album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getAlbumAnalyzer());
                 }
             });
             /*Create a MenuItem*/
@@ -164,7 +164,7 @@ public class BeginningController implements Initializable {
                 /*Get the cell contents*/
                 String item = cell.getItem();
                 /*Open a basic window yesNo*/
-                if (ProgramFunctions.showYesNo("Delete Container...", "Are you sure?")) {
+                if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Delete Container...", "Are you sure?")) {
                     /*Delete the container*/
                     ProgramFunctions.deleteContainer(item);
                 }
@@ -199,7 +199,7 @@ public class BeginningController implements Initializable {
         });
 
         ObservableList<String> cards = cardList.getItems();
-        for(String C : ProgramFunctions.getCurrentProfile().listAllCards()) {
+        for(String C : ProgramFunctions.getProgramData().getCurrentProfile().listAllCards()) {
             cards.add(C);
         }
         cardList.setCellFactory(lv -> {
@@ -210,7 +210,7 @@ public class BeginningController implements Initializable {
             MenuItem view = new MenuItem("View...");
             view.setOnAction(event -> ProgramFunctions.getCardForView(cell.getItem(), true));
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.showResults(ProgramFunctions.searchCard(cell.getItem())));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem())));
             MenuItem cancel = new MenuItem("Cancel");
             cancel.setOnAction(event -> {
 
@@ -241,20 +241,20 @@ public class BeginningController implements Initializable {
                     /*If the TextFile contents are not null*/
                     if (searchCard.getText() != null) {
                         if (searchCard.getText().toLowerCase().contains("command:")) {
-                            ProgramFunctions.getTerminal().getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
+                            System.out.getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
                             searchCard.clear();
                             return;
                         }
                         /*Open the results of a search*/
-                        ProgramFunctions.showResults(ProgramFunctions.searchCard(searchCard.getText()));
+                        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(searchCard.getText()));
                         /*Clear the TextField*/
                         searchCard.clear();
                         /*Return*/
                         return;
                     }
                     /*Output an error*/
-                    ProgramFunctions.showAlert("ERROR", "013: Invalid input from user");
-                    ProgramFunctions.getTerminal().println("[ERROR] 013: Invalid input from user");
+                    ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
+                    System.out.println("[ERROR] 013: Invalid input from user");
                     /*Break*/
                     break;
                 /*Default*/
@@ -273,10 +273,10 @@ public class BeginningController implements Initializable {
      */
     private void setupBox() {
         profDetailsBox.setWrapText(true);
-        profDetailsBox.appendText("Name: " + ProgramFunctions.getCurrentProfile().getProfileName() + "\n");
-        profDetailsBox.appendText("Number of Decks: " + ProgramFunctions.getUtilities().getFilter().filterDecks(ProgramFunctions.getCurrentProfile().getUserContainers()).size() +"\n");
-        profDetailsBox.appendText("Number of Albums: " + ProgramFunctions.getUtilities().getFilter().filterAlbums(ProgramFunctions.getCurrentProfile().getUserContainers()).size() + "\n");
-        profDetailsBox.appendText("Number of Cards: " + ProgramFunctions.getCurrentProfile().listAllCards().size() + "\n");
+        profDetailsBox.appendText("Name: " + ProgramFunctions.getProgramData().getCurrentProfile().getProfileName() + "\n");
+        profDetailsBox.appendText("Number of Decks: " + ProgramFunctions.getUtilities().getFilter().filterDecks(ProgramFunctions.getProgramData().getCurrentProfile().getUserContainers()).size() +"\n");
+        profDetailsBox.appendText("Number of Albums: " + ProgramFunctions.getUtilities().getFilter().filterAlbums(ProgramFunctions.getProgramData().getCurrentProfile().getUserContainers()).size() + "\n");
+        profDetailsBox.appendText("Number of Cards: " + ProgramFunctions.getProgramData().getCurrentProfile().listAllCards().size() + "\n");
     }
     /**
      * Function definition for createDeck()
@@ -287,7 +287,7 @@ public class BeginningController implements Initializable {
      */
     @FXML
     private void createDeck(ActionEvent event) {
-        ProgramFunctions.createDeck(ProgramFunctions.showInput("Create Deck", "Input name:"));
+        ProgramFunctions.createDeck(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Deck", "Input name:"));
     }
     /**
      * Function definition for importButton()
@@ -320,7 +320,7 @@ public class BeginningController implements Initializable {
      */
     @FXML
     private void createAlbum(ActionEvent event) {
-        ProgramFunctions.createAlbum(ProgramFunctions.showInput("Create Album", "Input name:"));
+        ProgramFunctions.createAlbum(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Album", "Input name:"));
     }
     /**
      * Function definition for checklistButton()
@@ -332,7 +332,7 @@ public class BeginningController implements Initializable {
     @FXML
     private void checklistButton(ActionEvent event) {
         ArrayList<String> tst = new ArrayList<>();
-        ProgramFunctions.updateGUI(ProgramFunctions.getChecklistScene(tst));
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getChecklistScene(tst));
     }
     /**
      * Function definition for profileSettings()
@@ -343,7 +343,7 @@ public class BeginningController implements Initializable {
      */
     @FXML
     private void profileSettings(ActionEvent event) {
-        ProgramFunctions.getGUI().updateScene(ProgramFunctions.getProfileSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getProfSetScene());
     }
     /**
      * Function definition for banlistButton()
@@ -354,7 +354,7 @@ public class BeginningController implements Initializable {
      */
     @FXML
     private void banlistButton(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getForbiddenScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getForbiddenScene());
     }
     /**
      * Function definition for search()
@@ -367,21 +367,16 @@ public class BeginningController implements Initializable {
     private void search(ActionEvent event) {
         /*If the TextField content is not null*/
         if (searchCard.getText() != null) {
-            if (searchCard.getText().toLowerCase().contains("command:")) {
-                ProgramFunctions.getTerminal().getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
-                searchCard.clear();
-                return;
-            }
             /*Open the results of a search*/
-            ProgramFunctions.showResults(ProgramFunctions.searchCard(searchCard.getText()));
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(searchCard.getText()));
             /*Clear the TextField*/
             searchCard.clear();
             /*Return*/
             return;
         }
         /*Output an error*/
-        ProgramFunctions.showAlert("ERROR", "013: Invalid input from user");
-        ProgramFunctions.getTerminal().println("[ERROR] 013: Invalid input from user");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
+        System.out.println("[ERROR] 013: Invalid input from user");
     }
     /**
      * COLLECTION FOR MENUBAR
@@ -389,16 +384,16 @@ public class BeginningController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -406,14 +401,14 @@ public class BeginningController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -421,6 +416,6 @@ public class BeginningController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
     }
 }

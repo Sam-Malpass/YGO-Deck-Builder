@@ -48,7 +48,7 @@ public class PasswordController implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 /*Set the sResult to the input*/
-                ProgramFunctions.getGUI().getBasicWindows().setsResult(pass.getText());
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().setsResult(pass.getText());
                 /*Close the window*/
                 Stage stage = (Stage) cancel.getScene().getWindow();
                 stage.close();
@@ -59,7 +59,7 @@ public class PasswordController implements Initializable {
             switch (keyEvent.getCode()) {
                 case ENTER:
                     /*Set the sResult to the input*/
-                    ProgramFunctions.getGUI().getBasicWindows().setsResult(pass.getText());
+                    ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().setsResult(pass.getText());
                     /*Close the window*/
                     Stage stage = (Stage) cancel.getScene().getWindow();
                     stage.close();

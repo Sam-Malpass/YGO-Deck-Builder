@@ -52,17 +52,17 @@ public class GlobalSettingsController implements Initializable {
         reg.add("DE");
         reg.add("FR");
 
-        siteBox.getSelectionModel().select(ProgramFunctions.getGlobalSettings().getShoppingSite());
-        regBox.getSelectionModel().select(ProgramFunctions.getGlobalSettings().getRegion());
+        siteBox.getSelectionModel().select(ProgramFunctions.getProgramData().getGlobalSettings().getShoppingSite());
+        regBox.getSelectionModel().select(ProgramFunctions.getProgramData().getGlobalSettings().getRegion());
 
         cancel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if(ProgramFunctions.profileActive()) {
-                    ProgramFunctions.updateGUI(ProgramFunctions.getGUI().getBeginningScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
                 }
                 else {
-                    ProgramFunctions.updateGUI(ProgramFunctions.getGUI().getDefaultScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDefaultScene());
                 }
             }
         });
@@ -77,10 +77,10 @@ public class GlobalSettingsController implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 saveSettings();
                 if(ProgramFunctions.profileActive()) {
-                    ProgramFunctions.updateGUI(ProgramFunctions.getGUI().getBeginningScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
                 }
                 else {
-                    ProgramFunctions.updateGUI(ProgramFunctions.getGUI().getDefaultScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDefaultScene());
                 }
             }
         });
@@ -92,8 +92,8 @@ public class GlobalSettingsController implements Initializable {
      * </p>
      */
     private void saveSettings() {
-        ProgramFunctions.getGlobalSettings().setRegion(lookup(regBox.getValue().toString()));
-        ProgramFunctions.getGlobalSettings().setShoppingSite(lookup(siteBox.getValue().toString()));
+        ProgramFunctions.getProgramData().getGlobalSettings().setRegion(lookup(regBox.getValue().toString()));
+        ProgramFunctions.getProgramData().getGlobalSettings().setShoppingSite(lookup(siteBox.getValue().toString()));
     }
     /**
      * Function definition for lookup()
@@ -132,16 +132,16 @@ public class GlobalSettingsController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -149,14 +149,14 @@ public class GlobalSettingsController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -164,6 +164,6 @@ public class GlobalSettingsController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
     }
 }

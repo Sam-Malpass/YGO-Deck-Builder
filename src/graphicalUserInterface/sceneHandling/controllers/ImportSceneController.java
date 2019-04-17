@@ -4,6 +4,7 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
+import dataStructure.containerHierarchy.Deck;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -40,23 +41,23 @@ public class ImportSceneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ProgramFunctions.getGUI().getData().setCardSuggestor(null);
+        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
         String name = "test";
-        ArrayList<String> tst = ProgramFunctions.resultsToString(ProgramFunctions.processImportResults(ProgramFunctions.getGUI().getData().getAvailable()));
+        ArrayList<String> tst = ProgramFunctions.resultsToString(ProgramFunctions.processImportResults(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAvailable()));
         ObservableList<String> owned = using.getItems();
         for(String C : tst) {
             owned.add(C);
         }
         ObservableList<String> missed = missing.getItems();
-        for(String C : ProgramFunctions.getGUI().getData().getMissing()) {
+        for(String C : ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getMissing()) {
             missed.add(C);
         }
         cancel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (ProgramFunctions.getGUI().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
-                    ProgramFunctions.getGUI().getData().setCardSuggestor(null);
-                    ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+                if (ProgramFunctions.getProgramData().getUserInterface().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
+                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
                 } else {
                     return;
                 }
@@ -65,13 +66,13 @@ public class ImportSceneController implements Initializable {
         confirm.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (ProgramFunctions.getGUI().yesNoWindow("Are You Sure?", "This will move cards from the album(s)")) {
+                if (ProgramFunctions.getProgramData().getUserInterface().yesNoWindow("Are You Sure?", "This will move cards from the album(s)")) {
                     ProgramFunctions.createDeck(name);
                     for(String S : tst) {
                         ProgramFunctions.moveCard(S.substring(S.indexOf("in ")).replace("in ", ""), name,S.substring(0, S.indexOf(" (")).replace(" (", ""),S.substring(S.indexOf("("), S.indexOf(")")).replace("(", "").replace(")", ""));
                     }
-                    ProgramFunctions.getGUI().getData().setCardSuggestor(new CardSuggestor((Deck)ProgramFunctions.getCurrentProfile().determineContainer(name), 2, 1, 1));
-                    ProgramFunctions.getGUI().updateScene(ProgramFunctions.getDeckBuilderScene());
+                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new CardSuggestor((Deck)ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(name), 2, 1, 1));
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
                 }
                 else {
                     return;
@@ -85,16 +86,16 @@ public class ImportSceneController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -102,14 +103,14 @@ public class ImportSceneController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -117,6 +118,6 @@ public class ImportSceneController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
     }
 }

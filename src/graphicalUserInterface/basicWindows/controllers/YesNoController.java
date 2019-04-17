@@ -37,7 +37,7 @@ public class YesNoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         label.setWrapText(true);
-        label.setText(ProgramFunctions.getGUI().getBasicWindows().getLabel());
+        label.setText(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().getLabel());
         no.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -49,7 +49,7 @@ public class YesNoController implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 /*Set the flag to true*/
-                ProgramFunctions.getGUI().getBasicWindows().setFlag(true);
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().setFlag(true);
                 Stage stage = (Stage) yes.getScene().getWindow();
                 stage.close();
             }

@@ -38,7 +38,7 @@ public class ProfileSettingsController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ProfileSettings settings = ProgramFunctions.getCurrentProfile().getProfileSettings();
+        ProfileSettings settings = ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings();
         if(settings.isHasPassword()) {
             passwordCheck.setSelected(true);
             passwordCheck.setText("Enabled");
@@ -74,7 +74,7 @@ public class ProfileSettingsController implements Initializable {
      */
     @FXML
     private void cancel(){
-        ProgramFunctions.getGUI().updateScene(ProgramFunctions.getBeginningScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     /**
      * Function definition for delete()
@@ -84,9 +84,9 @@ public class ProfileSettingsController implements Initializable {
      */
     @FXML
     private void delete(){
-        if (ProgramFunctions.showYesNo("Delete Profile...", "Are you sure?")) {
-            ProgramFunctions.deleteProfile(ProgramFunctions.getCurrentProfile().getProfileName());
-            ProgramFunctions.getGUI().updateScene(ProgramFunctions.getDefaultScene());
+        if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Delete Profile...", "Are you sure?")) {
+            ProgramFunctions.deleteProfile(ProgramFunctions.getProgramData().getCurrentProfile().getProfileName());
+            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDefaultScene());
         }
     }
     /**
@@ -97,8 +97,8 @@ public class ProfileSettingsController implements Initializable {
      */
     @FXML
     private void changePassword() {
-        ProgramFunctions.changePassword(ProgramFunctions.showPasswordHash());
-        ProgramFunctions.saveUser(ProgramFunctions.getCurrentProfile());
+        ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input New Password..."));
+        ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
     }
     /**
      * Function definition for rename()
@@ -108,7 +108,16 @@ public class ProfileSettingsController implements Initializable {
      */
     @FXML
     private void rename() {
-        ProgramFunctions.renameUser(ProgramFunctions.showInput("Rename Profile...", "Input new name:"));
+        String x = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Rename Profile...", "Input new name:");
+        if(ProgramFunctions.checkUser(x)) {
+            ProgramFunctions.getProgramData().getCurrentProfile().setProfileName(x);
+            ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+            ProgramFunctions.getProgramData().getUserInterface().updateTitle();
+        }
+        else {
+            System.out.println("[ERROR] 001a: Profile already exists");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("ERROR", "Profile with that name already exists");
+        }
     }
     /**
      * Function definition for apply()
@@ -119,28 +128,28 @@ public class ProfileSettingsController implements Initializable {
     @FXML
     private void apply() {
         if (passwordCheck.isSelected()) {
-            if (!ProgramFunctions.getCurrentProfile().getProfileSettings().isHasPassword()) {
-                ProgramFunctions.getCurrentProfile().getProfileSettings().setHasPassword(true);
-                ProgramFunctions.getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.showPasswordHash());
+            if (!ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isHasPassword()) {
+                ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setHasPassword(true);
+                ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input Password: "));
             }
         } else {
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setHasPassword(false);
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setPassword(null);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setHasPassword(false);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(null);
         }
 
         if (deckCheck.isSelected()) {
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setIncludeDecks(true);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setIncludeDecks(true);
         } else {
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setIncludeDecks(false);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setIncludeDecks(false);
         }
 
         if (unownedCheck.isSelected()) {
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setIncludeUnowned(true);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setIncludeUnowned(true);
         } else {
-            ProgramFunctions.getCurrentProfile().getProfileSettings().setIncludeUnowned(false);
+            ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setIncludeUnowned(false);
         }
-        ProgramFunctions.saveUser(ProgramFunctions.getCurrentProfile());
-        ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+        ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     /**
      * COLLECTION FOR MENUBAR
@@ -148,16 +157,16 @@ public class ProfileSettingsController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -165,14 +174,14 @@ public class ProfileSettingsController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -180,6 +189,6 @@ public class ProfileSettingsController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }

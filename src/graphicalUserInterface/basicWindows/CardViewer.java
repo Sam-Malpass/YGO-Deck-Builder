@@ -18,6 +18,8 @@ import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import programFunctions.ProgramFunctions;
+
 public class CardViewer {
     /**
      * Function definition for monsterCardView()
@@ -179,7 +181,7 @@ public class CardViewer {
         /*Set the Stage Title*/
         monsterCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Stage Icon*/
-        monsterCardView.getIcons().addAll(ProgramFunctions.getIcon());
+        monsterCardView.getIcons().addAll(ProgramFunctions.getProgramData().getIcon());
         /*Set the Scene*/
         monsterCardView.setScene(scene);
         /*Make un-resizable*/
@@ -347,7 +349,7 @@ public class CardViewer {
         /*Set the Stage Title*/
         monsterCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Stage Icon*/
-        monsterCardView.getIcons().addAll(ProgramFunctions.getIcon());
+        monsterCardView.getIcons().addAll(ProgramFunctions.getProgramData().getIcon());
         /*Set the Scene*/
         monsterCardView.setScene(scene);
         /*Make un-resizable*/
@@ -466,7 +468,7 @@ public class CardViewer {
         /*Set the Title*/
         spellCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        spellCardView.getIcons().add(ProgramFunctions.getIcon());
+        spellCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Make un-resizable*/
         spellCardView.setResizable(false);
         /*Show and the wait*/
@@ -583,7 +585,7 @@ public class CardViewer {
         /*Set the Title*/
         trapCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        trapCardView.getIcons().add(ProgramFunctions.getIcon());
+        trapCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Make un-resizable*/
         trapCardView.setResizable(false);
         /*Show and the wait*/
@@ -755,7 +757,7 @@ public class CardViewer {
         /*Set the Title*/
         ritualCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        ritualCardView.getIcons().add(ProgramFunctions.getIcon());
+        ritualCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         ritualCardView.showAndWait();
     }
@@ -925,7 +927,7 @@ public class CardViewer {
         /*Set the Title*/
         fusionCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        fusionCardView.getIcons().add(ProgramFunctions.getIcon());
+        fusionCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         fusionCardView.showAndWait();
     }
@@ -1095,7 +1097,7 @@ public class CardViewer {
         /*Set the Title*/
         synchroCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        synchroCardView.getIcons().add(ProgramFunctions.getIcon());
+        synchroCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         synchroCardView.showAndWait();
     }
@@ -1265,7 +1267,7 @@ public class CardViewer {
         /*Set the Title*/
         XYZCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        XYZCardView.getIcons().add(ProgramFunctions.getIcon());
+        XYZCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         XYZCardView.showAndWait();
     }
@@ -1425,7 +1427,7 @@ public class CardViewer {
         /*Set the Title*/
         linkCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        linkCardView.getIcons().add(ProgramFunctions.getIcon());
+        linkCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         linkCardView.showAndWait();
     }
@@ -1605,7 +1607,7 @@ public class CardViewer {
         /*Set the Title*/
         pendulumCardView.setTitle("View Card: " + X.getCardName());
         /*Set the Icon*/
-        pendulumCardView.getIcons().add(ProgramFunctions.getIcon());
+        pendulumCardView.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show and Wait*/
         pendulumCardView.showAndWait();
     }
