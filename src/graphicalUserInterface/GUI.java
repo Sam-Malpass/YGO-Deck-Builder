@@ -4,16 +4,16 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface;
-
 import dataStructure.cardHierarchy.Card;
+import graphicalUserInterface.basicWindows.Windows;
+import graphicalUserInterface.sceneHandling.SceneData;
+import graphicalUserInterface.sceneHandling.Scenes;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import programFunctions.ProgramFunctions;
 import programFunctions.searching.SearchResult;
-
 import java.io.File;
 import java.util.ArrayList;
-
 public class GUI {
     /**
      * windowHeight holds the window height
@@ -386,7 +386,7 @@ public class GUI {
      * </p>
      * @return the scene dataCache
      */
-    private SceneDataCache accessSceneCache() {
+    private SceneData accessSceneCache() {
         return scenes.getDataCache();
     }
     /**
