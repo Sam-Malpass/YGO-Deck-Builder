@@ -118,11 +118,11 @@ public class BeginningController implements Initializable {
                 if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
                     deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
                     ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new CardSuggestor(deck, 2, 1, 1));
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getDeckBuilderScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilderScene());
                 } else {
                     album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
                     ProgramFunctions.getUtilities().getOutputter().outputStringList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards()));
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getAlbumBuilder());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getAlbumBuilder());
                 }
             });
             /*Create a MenuItem*/
@@ -149,10 +149,10 @@ public class BeginningController implements Initializable {
                 String item = cell.getItem();
                 if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
                     deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getDeckAnalyzerScene());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckAnalyzerScene());
                 } else {
                     album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getAlbumAnalyzer());
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getAlbumAnalyzer());
                 }
             });
             /*Create a MenuItem*/
@@ -208,9 +208,9 @@ public class BeginningController implements Initializable {
             /*Create a ContextMenu*/
             ContextMenu contextMenu = new ContextMenu();
             MenuItem view = new MenuItem("View...");
-            view.setOnAction(event -> ProgramFunctions.getCardForView(cell.getItem(), true));
+            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem())));
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem())));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem()))));
             MenuItem cancel = new MenuItem("Cancel");
             cancel.setOnAction(event -> {
 
@@ -240,11 +240,6 @@ public class BeginningController implements Initializable {
                 case ENTER:
                     /*If the TextFile contents are not null*/
                     if (searchCard.getText() != null) {
-                        if (searchCard.getText().toLowerCase().contains("command:")) {
-                            System.out.getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
-                            searchCard.clear();
-                            return;
-                        }
                         /*Open the results of a search*/
                         ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(searchCard.getText()));
                         /*Clear the TextField*/
@@ -416,6 +411,6 @@ public class BeginningController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }

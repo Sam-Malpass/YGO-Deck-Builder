@@ -22,6 +22,46 @@ import programFunctions.ProgramFunctions;
 
 public class CardViewer {
     /**
+     * Function definition for determineCardType()
+     * <p>
+     *     Decides what type of Card the parameter is and calls the appropriate view window
+     *     for that type of card.
+     * </p>
+     * @param X is the card to view
+     */
+    public void determineCardType(Card X) {
+        if(X instanceof RitualMonster) {
+            ritualCardView((RitualMonster) X);
+        }
+        else if(X instanceof PendulumMonster) {
+            pendulumCardView((PendulumMonster) X);
+        }
+        else if(X instanceof FusionMonster) {
+            fusionCardView((FusionMonster) X);
+        }
+        else if(X instanceof SynchroMonster) {
+            synchroCardView((SynchroMonster) X);
+        }
+        else if(X instanceof XYZMonster) {
+            XYZCardView((XYZMonster) X);
+        }
+        else if(X instanceof LinkMonster) {
+            linkCardView((LinkMonster) X);
+        }
+        else if(X instanceof EffectMonster) {
+            effectCardView((EffectMonster) X);
+        }
+        else if(X instanceof MonsterCard) {
+            monsterCardView((MonsterCard) X);
+        }
+        else if(X instanceof SpellCard) {
+            spellCardView((SpellCard) X);
+        }
+        else if(X instanceof TrapCard) {
+            trapCardView((TrapCard) X);
+        }
+    }
+    /**
      * Function definition for monsterCardView()
      * <p>
      * Opens a window displaying the details of a given monster card

@@ -5,6 +5,8 @@
  */
 package programFunctions.utilities;
 import dataStructure.cardHierarchy.Card;
+import programFunctions.searching.SearchResult;
+
 import java.util.ArrayList;
 public class Outputters {
     /**
@@ -38,5 +40,24 @@ public class Outputters {
             tmp.add(c.getCardName());
         }
         return tmp;
+    }
+    /**
+     * Function definition for resultsToString()
+     * <P>
+     *     Converts an ArrayList of SearchResults to an ArrayList of Strings
+     * </P>
+     * @param results is an ArrayList of SearchResults
+     * @return an ArrayList of Strings
+     */
+    public static ArrayList<String> resultsToString(ArrayList<SearchResult> results) {
+        /*Make an empty ArrayList*/
+        ArrayList<String> resultsOutput = new ArrayList<>();
+        /*For all results*/
+        for(SearchResult S : results) {
+            /*Add the output to the ArrayList*/
+            resultsOutput.add(S.outputResult());
+        }
+        /*Return the ArrayList*/
+        return resultsOutput;
     }
 }

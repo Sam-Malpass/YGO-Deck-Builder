@@ -6,10 +6,15 @@
 package programFunctions;
 
 import dataStructure.UserProfile;
+import dataStructure.cardHierarchy.Card;
+import dataStructure.containerHierarchy.Album;
+import dataStructure.containerHierarchy.Deck;
+import dataStructure.containerHierarchy.Series;
 import programFunctions.appData.AppData;
 import programFunctions.appData.Cache;
+import programFunctions.searching.SearchResult;
 import programFunctions.utilities.Utils;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProgramFunctions {
@@ -55,7 +60,51 @@ public class ProgramFunctions {
         return true;
     }
 
-
+    public static boolean checkVersion() {
+        String onlineVer = utilities.getFileCollector().getVersionOnline();
+        String currentVer = programData.getVersionNumber();
+        System.out.println("[SYSTEM] online: " + onlineVer + " offline: " + currentVer);
+        if(onlineVer.equals(currentVer)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    /**
+     * Function definition for checkContainerNameOutput()
+     * <p>
+     *     Checks whether a name is available for the containers
+     * </p>
+     * @param name is the name to be tested
+     * @return whether it's available
+     */
+    public static boolean checkContainerName(String name) {
+        /*If the input is invalid*/
+        if(name == null || name.equals("")) {
+            /*Output an error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
+            System.out.println("[ERROR] 013: Invalid input from user");
+            /*Return false*/
+            return false;
+        }
+        /*For all containers*/
+        ArrayList<String> tmpI = programData.getCurrentProfile().listContainers();
+        for (String aTmpI : tmpI) {
+            /*If the name matches an existing container*/
+            if (name.equals(aTmpI)) {
+                /*Output an error*/
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Container already exists");
+                System.out.println("[ERROR] 003a: Container already exists");
+                /*Return false*/
+                return false;
+            }
+        }
+        /*Output success*/
+        System.out.println("[SYSTEM] Name available");
+        /*Return true*/
+        return true;
+    }
 
 
     /**
@@ -134,12 +183,388 @@ public class ProgramFunctions {
             return false;
         }
     }
+    /**
+     * Function definition for createDeck()
+     * <p>
+     *      Creates a Deck and adds it to the currently
+     *      active UserProfile.
+     * </p>
+     * @param name is the name of the Container
+     * @return whether the creation was successful
+     */
+    public static boolean createDeck(String name) {
+        if(name == null || name.equals("")) {
+            return false;
+        }
+        /*If there is an active profile*/
+        if (profileActive()) {
+            /*For all existing containers in profile*/
+            ArrayList<String> tmp = programData.getCurrentProfile().listContainers();
+            for (String aTmp : tmp) {
+                /*Check name against these containers*/
+                System.out.println("[SYSTEM] testing " + name + " against " + aTmp);
+                /*If name is taken*/
+                if (name.equals(aTmp)) {
+                    /*Output error message*/
+                    programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Deck with that name already exists");
+                    System.out.println("[ERROR] 003a: Container with that name already exists");
+                    /*Return false*/
+                    return false;
+                }
+            }
+            /*Otherwise create a deck*/
+            Deck deck = new Deck(name);
+            /*Add the deck to the profile*/
+            programData.getCurrentProfile().addContainer(deck);
+            /*Output success*/
+            System.out.println("[SYSTEM] Deck created successfully");
+            /*Save the profile*/
+            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+            /*Update GUI*/
+            programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
+            /*Return true*/
+            return true;
+        }
+        /*Otherwise*/
+        else {
+            /*Output error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "002: No active profile selected");
+            System.out.println("[ERROR] 002: No active profile selected");
+            /*Return false*/
+            return false;
+        }
+    }
+    /**
+     * Function definition for createAlbum()
+     * <p>
+     *      Creates an Album and adds it to the currently
+     *      active UserProfile.
+     * </p>
+     * @param name is the name of the Container
+     * @return whether the creation was successful
+     */
+    public static boolean createAlbum(String name) {
+        if(name == null || name.equals("")) {
+            return false;
+        }
+        if (profileActive()) {
+            /*For all existing containers in profile*/
+            ArrayList<String> tmp = programData.getCurrentProfile().listContainers();
+            for (String aTmp : tmp) {
+                /*Check name against these containers*/
+                System.out.println("[SYSTEM] testing " + name + " against " + aTmp);
+                /*If name is taken*/
+                if (name.equals(aTmp)) {
+                    /*Output error message*/
+                    programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Container with that name already exists");
+                    System.out.println("[ERROR] 003a: Container with that name already exists");
+                    /*Return false*/
+                    return false;
+                }
+            }
+            /*Otherwise create a deck*/
+            Album album = new Album(name);
+            /*Add the deck to the profile*/
+            programData.getCurrentProfile().addContainer(album);
+            /*Output success*/
+            System.out.println("[SYSTEM] Album created successfully");
+            /*Save the profile*/
+            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+            programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
+            /*Return true*/
+            return true;
+        }
+        /*Otherwise*/
+        else {
+            /*Output error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "002: No active profile selected");
+            System.out.println("[ERROR] 002: No active profile selected");
+            /*Return false*/
+            return false;
+        }
+    }
+    /**
+     * Function definition for deleteContainer()
+     * <p>
+     *      Deletes a container with a given name.
+     * </p>
+     * @param name is the name of the container to be deleted
+     * @return whether container was deleted successfully
+     */
+    public static boolean deleteContainer(String name) {
+        /*If there is an active profile*/
+        if (profileActive()) {
+            /*Check the containers for the one we want to delete*/
+            ArrayList<String> tmp = programData.getCurrentProfile().listContainers();
+            for (String aTmp : tmp) {
+                /*Check name against these containers*/
+                System.out.println("[SYSTEM] testing " + name + " against " + aTmp);
+                /*If name is taken*/
+                if (name.equals(aTmp)) {
+                    /*Remove the container*/
+                    programData.getCurrentProfile().removeContainer(programData.getCurrentProfile().determineContainer(name));
+                    /*Output success*/
+                    System.out.println("[SYSTEM] Container deleted successfully");
+                    /*Update the changes*/
+                    utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+                    programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
+                    /*Return true*/
+                    return true;
+                }
+            }
+            /*Output error message*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "010: Container does not exist");
+            System.out.println("[ERROR] 010: Container does not exist");
+            /*Return false*/
+            return false;
+
+        } else {
+            /*Output error message*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "002: No active profile selected");
+            System.out.println("[ERROR] 002: No active profile selected");
+            /*Return false*/
+            return false;
+        }
+    }
+
+    /**
+     * Function definition for moveCard()
+     * <p>
+     *     Checks that container 1 exists, and checks that container 2 exists, then checks the card exists.
+     *     If all are ok then move the card and re-save the profile.
+     * </p>
+     * @param con1Name name of initial container
+     * @param con2Name name of target container
+     * @param cardName name of card
+     * @return whether successful
+     */
+    public static boolean moveCard(String con1Name, String con2Name, String cardName, String cardID) {
+        /*If there is an active profile*/
+        if(profileActive()) {
+            if(!checkContainerName(con1Name) && !checkContainerName(con2Name)) {
+                for(Card C : programData.getCurrentProfile().determineContainer(con1Name).getCards()) {
+                    if(C.getCardID().equals(cardID) && C.getCardName().equals(cardName)) {
+                        if(programData.getCurrentProfile().determineContainer(con2Name).addCard(C)) {
+                            programData.getCurrentProfile().determineContainer(con1Name).removeCard(C);
+                            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+                            System.out.println("[SYSTEM] Card " + C.getCardName() + " with SetID " + C.getCardID() + " moved from " + con1Name + " to " + con2Name);
+                            programData.getCache().swapCard(programData.getCurrentProfile().determineContainer(con1Name),programData.getCurrentProfile().determineContainer(con2Name), C);
+                            return true;
+                        }
+                        else {
+                            programData.getUserInterface().getBasicWindows().alert("ERROR", "014: Deck already contains max copies of that card");
+                            System.out.println("[ERROR] 014: Deck already contains max copies of that card");
+                            return false;
+                        }
+                    }
+                }
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "011: Card not found in container");
+                System.out.println("[ERROR] 011: Card not found in container");
+                return false;
+            }
+            else {
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "010: Container does not exist");
+                System.out.println("[ERROR] 010: Container does not exist");
+                return false;
+            }
+        }
+        /*Otherwise*/
+        else {
+            /*Output error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "002: No active profile selected");
+            System.out.println("[ERROR] 002: No active profile selected");
+            /*Return false*/
+            return false;
+        }
+    }
+    /**
+     * Function definition for removeCard()
+     * <p>
+     *     Checks that profile is active, that the container exists, and the card exists
+     *     and then removes that card from the container.
+     * </p>
+     * @param cName is the card name
+     * @param uName is the container name
+     * @return whether the function was successful
+     */
+    public static boolean removeCard(String cName, String uName, String cID) {
+        /*If profile is active*/
+        if(profileActive()) {
+            if(!checkContainerName(uName)) {
+                for(Card C : programData.getCurrentProfile().determineContainer(uName).getCards()) {
+                    if(C.getCardName().equals(cName) && C.getCardID().equals(cID)) {
+                        programData.getCurrentProfile().determineContainer(uName).removeCard(C);
+                        utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+                        System.out.println("[SYSTEM] Card " + C.getCardName() + " with setID " + C.getCardID() + " removed from " + uName);
+                        programData.getCache().removeCard(programData.getCurrentProfile().determineContainer(uName), C);
+                        return true;
+                    }
+                }
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "011: Card not found in container");
+                System.out.println("[ERROR] 011: Card not found in container");
+                return false;
+            }
+            else {
+                /*Output error*/
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "010: Container does not exist");
+                System.out.println("[ERROR] 010: Container does not exist");
+                /*Return false*/
+                return false;
+            }
+        }
+        /*Otherwise*/
+        else {
+            /*Output error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "002: No active profile selected");
+            System.out.println("[ERROR] 002: No active profile selected");
+            /*Return false*/
+            return false;
+        }
+    }
+
+    /**
+     * Function definition for createSeries()
+     * <p>
+     *      Creates a Series
+     * </p>
+     * @param name is the name of the Container
+     * @return whether the creation was successful
+     */
+    public static boolean createSeries(String name) {
+        /*For all existing containers in profile*/
+        List<String> tmp = utilities.getFileHandler().searchSeriesFolder();
+        for (String aTmp : tmp) {
+            /*Check name against these containers*/
+            System.out.println("[SYSTEM] testing " + name + " against " + aTmp);
+            if (name.equals(aTmp)) {
+                /*Output error*/
+                programData.getUserInterface().getBasicWindows().alert("ERROR", "005: Series already exists");
+                System.out.println("[ERROR] 005: Series already exists");
+                /*Return false*/
+                return false;
+            }
+        }
+        /*Otherwise create a deck*/
+        Series series = new Series(name);
+        /*Output success*/
+        System.out.println("[SYSTEM] Series created successfully");
+        /*Save the profile*/
+        utilities.getFileHandler().saveSeries(series);
+        /*Return true*/
+        return true;
+    }
+    /**
+     * Function definition for deleteSeries()
+     * <p>
+     *      Deletes a Series with a given name.
+     * </p>
+     * @param name the name of the series to be deleted
+     * @return whether deletion was successful or not
+     */
+    public static boolean deleteSeries(String name) {
+        /*Update the user list*/
+        List<String> list = utilities.getFileHandler().searchSeriesFolder();
+        /*For all elements in the list*/
+        for (String aList : list) {
+            /*If name equals the element*/
+            if ((name).equals(aList)) {
+                /*Delete the series*/
+                utilities.getFileHandler().deleteSeries(name);
+                /*Output success*/
+                System.out.println("[SYSTEM] Series deleted successfully");
+                /*Return true*/
+                return true;
+            }
+        }
+        /*Output error*/
+        programData.getUserInterface().getBasicWindows().alert("ERROR", "006: Series not found");
+        System.out.println("[ERROR] 006: Series not found");
+        /*Return false*/
+        return false;
+    }
 
 
-
-
-
-
+    /**
+     * Function definition for searchCard()
+     * <p>
+     *     Searches for a card in all containers
+     * </p>
+     * @param name is the name of the card
+     * @return an ArrayList of cards and locations
+     */
+    public static ArrayList<SearchResult> searchCard(String name) {
+        /*Check the name is not null or whitespace*/
+        if(name.equals("") || name == null) {
+            /*Output an error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
+            System.out.println("[ERROR] 013: Invalid input from user");
+            /*Return null*/
+            return null;
+        }
+        /*Make an ArrayList*/
+        ArrayList<SearchResult> cardList = new ArrayList<>();
+        /*For all containers*/
+        ArrayList<Album> albums = getUtilities().getFilter().filterAlbums(programData.getCurrentProfile().getUserContainers());
+        ArrayList<Deck> decks = new ArrayList<>();
+        if(programData.getCurrentProfile().getProfileSettings().isIncludeDecks()) {
+            decks = getUtilities().getFilter().filterDecks(programData.getCurrentProfile().getUserContainers());
+        }
+        for(Album a : albums) {
+            for(Card b : a.getCards()) {
+                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
+                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
+                }
+            }
+        }
+        for(Deck a : decks) {
+            for(Card b : a.getOnlyDeck()) {
+                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
+                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
+                }
+            }
+            for(Card b : a.getExtraDeck()) {
+                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
+                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
+                }
+            }
+        }
+        /*Return the cardList*/
+        return cardList;
+    }
+    /**
+     * Function definition for searchSystem()
+     * <p>
+     *     Searches the system for a card
+     * </p>
+     * @param name is the card to seach for
+     * @return the results
+     */
+    public static ArrayList<SearchResult> searchSystem(String name) {
+        /*Check the name is not null or whitespace*/
+        if(name.equals("") || name == null) {
+            /*Output an error*/
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
+            System.out.println("[ERROR] 013: Invalid input from user");
+            /*Return null*/
+            return null;
+        }
+        /*Make an ArrayList*/
+        ArrayList<SearchResult> cardList = new ArrayList<>();
+        /*For all containers*/
+        for (Card aTmpII : programData.getCache().getSystemCards()) {
+            if (name.equals(aTmpII.getCardName()) || aTmpII.getCardName().contains(name)) {
+                SearchResult tmpIII = new SearchResult(aTmpII.getCardName(), "System" , aTmpII.getCardID());
+                cardList.add(tmpIII);
+            }
+        }
+        /*If card is present*/
+        /*Return the cardList*/
+        return cardList;
+    }
+    
+    
+    
+    
     /**
      * Function definition for profileActive()
      * <p>
@@ -159,14 +584,20 @@ public class ProgramFunctions {
             return false;
         }
     }
-
     public static AppData getProgramData() {
         return programData;
     }
     public static Utils getUtilities() {
         return utilities;
     }
-
+    public static Card findCard(String name) {
+        for(Card C : programData.getCache().getSystemCards()) {
+            if(C.getCardName().equals(name)) {
+                return C;
+            }
+        }
+        return null;
+    }
 
     /**
      * Function definition for makeActive()
@@ -209,6 +640,53 @@ public class ProgramFunctions {
             System.out.println("[ERROR] 004: Profile of that name does not exist");
             /*Return true*/
             return false;
+        }
+    }
+    /**
+     * Function definition for renameContaienr()
+     * <p>
+     *     Handles the renaming of a container, checking that the new name is not
+     *     already in use by another container
+     * </p>
+     * @param containerName is the current name of the contaienr
+     * @param newName is the new name for the container
+     */
+    public static void renameContainer(String containerName, String newName) {
+        if(checkContainerName(newName)) {
+            /*Update the container name*/
+            programData.getCurrentProfile().determineContainer(containerName).setContainerName(newName);
+            /*Save the profile*/
+            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+            /*Output success*/
+            System.out.println("[SYSTEM] Name changed successfully");
+            /*Update the Scene*/
+            programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
+        }
+    }
+    /**
+     * Function definition for renameUser()
+     * <P>
+     *     Handles the renaming of the current user, checking whether the name is
+     *     already in use
+     * </P>
+     * @param newName is the new name for the profile
+     */
+    public static void renameUser(String newName) {
+        if(checkUser(newName)) {
+            /*Is the name of the current profile*/
+            String tmp = programData.getCurrentProfile().getProfileName();
+            /*Attempts to change the name of the profile*/
+            programData.getCurrentProfile().setProfileName(newName);
+            /*Saves the new profile*/
+            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
+            /*Deletes the old user*/
+            deleteProfile(tmp);
+            /*Update the title of the main window*/
+            programData.getUserInterface().updateTitle();
+        }
+        else {
+            System.out.println("[ERROR] 001a: Profile already exists");
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "Profile with that name already exists");
         }
     }
 

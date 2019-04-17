@@ -51,11 +51,11 @@ public class SetCollectedController implements Initializable {
             view.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    ProgramFunctions.getCardForView(cell.getItem(), true);
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
                 }
             });
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem())));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem()))));
             MenuItem cancel = new MenuItem("Cancel");
             contextMenu.getItems().addAll(view, findAll, cancel);
             /*Bind the itemProperty to the textProperty*/
@@ -83,7 +83,7 @@ public class SetCollectedController implements Initializable {
             view.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    ProgramFunctions.getCardForView(cell.getItem(), false);
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
                 }
             });
             MenuItem findOnline = new MenuItem("Find Online...");
@@ -155,6 +155,6 @@ public class SetCollectedController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }

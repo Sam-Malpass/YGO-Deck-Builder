@@ -43,7 +43,7 @@ public class SearchResultController implements Initializable {
             }
         });
 
-        ArrayList<String> resultsOutput = ProgramFunctions.resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().resultsToString(results);
         ObservableList<String> containers = list.getItems();
         for(String C : resultsOutput) {
             containers.add(C);
@@ -57,7 +57,7 @@ public class SearchResultController implements Initializable {
             /*Make a MenuItem*/
             MenuItem view = new MenuItem("View...");
             /*Set an action*/
-            view.setOnAction(event -> ProgramFunctions.getCardForView(results.get(cell.getIndex()).getCardName(), true));
+            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
             /*Make a MenuItem*/
             MenuItem move = new MenuItem("Move...");
             /*Set an action*/

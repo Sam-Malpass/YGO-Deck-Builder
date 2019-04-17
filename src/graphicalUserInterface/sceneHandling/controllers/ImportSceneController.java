@@ -43,7 +43,7 @@ public class ImportSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
         String name = "test";
-        ArrayList<String> tst = ProgramFunctions.resultsToString(ProgramFunctions.processImportResults(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAvailable()));
+        ArrayList<String> tst = ProgramFunctions.getUtilities().getOutputter().resultsToString(ProgramFunctions.processImportResults(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAvailable()));
         ObservableList<String> owned = using.getItems();
         for(String C : tst) {
             owned.add(C);
@@ -118,6 +118,6 @@ public class ImportSceneController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }
