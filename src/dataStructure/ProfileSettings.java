@@ -4,7 +4,8 @@
  * @since 0.0.0.d
  */
 package dataStructure;
-public class ProfileSettings {
+import java.io.Serializable;
+public class ProfileSettings implements Serializable {
     /**
      * serialVersionUID allows the class to implement serialised
      */
