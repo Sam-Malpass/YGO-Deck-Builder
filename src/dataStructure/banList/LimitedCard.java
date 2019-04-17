@@ -4,7 +4,8 @@
  * @since 0.0.0.d
  */
 package dataStructure.banList;
-public class LimitedCard {
+import java.io.Serializable;
+public class LimitedCard implements Serializable {
     /**
      * cardName holds the name of a given card
      */
