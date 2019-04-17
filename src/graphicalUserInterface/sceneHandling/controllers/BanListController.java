@@ -39,7 +39,7 @@ public class BanListController implements Initializable {
                     if (item == null) {
                         return;
                     }
-                    ProgramFunctions.getTerminal().println(item.toString());
+                    System.out.println(item.toString());
                     if (item.contains("SEMI-LIMITED")) {
                         setStyle("-fx-background-color: darkseagreen;");
                     } else if (item.contains("LIMITED")) {

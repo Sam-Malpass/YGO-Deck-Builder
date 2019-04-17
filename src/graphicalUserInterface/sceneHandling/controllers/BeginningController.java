@@ -241,7 +241,7 @@ public class BeginningController implements Initializable {
                     /*If the TextFile contents are not null*/
                     if (searchCard.getText() != null) {
                         if (searchCard.getText().toLowerCase().contains("command:")) {
-                            ProgramFunctions.getTerminal().getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
+                            System.out.getCommandInterpreter().interpret(searchCard.getText().toLowerCase().replace("command:", ""));
                             searchCard.clear();
                             return;
                         }
@@ -254,7 +254,7 @@ public class BeginningController implements Initializable {
                     }
                     /*Output an error*/
                     ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
-                    ProgramFunctions.getTerminal().println("[ERROR] 013: Invalid input from user");
+                    System.out.println("[ERROR] 013: Invalid input from user");
                     /*Break*/
                     break;
                 /*Default*/
