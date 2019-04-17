@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.sceneHandling.controllers.ChecklistController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem onAction="#newProfile" fx:id="newProf" mnemonicParsing="false" text="New Profile" />
+                  <MenuItem onAction="#loadProfile" fx:id="loadProf" mnemonicParsing="false" text="Load Profile" />
+                  <MenuItem onAction="#settings" fx:id="settings" mnemonicParsing="false" text="Settings" />
+                  <MenuItem onAction="#exit" fx:id="exit" mnemonicParsing="false" text="Exit..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem onAction="#about" fx:id="about" mnemonicParsing="false" text="About..." />
+                  <MenuItem onAction="#check" fx:id="checkForUpdates" mnemonicParsing="false" text="Check for Updates..." />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.8900804289544236" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text layoutX="264.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checklist" AnchorPane.bottomAnchor="291.482421875" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="263.5380859375" AnchorPane.topAnchor="13.576171875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="checkList" layoutX="14.0" layoutY="41.0" prefHeight="274.0" prefWidth="571.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="41.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button onAction="#back" fx:id="back" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="571.0" text="Back" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="7.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
