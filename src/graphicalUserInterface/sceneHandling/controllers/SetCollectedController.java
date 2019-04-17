@@ -35,11 +35,11 @@ public class SetCollectedController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<String> checkers = collected.getItems();
-        for(String C : ProgramFunctions.getUtilities().getOutputter().outputCardList(ProgramFunctions.getGUI().getData().getCollected())) {
+        for(String C : ProgramFunctions.getUtilities().getOutputter().outputCardList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCollected())) {
             checkers.add(C);
         }
         ObservableList<String> checkers2 = uncollected.getItems();
-        for(String C : ProgramFunctions.getUtilities().getOutputter().outputCardList(ProgramFunctions.getGUI().getData().getUncollected())) {
+        for(String C : ProgramFunctions.getUtilities().getOutputter().outputCardList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getUncollected())) {
             checkers2.add(C);
         }
         collected.setCellFactory(lv -> {
@@ -55,7 +55,7 @@ public class SetCollectedController implements Initializable {
                 }
             });
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.showResults(ProgramFunctions.searchCard(cell.getItem())));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem())));
             MenuItem cancel = new MenuItem("Cancel");
             contextMenu.getItems().addAll(view, findAll, cancel);
             /*Bind the itemProperty to the textProperty*/
@@ -87,7 +87,7 @@ public class SetCollectedController implements Initializable {
                 }
             });
             MenuItem findOnline = new MenuItem("Find Online...");
-            findOnline.setOnAction(event -> ProgramFunctions.findOnline(cell.getItem(), ProgramFunctions.getGUI().getData().getCollectedSetID()));
+            findOnline.setOnAction(event -> ProgramFunctions.findOnline(cell.getItem(), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCollectedSetID()));
             MenuItem cancel = new MenuItem("Cancel");
             contextMenu.getItems().addAll(view, findOnline, cancel);
             /*Bind the itemProperty to the textProperty*/
@@ -115,7 +115,7 @@ public class SetCollectedController implements Initializable {
      */
     @FXML private void back() {
         ArrayList<String> tst = new ArrayList<>();
-        ProgramFunctions.updateGUI(ProgramFunctions.getChecklistScene(tst));
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getChecklistScene(tst));
     }
     /**
      * COLLECTION FOR MENUBAR
@@ -123,16 +123,16 @@ public class SetCollectedController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -140,14 +140,14 @@ public class SetCollectedController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -155,6 +155,6 @@ public class SetCollectedController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
     }
 }

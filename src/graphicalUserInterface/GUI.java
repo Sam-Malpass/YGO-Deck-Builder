@@ -5,6 +5,7 @@
  */
 package graphicalUserInterface;
 import dataStructure.cardHierarchy.Card;
+import graphicalUserInterface.basicWindows.CardViewer;
 import graphicalUserInterface.basicWindows.Windows;
 import graphicalUserInterface.sceneHandling.SceneData;
 import graphicalUserInterface.sceneHandling.Scenes;
@@ -46,7 +47,7 @@ public class GUI {
      * </p>
      */
     public GUI() {
-        basicWindows = new BasicWindows();
+        basicWindows = new Windows();
         scenes = new Scenes();
     }
     /**
@@ -232,14 +233,14 @@ public class GUI {
      */
     public void updateTitle() {
         /*If there is no profile active*/
-        if (ProgramFunctions.getCurrentProfile() == null) {
+        if (ProgramFunctions.getProgramData().getCurrentProfile() == null) {
             /*Set the title*/
             mainStage.setTitle("Yu-Gi-Oh! Deck Builder : ");
             /*Return*/
             return;
         }
         /*Set the title*/
-        mainStage.setTitle("Yu-Gi-Oh! Deck Builder : " + ProgramFunctions.getCurrentProfile().getProfileName());
+        mainStage.setTitle("Yu-Gi-Oh! Deck Builder : " + ProgramFunctions.getProgramData().getCurrentProfile().getProfileName());
     }
     /**
      * Function definition for updateScene()
@@ -386,7 +387,7 @@ public class GUI {
      * </p>
      * @return the scene dataCache
      */
-    private SceneData accessSceneCache() {
+    public SceneData accessSceneCache() {
         return scenes.getDataCache();
     }
     /**
@@ -403,7 +404,7 @@ public class GUI {
         /*Set the title*/
         mainStage.setTitle("Yu-Gi-Oh! Deck Builder :");
         /*Add an icon*/
-        mainStage.getIcons().add(ProgramFunctions.getIcon());
+        mainStage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Add the Scene to the mainStage*/
         mainStage.setScene(getDefaultScene());
         /*Make mainStage impossible to resize*/

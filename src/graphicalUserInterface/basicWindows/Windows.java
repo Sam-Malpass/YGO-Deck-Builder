@@ -17,6 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import programFunctions.ProgramFunctions;
 import programFunctions.searching.SearchResult;
 
 import java.io.File;
@@ -124,7 +125,7 @@ public class Windows {
         /*Set the content of the Alert to contentStr*/
         alert.setContentText(contentStr);
         Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-        stage.getIcons().add(ProgramFunctions.getIcon());
+        stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Show the Alert*/
         stage.showAndWait();
     }
@@ -147,7 +148,7 @@ public class Windows {
         /*Setup the user input*/
         String userInput = "";
         Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-        stage.getIcons().add(ProgramFunctions.getIcon());
+        stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Create a result*/
         Optional<String> result = dialog.showAndWait();
         /*If the result is there*/
@@ -175,7 +176,7 @@ public class Windows {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.setTitle(titleStr);
-            stage.getIcons().add(ProgramFunctions.getIcon());
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
             stage.showAndWait();
         }
         catch (Exception e) {
@@ -201,7 +202,7 @@ public class Windows {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.setTitle(titleStr);
-            stage.getIcons().add(ProgramFunctions.getIcon());
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
             stage.showAndWait();
         }
         catch (Exception e) {
@@ -228,7 +229,7 @@ public class Windows {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.setTitle(title);
-            stage.getIcons().add(ProgramFunctions.getIcon());
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
             stage.showAndWait();
         }
         catch (Exception e) {
@@ -242,7 +243,7 @@ public class Windows {
      * </p>
      */
     public void searchResult() {
-        ArrayList<SearchResult> results = ProgramFunctions.getGUI().getResults();
+        ArrayList<SearchResult> results = ProgramFunctions.getProgramData().getUserInterface().getResults();
         /*If results are null*/
         if (results == null) {
             /*Return*/
@@ -262,7 +263,7 @@ public class Windows {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.setTitle("Search Results");
-            stage.getIcons().add(ProgramFunctions.getIcon());
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
             stage.showAndWait();
         }
         catch (Exception e) {
@@ -295,7 +296,7 @@ public class Windows {
         /*Set the title*/
         searchResult.setTitle("Search Results");
         /*Set the icon*/
-        searchResult.getIcons().add(ProgramFunctions.getIcon());
+        searchResult.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Create a StackPane*/
         StackPane stackPane = new StackPane();
         /*Create a GridPane*/
@@ -399,7 +400,7 @@ public class Windows {
         /*Set the title*/
         searchResult.setTitle("Search Results");
         /*Set the icon*/
-        searchResult.getIcons().add(ProgramFunctions.getIcon());
+        searchResult.getIcons().add(ProgramFunctions.getProgramData().getIcon());
         /*Create a StackPane*/
         StackPane stackPane = new StackPane();
         /*Create a GridPane*/
@@ -430,7 +431,7 @@ public class Windows {
             /*Set an action*/
             move.setOnAction(event -> {
                 String item = cell.getItem();
-                card = ProgramFunctions.loadSeries(item.substring(item.indexOf("(")+1, item.indexOf(")"))).getCard(item.substring(0, item.indexOf(" (")));
+                card = ProgramFunctions.getUtilities().getFileHandler().loadSeries(item.substring(item.indexOf("(")+1, item.indexOf(")"))).findCard(item.substring(0, item.indexOf(" (")));
                 searchResult.close();
             });
             /*Make a MenuItem*/

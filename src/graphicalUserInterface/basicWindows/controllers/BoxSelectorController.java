@@ -38,7 +38,7 @@ public class BoxSelectorController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<String> containers = comboBox.getItems();
-        for(String C : ProgramFunctions.getGUI().getBasicWindows().getItems()) {
+        for(String C : ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().getItems()) {
             containers.add(C);
         }
         cancel.setOnAction(new EventHandler<ActionEvent>() {
@@ -52,16 +52,16 @@ public class BoxSelectorController implements Initializable {
             /*Attempt*/
             try {
                 /*Get the result*/
-                ProgramFunctions.getGUI().getBasicWindows().setsResult(comboBox.getValue().toString());
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().setsResult(comboBox.getValue().toString());
                 /*Close the window*/
                 Stage stage = (Stage) cancel.getScene().getWindow();
                 stage.close();
             }
             /*If failed*/ catch (NullPointerException e1) {
                 /*Make result empty*/
-                ProgramFunctions.getGUI().getBasicWindows().setsResult("");
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().setsResult("");
                 /*Make an alert*/
-                ProgramFunctions.showAlert("Error 007", "Field filled incorrectly");
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Error 007", "Field filled incorrectly");
             }
         });
     }

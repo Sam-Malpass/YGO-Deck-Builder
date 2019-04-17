@@ -34,7 +34,7 @@ public class SearchResultController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ArrayList<SearchResult> results = ProgramFunctions.getGUI().getResults();
+        ArrayList<SearchResult> results = ProgramFunctions.getProgramData().getUserInterface().getResults();
         close.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -63,7 +63,7 @@ public class SearchResultController implements Initializable {
             /*Set an action*/
             move.setOnAction(event -> {
                 /*Get a destination container name*/
-                String test = ProgramFunctions.showSelector(ProgramFunctions.getCurrentProfile().listContainers(), "Select Destination...");
+                String test = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getProgramData().getCurrentProfile().listContainers(), "Select Destination...");
                 /*Move the card between the containers*/
                 if (ProgramFunctions.moveCard(results.get(cell.getIndex()).getContainerName(), test, results.get(cell.getIndex()).getCardName(), results.get(cell.getIndex()).getSetID())) {
                     results.get(cell.getIndex()).setContainerName(test);

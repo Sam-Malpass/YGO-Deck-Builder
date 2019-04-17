@@ -45,7 +45,7 @@ public class AlbumBuilderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         thing = url;
         test = resourceBundle;
-        album = ProgramFunctions.getGUI().getData().getAlbum();
+        album = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAlbum();
         getOverviewData();
         ObservableList<String> cards = cardList.getItems();
         for(String C : ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards())) {
@@ -59,7 +59,7 @@ public class AlbumBuilderController implements Initializable {
             MenuItem view = new MenuItem("View...");
             view.setOnAction(event -> ProgramFunctions.getCardForView(cell.getItem(), true));
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.showResults(ProgramFunctions.searchCard(cell.getItem())));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem())));
             MenuItem cancel = new MenuItem("Cancel");
             cancel.setOnAction(event -> {
 
@@ -109,7 +109,7 @@ public class AlbumBuilderController implements Initializable {
      */
     @FXML
     private void addCard() {
-        Card X = ProgramFunctions.showSystemResults(ProgramFunctions.searchSystem(ProgramFunctions.showInput("Search for...", "Search:")));
+        Card X = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().systemResults(ProgramFunctions.searchSystem(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for...", "Search:")));
         if(X == null) {
         }
         else {
@@ -125,9 +125,9 @@ public class AlbumBuilderController implements Initializable {
      */
     @FXML
     private void cancel() {
-        if (ProgramFunctions.getGUI().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
-            ProgramFunctions.getGUI().getData().setAlbum(null);
-            ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+        if (ProgramFunctions.getProgramData().getUserInterface().yesNoWindow("Are You Sure?", "Leave without updating changes?")) {
+            ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setAlbum(null);
+            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
         } else {
             return;
         }
@@ -140,10 +140,10 @@ public class AlbumBuilderController implements Initializable {
      */
     @FXML
     private void save() {
-        ProgramFunctions.getCurrentProfile().removeContainer(ProgramFunctions.getCurrentProfile().determineContainer(album.getContainerName()));
-        ProgramFunctions.getCurrentProfile().addContainer(album);
-        ProgramFunctions.saveUser(ProgramFunctions.getCurrentProfile());
-        ProgramFunctions.updateGUI(ProgramFunctions.getBeginningScene());
+        ProgramFunctions.getProgramData().getCurrentProfile().removeContainer(ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(album.getContainerName()));
+        ProgramFunctions.getProgramData().getCurrentProfile().addContainer(album);
+        ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     /**
      * COLLECTION FOR MENUBAR
@@ -151,16 +151,16 @@ public class AlbumBuilderController implements Initializable {
     @FXML
     private void newProfile(ActionEvent event) {
         /*Make a profile using user input*/
-        ProgramFunctions.createProfile(ProgramFunctions.showInput("Create Profile...", "Input Name:"));
+        ProgramFunctions.createProfile(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Create Profile...", "Input Name:"));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void loadProfile(ActionEvent event) {
         /*Load a profile*/
-        ProgramFunctions.makeActive(ProgramFunctions.showSelector(ProgramFunctions.searchUserFolder(), "Select Profile..."));
+        ProgramFunctions.makeActive(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getFileHandler().searchUserFolder(), "Select Profile..."));
         /*Update title*/
-        ProgramFunctions.updateTitle();
+        ProgramFunctions.getProgramData().getUserInterface().updateTitle();
     }
     @FXML
     private void exit(ActionEvent event) {
@@ -168,14 +168,14 @@ public class AlbumBuilderController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.showAlert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
     }
     @FXML
     private void check(ActionEvent event) {
         if (ProgramFunctions.checkVersion()) {
-            ProgramFunctions.showAlert("Check for updates...", "No Update Available.");
+            ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Check for updates...", "No Update Available.");
         } else {
-            if (ProgramFunctions.showYesNo("Update available", "Would you like to update now?")) {
+            if (ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().yesNo("Update available", "Would you like to update now?")) {
                 /*Download the update*/
             } else {
             }
@@ -183,6 +183,6 @@ public class AlbumBuilderController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.updateGUI(ProgramFunctions.getSettingsScene());
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
     }
 }
