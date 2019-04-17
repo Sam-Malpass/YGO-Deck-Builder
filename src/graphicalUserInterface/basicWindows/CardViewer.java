@@ -1,3 +1,8 @@
+/**
+ * @author Sam Malpass
+ * @version 0.0.0.d
+ * @since 0.0.0.d
+ */
 package graphicalUserInterface.basicWindows;
 import dataStructure.cardHierarchy.*;
 import javafx.geometry.Insets;
