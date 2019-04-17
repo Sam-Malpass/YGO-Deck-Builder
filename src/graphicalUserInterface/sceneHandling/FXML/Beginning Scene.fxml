@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="borderPaneMain" prefHeight="395.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.controllersFXML.Controllers.BeginningController">
+<BorderPane fx:id="borderPaneMain" prefHeight="395.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.sceneHandling.controllers.BeginningController">
    <center>
       <AnchorPane prefHeight="385.0" prefWidth="610.0" BorderPane.alignment="CENTER">
          <children>
