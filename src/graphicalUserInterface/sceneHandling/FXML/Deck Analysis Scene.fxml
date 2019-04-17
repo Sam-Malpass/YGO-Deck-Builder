@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.controllersFXML.Controllers.DeckAnalysisController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="newProf" mnemonicParsing="false" onAction="#newProfile" text="New Profile" />
+                  <MenuItem fx:id="loadProf" mnemonicParsing="false" onAction="#loadProfile" text="Load Profile" />
+                  <MenuItem fx:id="settings" mnemonicParsing="false" onAction="#settings" text="Settings" />
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exit" text="Exit..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About..." />
+                  <MenuItem fx:id="checkForUpdates" mnemonicParsing="false" onAction="#check" text="Check for Updates..." />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.8605898123324397" orientation="VERTICAL" prefHeight="375.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="318.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Overview">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="289.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <PieChart fx:id="overviewChart" layoutX="14.0" layoutY="14.0" prefHeight="261.0" prefWidth="265.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="382.0">
+                                             <children>
+                                                <TextArea fx:id="overviewText" layoutX="14.0" layoutY="58.0" prefHeight="216.0" prefWidth="267.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0" />
+                                                <HBox alignment="TOP_CENTER" layoutX="95.0" layoutY="14.0" prefHeight="31.0" prefWidth="105.0" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="14.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="99.26953125">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Spell Summary">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="289.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <PieChart fx:id="spellChart" layoutX="14.0" layoutY="14.0" prefHeight="259.0" prefWidth="265.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="382.0">
+                                             <children>
+                                                <TextArea fx:id="spellText" layoutX="14.0" layoutY="58.0" prefHeight="216.0" prefWidth="267.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0" />
+                                                <HBox alignment="TOP_CENTER" layoutX="95.0" layoutY="14.0" prefHeight="31.0" prefWidth="105.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="14.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="99.26953125">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Trap Summary">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="289.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <PieChart fx:id="trapChart" layoutX="14.0" layoutY="14.0" prefHeight="262.0" prefWidth="265.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="382.0">
+                                             <children>
+                                                <TextArea fx:id="trapText" layoutX="14.0" layoutY="58.0" prefHeight="216.0" prefWidth="267.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0" />
+                                                <HBox alignment="TOP_CENTER" layoutX="95.0" layoutY="14.0" prefHeight="31.0" prefWidth="105.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="14.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="99.26953125">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Monster Summary">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="289.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TabPane prefHeight="287.0" prefWidth="295.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <tabs>
+                                                    <Tab text="CardType">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <PieChart fx:id="monsterChart1" prefHeight="262.0" prefWidth="265.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                      <Tab text="Attribute">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <PieChart fx:id="monsterChart2" layoutX="11.0" layoutY="10.0" prefHeight="236.0" prefWidth="270.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                    <Tab text="Monster Type">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <PieChart fx:id="monsterChart3" layoutX="21.0" layoutY="10.0" prefHeight="238.0" prefWidth="254.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="382.0">
+                                             <children>
+                                                <TextArea fx:id="monsterText" layoutX="14.0" layoutY="58.0" prefHeight="216.0" prefWidth="267.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0" />
+                                                <HBox alignment="TOP_CENTER" layoutX="95.0" layoutY="14.0" prefHeight="31.0" prefWidth="105.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="14.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Information" wrappingWidth="99.26953125">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Deck Analytics">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.4983221476510067" layoutX="224.0" layoutY="94.0" prefHeight="289.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <VBox alignment="CENTER" layoutX="97.0" layoutY="44.0" prefHeight="287.0" prefWidth="294.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test Hand">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextArea fx:id="testHandText" prefHeight="112.0" prefWidth="294.0" />
+                                                      <Button fx:id="redraw" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Redraw" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <VBox alignment="CENTER" layoutX="98.0" layoutY="28.0" prefHeight="287.0" prefWidth="296.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Draw Probabilities">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextArea fx:id="probabilities" prefHeight="200.0" prefWidth="200.0" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="back" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="570.0" text="Back" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>

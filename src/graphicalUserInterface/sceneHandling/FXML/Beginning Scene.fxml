@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPaneMain" prefHeight="395.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphicalUserInterface.controllersFXML.Controllers.BeginningController">
+   <center>
+      <AnchorPane prefHeight="385.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.48848684210526316" prefHeight="175.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="372.0" prefWidth="289.0">
+                     <children>
+                        <TabPane fx:id="tabPane" prefHeight="173.0" prefWidth="294.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <tabs>
+                              <Tab fx:id="containers" text="Containers">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="containerList" layoutX="15.0" layoutY="15.0" prefHeight="320.0" prefWidth="268.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="15.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="cards" text="Cards">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="cardList" layoutX="14.0" layoutY="42.0" prefHeight="95.0" prefWidth="269.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="42.0" />
+                                          <TextField fx:id="searchCard" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="132.0" AnchorPane.leftAnchor="14.0" />
+                                          <Button onAction="#search" fx:id="searchButton" layoutX="149.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Search" />
+                                          <ChoiceBox fx:id="sortBox" layoutX="203.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="80.0" AnchorPane.rightAnchor="11.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="372.0" prefWidth="223.0">
+                     <children>
+                        <BorderPane fx:id="borderPane2" prefHeight="368.0" prefWidth="308.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <HBox fx:id="hBoxBottom" alignment="BASELINE_CENTER" prefHeight="26.0" prefWidth="293.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button onAction="#checklistButton" fx:id="checklist" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Checklist" />
+                                    <Button onAction="#profileSettings" fx:id="profSettings" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Profile Settings" />
+                                    <Button onAction="#banlistButton" fx:id="banList" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Ban List" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                           <center>
+                              <VBox fx:id="vBoxCentre" alignment="CENTER" prefHeight="286.0" prefWidth="284.0" spacing="18.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button onAction="#createDeck" fx:id="createDeck" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Create Deck" />
+                                    <Button onAction="#importButton" fx:id="importDeck" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Import Deck" />
+                                    <Button onAction="#exportButton" fx:id="exportDeck" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Export Deck" />
+                                    <Button onAction="#createAlbum" fx:id="createAlbum" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Create Album" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                           <top>
+                              <VBox fx:id="vBoxTop" prefHeight="152.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox fx:id="hBoxTop" alignment="CENTER" prefHeight="30.0" prefWidth="143.0">
+                                       <children>
+                                          <Text fx:id="profDetailsLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Details">
+                                             <font>
+                                                <Font name="Calibri Light Italic" size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <TextArea fx:id="profDetailsBox" prefHeight="114.0" prefWidth="273.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar fx:id="menuBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem onAction="#newProfile" fx:id="menuNewProf" mnemonicParsing="false" text="New Profile" />
+                  <MenuItem onAction="#loadProfile" fx:id="menuLoadProf" mnemonicParsing="false" text="Load Profile" />
+                  <MenuItem onAction="#settings" fx:id="menuSettings" mnemonicParsing="false" text="Settings" />
+                  <MenuItem onAction="#exit" fx:id="menuExit" mnemonicParsing="false" text="Exit..." />
+               </items>
+            </Menu>
+            <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem onAction="#about" fx:id="menuAbout" mnemonicParsing="false" text="About..." />
+                  <MenuItem onAction="#check" fx:id="menuCFU" mnemonicParsing="false" text="Check for Updates..." />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
