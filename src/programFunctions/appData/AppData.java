@@ -5,6 +5,7 @@
  */
 package programFunctions.appData;
 import dataStructure.UserProfile;
+import graphicalUserInterface.GUI;
 import javafx.scene.image.Image;
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,7 +21,7 @@ public class AppData {
     /**
      * userInterface holds the object for the UI
      */
-    //private GUI userInterface;
+    private GUI userInterface;
     /**
      * currentProfile holds the active user profile
      */
@@ -32,7 +33,7 @@ public class AppData {
     /**
      * cache holds misc data that is useful for the program
      */
-    //private Cache cache;
+    private Cache cache;
     /**
      * globalSettings holds the global settings
      */
