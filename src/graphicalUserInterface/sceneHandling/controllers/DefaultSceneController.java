@@ -4,7 +4,6 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
-import dataStructure.containerHierarchy.Series;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
