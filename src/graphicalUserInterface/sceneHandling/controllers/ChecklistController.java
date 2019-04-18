@@ -45,8 +45,8 @@ public class ChecklistController implements Initializable {
                 @Override
                 public void handle(ActionEvent event) {
                     String name = cell.getItem().substring(0, cell.getItem().indexOf(" "));
-                    ArrayList<Card> tmpI = ProgramFunctions.checklistCollected(name);
-                    ArrayList<Card> tmpII = ProgramFunctions.checklistUncollected(tmpI, name);
+                    ArrayList<Card> tmpI = ProgramFunctions.getUtilities().getChecker().checklistCollected(name);
+                    ArrayList<Card> tmpII = ProgramFunctions.getUtilities().getChecker().checklistUncollected(tmpI, name);
                     ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCollected(tmpI);
                     ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setUncollected(tmpII);
                     ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCollectedSetID(name);
