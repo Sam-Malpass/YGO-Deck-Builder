@@ -52,7 +52,7 @@ public class Scenes {
         double width = scene.getWidth();
         double height = scene.getHeight();
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Beginning Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Beginning Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -72,7 +72,7 @@ public class Scenes {
         double width = scene.getWidth();
         double height = scene.getHeight();
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Import Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Import Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -92,7 +92,7 @@ public class Scenes {
         dataCache.setChecklist(ProgramFunctions.getUtilities().getChecker().checklistChecker());
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Checklist Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Checklist Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -111,7 +111,7 @@ public class Scenes {
         dataCache.setBanList(ProgramFunctions.getUtilities().getOutputter().outputBanList());
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Ban List Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Ban List Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -130,7 +130,7 @@ public class Scenes {
         dataCache.setDeck(BeginningController.deck);
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Deck Analysis Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Deck Analysis Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -152,7 +152,7 @@ public class Scenes {
         }
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Profile Settings.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Profile Settings.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -171,7 +171,7 @@ public class Scenes {
     public Scene defaultScene() {
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Default Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Default Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -190,7 +190,7 @@ public class Scenes {
     public Scene deckBuidler() {
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Deck Building Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Deck Building Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -209,7 +209,7 @@ public class Scenes {
         dataCache.setAlbum(BeginningController.album);
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Album Builder Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Album Builder Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -228,7 +228,7 @@ public class Scenes {
         dataCache.setAlbum(BeginningController.album);
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Album Analysis Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Album Analysis Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -247,7 +247,7 @@ public class Scenes {
     public Scene viewSetCollected() {
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Set Collected Scene.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Set Collected Scene.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
@@ -265,7 +265,7 @@ public class Scenes {
     public Scene settings() {
         scene = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Global Settings.fxml"));
+            root = FXMLLoader.load(getClass().getResource("FXML/Global Settings.fxml"));
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {

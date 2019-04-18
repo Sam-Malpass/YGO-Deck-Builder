@@ -170,7 +170,7 @@ public class Windows {
      */
     public String passwordInput(String titleStr) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Password Pop-Up.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Password Pop-Up.fxml"));
             Scene scene = new Scene(root, 400, 200);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -196,7 +196,7 @@ public class Windows {
     public String boxSelector(List<String> list, String titleStr) {
         items = list;
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Box Selector Pop-Up.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Box Selector Pop-Up.fxml"));
             Scene scene = new Scene(root, 300, 200);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -223,7 +223,7 @@ public class Windows {
     public boolean yesNo(String title, String label) {
         this.label = label;
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Yes-No Pop-Up.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Yes-No Pop-Up.fxml"));
             Scene scene = new Scene(root, 300, 200);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -256,7 +256,7 @@ public class Windows {
             return;
         }
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Search Result Pop-Up.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Search Result Pop-Up.fxml"));
             Scene scene = new Scene(root, 400, 400);
             Stage stage = new Stage();
             stage.setScene(scene);
