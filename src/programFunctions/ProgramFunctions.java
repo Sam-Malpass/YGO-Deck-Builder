@@ -4,8 +4,6 @@
  * @since 0.0.0.d
  */
 package programFunctions;
-
-import programFunctions.dataImporter.DataImporter;
 import dataStructure.UserProfile;
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Album;
@@ -15,17 +13,16 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import programFunctions.appData.AppData;
 import programFunctions.appData.Cache;
+import programFunctions.dataImporter.DataImporter;
 import programFunctions.searching.Searcher;
 import programFunctions.utilities.Utils;
 import java.util.ArrayList;
 import java.util.List;
-
-public class ProgramFunctions {
+public class ProgramFunctions extends Application {
     private static AppData programData;
     private static Utils utilities;
     private static Searcher query;
     private static DataImporter dataImporter;
-
     /**
      * Function definition for updateUserList()
      * <p>
@@ -108,8 +105,6 @@ public class ProgramFunctions {
         /*Return true*/
         return true;
     }
-
-
     /**
      * Function definition for createProfile()
      * <p>
@@ -329,7 +324,6 @@ public class ProgramFunctions {
             return false;
         }
     }
-
     /**
      * Function definition for moveCard()
      * <p>
@@ -424,7 +418,6 @@ public class ProgramFunctions {
             return false;
         }
     }
-
     /**
      * Function definition for createSeries()
      * <p>
@@ -485,13 +478,6 @@ public class ProgramFunctions {
         /*Return false*/
         return false;
     }
-
-
-
-    
-    
-    
-    
     /**
      * Function definition for profileActive()
      * <p>
@@ -528,7 +514,6 @@ public class ProgramFunctions {
         }
         return null;
     }
-
     /**
      * Function definition for makeActive()
      * <p>
@@ -619,7 +604,12 @@ public class ProgramFunctions {
             programData.getUserInterface().getBasicWindows().alert("ERROR", "Profile with that name already exists");
         }
     }
-
+    /**
+     * Function definition for exit()
+     * <p>
+     *      Closes the application completely.
+     * </p>
+     */
     public static void exit() {
         System.exit(0);
     }
@@ -634,6 +624,7 @@ public class ProgramFunctions {
         /*Creates a new base data scheme for the program*/
         utilities = new Utils();
         programData = new AppData();
+        query = new Searcher();
         dataImporter = new DataImporter();
         /*Setup the UI*/
         programData.getUserInterface().run(S);

@@ -87,7 +87,7 @@ public class SetCollectedController implements Initializable {
                 }
             });
             MenuItem findOnline = new MenuItem("Find Online...");
-            findOnline.setOnAction(event -> ProgramFunctions.findOnline(cell.getItem(), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCollectedSetID()));
+            findOnline.setOnAction(event -> ProgramFunctions.getUtilities().getPricing().findOnline(cell.getItem(), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCollectedSetID()));
             MenuItem cancel = new MenuItem("Cancel");
             contextMenu.getItems().addAll(view, findOnline, cancel);
             /*Bind the itemProperty to the textProperty*/

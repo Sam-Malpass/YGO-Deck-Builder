@@ -108,7 +108,7 @@ public class Scenes {
      * @return the Scene
      */
     public Scene forbiddenScene() {
-        dataCache.setBanList(ProgramFunctions.outputBanList());
+        dataCache.setBanList(ProgramFunctions.getUtilities().getOutputter().outputBanList());
         scene = null;
         try {
             root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Ban List Scene.fxml"));

@@ -4,9 +4,11 @@
  * @since 0.0.0.d
  */
 package programFunctions.utilities;
+import dataStructure.banList.BanList;
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Container;
 import dataStructure.containerHierarchy.Deck;
+import programFunctions.ProgramFunctions;
 import programFunctions.searching.SearchResult;
 
 import java.util.ArrayList;
@@ -61,6 +63,20 @@ public class Outputters {
         }
         /*Return the ArrayList*/
         return resultsOutput;
+    }
+    /**
+     * Function definition for outputBanList()
+     * <p>
+     *     Makes a banList from the loaded BanList, then returns the outputBanList of the
+     *     banList
+     * </p>
+     * @return the outputBanList of the banList
+     */
+    public static ArrayList<String> outputBanList() {
+        /*Make a BanList object*/
+        BanList banList = ProgramFunctions.getUtilities().getFileHandler().loadBanList();
+        /*Return the banList as a string ArrayList*/
+        return banList.outputBanList();
     }
     public ArrayList<String> listDecks(ArrayList<Deck> decks) {
         ArrayList<String> tmp = new ArrayList<>();

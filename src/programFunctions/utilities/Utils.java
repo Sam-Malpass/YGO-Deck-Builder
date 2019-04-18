@@ -38,6 +38,10 @@ public class Utils {
      */
     private Checklist checker;
     /**
+     * pricing holds the OnlinePricing object
+     */
+    private OnlinePricing pricing;
+    /**
      * Constructor with no arguments
      * <p>
      *     Creates the appropriate objects
@@ -50,6 +54,9 @@ public class Utils {
         fileCollector = new FileCollector();
         fileHandler = new FileHandler();
         authenticator = new PasswordAuthenticator();
+        importExport = new ImportExport();
+        checker = new Checklist();
+        pricing = new OnlinePricing();
     }
     /**
      * Function definition for getFilter()
@@ -132,6 +139,16 @@ public class Utils {
         return checker;
     }
     /**
+     * Function definition for getPricing()
+     * <p>
+     *     Returns pricing
+     * </p>
+     * @return pricing
+     */
+    public OnlinePricing getPricing() {
+        return pricing;
+    }
+    /**
      * Function definition for setFilter()
      * <p>
      *     Sets the Filters object to the passed object
@@ -210,5 +227,15 @@ public class Utils {
      */
     public void setChecker(Checklist checker) {
         this.checker = checker;
+    }
+    /**
+     * Function definition for setPricing()
+     * <p>
+     *     Sets the pricing to the passed object
+     * </p>
+     * @param pricing is the new object to use
+     */
+    public void setPricing(OnlinePricing pricing) {
+        this.pricing = pricing;
     }
 }

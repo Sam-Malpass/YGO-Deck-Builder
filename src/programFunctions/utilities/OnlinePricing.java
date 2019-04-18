@@ -13,6 +13,44 @@ import java.util.Arrays;
 import java.util.List;
 public class OnlinePricing {
     /**
+     * Constructor with no arguments
+     * <p>
+     *     Sets up the object
+     * </p>
+     */
+    OnlinePricing() {
+
+    }
+    /**
+     * Function definition for findOnline()
+     * <p>
+     *     Determines what the settings are using and passes to the appropriate
+     *     online price checkers
+     * </p>
+     * @param cardName is the name of the card
+     * @param setID is the setID of the card
+     */
+    public void findOnline(String cardName, String setID) {
+        if(true) {
+            String name;
+            String set;
+            switch(ProgramFunctions.getProgramData().getGlobalSettings().getShoppingSite()) {
+                case 0:
+                    name = cardMarketName(cardName);
+                    set = getSeriesName(setID);
+                    findOnCardMarket(name, set);
+                    break;
+                case 1:
+                    name = ebayName(cardName);
+                    set = getSeriesName(setID);
+                    findOnEbay(name, set);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    /**
      * Function definition for findOnCardMarket()
      * <p>
      *     This function takes a string of a card name and the name of a set and searches it on
@@ -21,7 +59,7 @@ public class OnlinePricing {
      * @param cardName is the name of the card
      * @param setID is the set
      */
-    public void findOnCardMarket(String cardName, String setID) {
+    private void findOnCardMarket(String cardName, String setID) {
         String domain;
         switch(ProgramFunctions.getProgramData().getGlobalSettings().getRegion()) {
             case 0:
@@ -63,7 +101,7 @@ public class OnlinePricing {
      * @param cardName is the name of the card to find
      * @param setID is the set the card belongs to
      */
-    public void findOnEbay(String cardName, String setID) {
+    private void findOnEbay(String cardName, String setID) {
         String newSetID = setID.replaceAll("-", "+");
         String domain;
         switch (ProgramFunctions.getProgramData().getGlobalSettings().getRegion()) {
@@ -107,7 +145,7 @@ public class OnlinePricing {
      * @param cardName is the name of the card to be processed
      * @return the processed name
      */
-    public String cardMarketName(String cardName) {
+    private String cardMarketName(String cardName) {
         String unprocessed[] = cardName.split(" ");
         java.util.List<String> list;
         list = Arrays.asList(unprocessed);
@@ -126,7 +164,7 @@ public class OnlinePricing {
      * @param cardName is the name to be processed
      * @return the processed name
      */
-    public String ebayName(String cardName) {
+    private String ebayName(String cardName) {
         String unprocessed[] = cardName.split(" ");
         List<String> list;
         list = Arrays.asList(unprocessed);
@@ -145,8 +183,25 @@ public class OnlinePricing {
      * @param cardName is the name to be cleaned
      * @return the cleaned string
      */
-    public String cleaner(String cardName) {
+    private String cleaner(String cardName) {
         cardName = cardName.replace(",", "");
         return cardName;
+    }
+    /**
+     * Function definition for getSeriesName()
+     * <p>
+     *     Gets the programFileHandler to look up the full name for a given set
+     *     using the setID
+     * </p>
+     * @param setID is the setID to search
+     * @return the result
+     */
+    private String getSeriesName(String setID) {
+        if(setID.contains("SD")) {
+            return "Structure-Deck-" + ProgramFunctions.getUtilities().getFileHandler().findSetName(setID);
+        }
+        else {
+            return ProgramFunctions.getUtilities().getFileHandler().findSetName(setID);
+        }
     }
 }
