@@ -32,6 +32,8 @@ public class GUI {
      * basicWindows holds a BasicWindows object
      */
     private Windows basicWindows;
+
+    private CardViewer cardViewer;
     /**
      * scenes holds all the functions to make Scenes
      */
@@ -379,6 +381,10 @@ public class GUI {
      */
     public ArrayList<String> deckBuilderResult(ArrayList<SearchResult> results) {
         return basicWindows.searchResultDeckBuilder(results);
+    }
+
+    public void viewCard(Card X) {
+        cardViewer.determineCardType(X);
     }
     /**
      * Function definition for accessSceneCache()

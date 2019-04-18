@@ -3,7 +3,7 @@
  * @version 0.0.0.d
  * @since 0.0.0.d
  */
-package dataImporter;
+package programFunctions.dataImporter;
 import dataStructure.cardHierarchy.*;
 import dataStructure.cardHierarchy.enumerators.*;
 import dataStructure.containerHierarchy.Series;

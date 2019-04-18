@@ -13,6 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import programFunctions.ProgramFunctions;
+import programFunctions.searching.SearchResult;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -43,7 +45,7 @@ public class ImportSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
         String name = "test";
-        ArrayList<String> tst = ProgramFunctions.resultsToString(ProgramFunctions.processImportResults(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAvailable()));
+        ArrayList<String> tst = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(processImportResults(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAvailable()));
         ObservableList<String> owned = using.getItems();
         for(String C : tst) {
             owned.add(C);
@@ -118,6 +120,47 @@ public class ImportSceneController implements Initializable {
     }
     @FXML
     private void settings(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());)
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getSettingsScene());
+    }
+    /**
+     * Function definition for processImportResults()
+     * <p>
+     *     Processes the results of the importDeck search feature, essentially
+     *     preventing double searching cards.
+     * </p>
+     * @param available is the list needed to be checked
+     * @return the final result
+     */
+    private ArrayList<SearchResult> processImportResults(ArrayList<String> available) {
+        /*Make a temp ArrayList*/
+        ArrayList<SearchResult> test = new ArrayList<>();
+        /*Make a temp ArrayList*/
+        ArrayList<String> dummy = new ArrayList<>();
+        /*Make a flag*/
+        boolean flag = false;
+        /*For all elements in the available list*/
+        for (String anAvailable : available) {
+            /*For all elements in the temp ArrayList*/
+            for (String s : dummy) {
+                /*If the element matches*/
+                if (s.equals(anAvailable)) {
+                    /*Set the flag to true*/
+                    flag = true;
+                }
+            }
+            /*If the flag is false*/
+            if (!flag) {
+                /*Create a temp ArrayList*/
+                ArrayList<SearchResult> locationBois = ProgramFunctions.getQuery().searchCard(anAvailable);
+                /*Add to the temp ArrayList*/
+                dummy.add(anAvailable);
+                /*For all elements in the temp ArrayList*/
+                /*Add to the temp ArrayList*/
+                test.addAll(locationBois);
+            }
+            /*Reset the flag*/
+            flag = false;
+        }
+        return test;
     }
 }

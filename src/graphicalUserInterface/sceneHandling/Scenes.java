@@ -149,7 +149,7 @@ public class Scenes {
      */
     public Scene profileSettingScene() {
         if(dataCache.getTmpProfSettings() == null) {
-            dataCache.tmpProfSettings = ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings();
+            dataCache.setTmpProfSettings(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings());
         }
         scene = null;
         try {

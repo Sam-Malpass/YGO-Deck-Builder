@@ -242,8 +242,7 @@ public class Windows {
      * Displays the results of a search query
      * </p>
      */
-    public void searchResult() {
-        ArrayList<SearchResult> results = ProgramFunctions.getProgramData().getUserInterface().getResults();
+    public void searchResult(ArrayList<SearchResult> results) {
         /*If results are null*/
         if (results == null) {
             /*Return*/
@@ -309,7 +308,7 @@ public class Windows {
         gc.setFill(Color.DARKGRAY);
         /*Draw a rectangle*/
         gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
         /*Create a ListView using results*/
         ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
         /*Set the cell factory*/
@@ -321,7 +320,7 @@ public class Windows {
             /*Make a MenuItem*/
             MenuItem view = new MenuItem("View...");
             /*Set an action*/
-            view.setOnAction(event -> ProgramFunctions.getCardForView(results.get(cell.getIndex()).getCardName(), true));
+            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
             /*Make a MenuItem*/
             MenuItem move = new MenuItem("Select...");
             /*Set an action*/
@@ -413,7 +412,7 @@ public class Windows {
         gc.setFill(Color.DARKGRAY);
         /*Draw a rectangle*/
         gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
         /*Create a ListView using results*/
         ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
         /*Set the cell factory*/
@@ -425,7 +424,7 @@ public class Windows {
             /*Make a MenuItem*/
             MenuItem view = new MenuItem("View...");
             /*Set an action*/
-            view.setOnAction(event -> ProgramFunctions.getCardForView(results.get(cell.getIndex()).getCardName(), true));
+            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
             /*Make a MenuItem*/
             MenuItem move = new MenuItem("Select...");
             /*Set an action*/
