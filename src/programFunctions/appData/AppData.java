@@ -46,6 +46,7 @@ public class AppData {
      * Constructor that sets up all objects
      */
     public AppData() {
+        cache = new Cache();
         /*Create a GUI*/
         userInterface = new GUI();
         /*Set the profile to null*/

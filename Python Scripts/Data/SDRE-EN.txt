@@ -1,0 +1,232 @@
+Poseidra, the Atlantean Dragon
+WATER
+Level 7
+Sea Serpent
+Effect
+ATK 2800
+DEF 1600
+You can Tribute 3 Level 3 or lower WATER monsters; Special Summon this card from your hand or Graveyard. When you do: Return all Spell and Trap Cards on the field to the hand, and if you do, if 3 or more cards are returned to the hand by this effect, all monsters your opponent currently controls lose 300 ATK for each.
+Atlantean Dragoons
+WATER
+Level 4
+Sea Serpent
+Effect
+ATK 1800
+DEF 0
+All Level 3 or lower Sea Serpent-Type monsters you control can attack your opponent directly. When this card is sent to the Graveyard to activate a WATER monster's effect: Add 1 Sea Serpent-Type monster from your Deck to your hand, except "Atlantean Dragoons".
+Atlantean Marksman
+WATER
+Level 3
+Sea Serpent
+Effect
+ATK 1400
+DEF 0
+When this card inflicts Battle Damage to your opponent: You can Special Summon 1 Level 4 or lower "Atlantean" Sea Serpent-Type monster from your Deck, except "Atlantean Marksman". When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 Set card your opponent controls; destroy that target.
+Atlantean Heavy Infantry
+WATER
+Level 2
+Sea Serpent
+Effect
+ATK 0
+DEF 1600
+Atlantean Pikeman
+WATER
+Level 2
+Sea Serpent
+Normal
+ATK 1400
+DEF 0
+The Great Ocean Lord, who reigns over the depths, is served by these lancers. Deep-sea creatures exist in fear of facing the stream of attacks their lances are capable of.
+Atlantean Attack Squad
+WATER
+Level 3
+Sea Serpent
+Effect
+ATK 1400
+DEF 0
+This card gains 800 ATK while you control a face-up Fish, Sea Serpent, or Aqua-Type monster other than this card.
+Lost Blue Breaker
+WATER
+Level 3
+Sea Serpent
+Effect
+ATK 1400
+DEF 0
+Armed Sea Hunter
+WATER
+Level 4
+Sea Serpent
+Effect
+ATK 1800
+DEF 400
+After damage calculation, if this card battles an Effect Monster: Negate the effects of that monster (including in the Graveyard). You must control another face-up WATER monster to activate and to resolve this effect. If this card would be destroyed, you can destroy 1 face-up Level 3 or lower WATER monster you control instead.
+Spined Gillman
+WATER
+Level 3
+Sea Serpent
+Effect
+ATK 1300
+DEF 0
+All Fish, Sea Serpent, and Aqua-Type monsters you control gain 400 ATK.
+Deep Sea Diva
+WATER
+Level 2
+Sea Serpent
+Tuner
+Effect
+ATK 200
+DEF 400
+When this card is Normal Summoned: You can Special Summon 1 Level 3 or lower Sea Serpent-Type monster from your Deck.
+Mermaid Archer
+WATER
+Level 3
+Sea Serpent
+Effect
+ATK 1200
+DEF 200
+Once per turn: You can target 1 face-up Level 3 or lower monster you control; equip that target to this card. (You can only equip 1 monster at a time to this card with this effect.) While equipped with a monster by this effect, this card gains 800 ATK. If this card would be destroyed, you can destroy the monster equipped to it with this effect, instead.
+Codarus
+WATER
+Level 4
+Sea Serpent
+Effect
+ATK 1400
+DEF 1200
+You can send 1 face-up "Umi" you control to the Graveyard to target up to 2 cards your opponent controls; send those targets to the Graveyard.
+Warrior of Atlantis
+WATER
+Level 4
+Aqua
+Effect
+ATK 1900
+DEF 1200
+You can discard this card to the Graveyard; add 1 "A Legendary Ocean" from your Deck to your hand.
+Abyss Soldier
+WATER
+Level 4
+Aqua
+Effect
+ATK 1800
+DEF 1300
+Once per turn: You can discard 1 WATER monster to the Graveyard to target 1 card on the field; return it to the hand.
+Skreech
+WATER
+Level 4
+Reptile
+Effect
+ATK 1500
+DEF 400
+If this card is destroyed by battle: Send 2 WATER monsters from your Deck to the Graveyard.
+Snowman Eater
+WATER
+Level 3
+Aqua
+Effect
+ATK 0
+DEF 1900
+If this card is flipped face-up: Target 1 face-up monster on the field; destroy that target.
+Nightmare Penguin
+WATER
+Level 4
+Aqua
+Effect
+ATK 900
+DEF 1800
+All face-up WATER monsters you control gain 200 ATK. When this card is flipped face-up: Target 1 card your opponent controls; return that target to the hand.
+Penguin Soldier
+WATER
+Level 2
+Aqua
+Effect
+ATK 750
+DEF 500
+FLIP: You can target up to 2 monsters on the field; return those targets to the hand.
+Deep Diver
+WATER
+Level 3
+Aqua
+Effect
+ATK 1000
+DEF 1100
+At the end of the Battle Phase, if this card was destroyed by battle and sent to the Graveyard: Choose 1 monster from your Deck and place it on top of your Deck.
+Reese the Ice Mistress
+WATER
+Level 2
+Sea Serpent
+Tuner
+Effect
+ATK 800
+DEF 800
+This card cannot be destroyed by battle with a Level 4 or higher monster.
+Mother Grizzly
+WATER
+Level 4
+Beast-Warrior
+Effect
+ATK 1400
+DEF 1000
+When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 WATER monster with 1500 or less ATK from your Deck, in face-up Attack Position.
+Friller Rabca
+WATER
+Level 3
+Fish
+Effect
+ATK 700
+DEF 1500
+When a Fish, Sea Serpent, or Aqua-Type monster you control is targeted for an attack: You can banish this card from your Graveyard, then target the attacking monster; negate the attack, and if you do, that target loses 500 ATK until the end of the next turn. You can only use this effect of "Friller Rabca" once per turn.
+Call of the Atlanteans
+SPELL
+Quick-Play
+Target 3 Level 3 or lower Sea Serpent-Type monsters in your Graveyard; Special Summon all 3 of them. You cannot Special Summon any other monsters during the turn you activate this card.
+A Legendary Ocean
+SPELL
+Field
+Terraforming
+SPELL
+Add 1 Field Spell from your Deck to your hand.
+Water Hazard
+SPELL
+Continuous
+Once per turn: You can Special Summon 1 Level 4 or lower WATER monster from your hand. You must control no monsters to activate and to resolve this effect.
+Aqua Jet
+SPELL
+Target 1 face-up Fish, Sea Serpent, or Aqua-Type monster you control; it gains 1000 ATK.
+Surface
+SPELL
+Target 1 Level 3 or lower Fish, Sea Serpent, or Aqua-Type monster in your Graveyard; Special Summon it in face-up Defense Position.
+Moray of Greed
+SPELL
+Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.
+Salvage
+SPELL
+Target 2 WATER monsters with 1500 or less ATK in your Graveyard; add those targets to your hand.
+Dark Hole
+SPELL
+Destroy all monsters on the field.
+Big Wave Small Wave
+SPELL
+Destroy all face-up WATER monsters you control, then you can Special Summon WATER monsters from your hand, up to the number of monsters destroyed by this effect.
+Aegis of the Ocean Dragon Lord
+TRAP
+Until the End Phase, face-up Level 3 or lower WATER monsters you control cannot be destroyed by battle or by card effects.
+Forgotten Temple of the Deep
+TRAP
+Continuous
+While this card is on the field, this card's name becomes "Umi". Once per turn: You can target 1 Level 4 or lower Fish, Sea Serpent or Aqua-Type monster you control; banish that target. During your End Phase: Special Summon the monster(s) banished by this effect.
+Tornado Wall
+TRAP
+Continuous
+Activate only while "Umi" is on the field. While "Umi" is face-up on the field, you take no Battle Damage from attacking monsters. Destroy this card when "Umi" leaves the field.
+Torrential Tribute
+TRAP
+When a monster(s) is Summoned: Destroy all monsters on the field.
+Spiritual Water Art - Aoi
+TRAP
+Tribute 1 WATER monster; look at your opponent's hand, then send 1 card from their hand to the Graveyard.
+Gravity Bind
+TRAP
+Continuous
+Level 4 or higher monsters cannot attack.
+Poseidon Wave
+TRAP
+When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.

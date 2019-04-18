@@ -1,0 +1,1049 @@
+Gate Guardian
+DARK
+Level 11
+Warrior
+Effect
+ATK 3750
+DEF 3400
+Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 "Sanga of the Thunder", "Kazejin", and "Suijin".
+Feral Imp
+DARK
+Level 4
+Fiend
+Normal
+ATK 1300
+DEF 1400
+A playful little fiend that lurks in the dark, waiting to attack an unwary enemy.
+Winged Dragon, Guardian of the Fortress #1
+WIND
+Level 4
+Dragon
+Normal
+ATK 1400
+DEF 1200
+A dragon commonly found guarding mountain fortresses. Its signature attack is a sweeping dive from out of the blue.
+Summoned Skull
+DARK
+Level 6
+Fiend
+Normal
+ATK 2500
+DEF 1200
+A fiend with dark powers for confusing the enemy. Among the Fiend-Type monsters, this monster boasts considerable force.(This card is always treated as an "Archfiend" card.)
+Rock Ogre Grotto #1
+EARTH
+Level 3
+Rock
+Normal
+ATK 800
+DEF 1200
+Protected by a solid body of rock, this monster throws a bone-shattering punch.
+Armored Lizard
+EARTH
+Level 4
+Reptile
+Normal
+ATK 1500
+DEF 1200
+A lizard with a very tough hide and a vicious bite.
+Killer Needle
+WIND
+Level 4
+Insect
+Normal
+ATK 1200
+DEF 1000
+A huge bee with exceptional strength that's particularly dangerous in a swarm.
+Larvae Moth
+EARTH
+Level 2
+Insect
+Effect
+ATK 500
+DEF 400
+This monster cannot be Normal Summoned or Set. This card can only be Special Summoned by offering "Petit Moth" as a Tribute on the 2nd of your turns after "Petit Moth" has been equipped with "Cocoon of Evolution".
+Harpie Lady
+WIND
+Level 4
+Winged Beast
+Normal
+ATK 1300
+DEF 1400
+This human-shaped animal with wings is beautiful to watch but deadly in battle.
+Harpie Lady Sisters
+WIND
+Level 6
+Winged Beast
+Effect
+ATK 1950
+DEF 2100
+Kojikocy
+EARTH
+Level 4
+Warrior
+Normal
+ATK 1500
+DEF 1200
+A man-hunter with powerful arms that can crush boulders.
+Cocoon of Evolution
+EARTH
+Level 3
+Insect
+Effect
+ATK 0
+DEF 2000
+You can equip this card from your hand as an Equip Spell Card to a face-up "Petit Moth" on the field. If equipped, the ATK and DEF of "Cocoon of Evolution" is applied to "Petit Moth".
+Crawling Dragon
+EARTH
+Level 5
+Dragon
+Normal
+ATK 1600
+DEF 1400
+This weakened dragon can no longer fly, but is still a deadly force to be reckoned with.
+Armored Zombie
+DARK
+Level 3
+Zombie
+Normal
+ATK 1500
+DEF 0
+This warrior blindly swings a deadly blade with devastating force.
+Mask of Darkness
+DARK
+Level 2
+Fiend
+Effect
+ATK 900
+DEF 400
+FLIP: Target 1 Trap Card in your Graveyard; add that target to your hand.
+Doma The Angel of Silence
+DARK
+Level 5
+Fairy
+Normal
+ATK 1600
+DEF 1400
+This fairy rules over the end of existence.
+White Magical Hat
+LIGHT
+Level 3
+Spellcaster
+Effect
+ATK 1000
+DEF 700
+Big Eye
+DARK
+Level 4
+Fiend
+Effect
+ATK 1200
+DEF 1000
+FLIP: Look at up to 5 cards from the top of your Deck, then place them on the top of the Deck in any order.
+B. Skull Dragon
+DARK
+Level 9
+Dragon
+Fusion
+ATK 3200
+DEF 2500
+"Summoned Skull" + "Red-Eyes B. Dragon"(This card is always treated as an "Archfiend" card.)
+Masked Sorcerer
+DARK
+Level 4
+Spellcaster
+Effect
+ATK 900
+DEF 1400
+When this card inflicts Battle Damage to your opponent's Life Points, draw 1 card from your Deck.
+Roaring Ocean Snake
+WATER
+Level 6
+Aqua
+Fusion
+ATK 2100
+DEF 1800
+"Mystic Lamp" + "Hyosube"
+Water Omotics
+WATER
+Level 4
+Aqua
+Normal
+ATK 1400
+DEF 1200
+Transforms the water overflowing from a jar into attacking dragons.
+Ground Attacker Bugroth
+EARTH
+Level 4
+Machine
+Normal
+ATK 1500
+DEF 1000
+A surface battle robot that was once used for sea warfare.
+Petit Moth
+EARTH
+Level 1
+Insect
+Normal
+ATK 300
+DEF 200
+This small but deadly creature is better off avoided.
+Elegant Egotist
+SPELL
+If "Harpie Lady" is on the field: Special Summon 1 "Harpie Lady" or "Harpie Lady Sisters" from your hand or Deck.
+Sanga of the Thunder
+LIGHT
+Level 7
+Thunder
+Effect
+ATK 2600
+DEF 2200
+During damage calculation in your opponent's turn, if this card is being attacked: You can target the attacking monster; make that target's ATK 0 during damage calculation only (this is a Quick Effect). This effect can only be used once while this card is face-up on the field.
+Kazejin
+WIND
+Level 7
+Spellcaster
+Effect
+ATK 2400
+DEF 2200
+During damage calculation in your opponent's turn, if this card is being attacked: You can target the attacking monster; make that target's ATK 0 during damage calculation only (this is a Quick Effect). This effect can only be used once while this card is face-up on the field.
+Suijin
+WATER
+Level 7
+Aqua
+Effect
+ATK 2500
+DEF 2400
+During damage calculation in your opponent's turn, if this card is being attacked: You can target the attacking monster; make that target's ATK 0 during damage calculation only (this is a Quick Effect). This effect can only be used once while this card is face-up on the field.
+Mystic Lamp
+DARK
+Level 1
+Spellcaster
+Effect
+ATK 400
+DEF 300
+This monster can attack your opponent's Life Points directly.
+Steel Scorpion
+EARTH
+Level 1
+Machine
+Effect
+ATK 250
+DEF 300
+A non Machine-Type Monster attacking "Steel Scorpion" will be destroyed at the End Phase of your opponent's 2nd turn after the attack.
+Ocubeam
+LIGHT
+Level 5
+Fairy
+Normal
+ATK 1550
+DEF 1650
+Frightening in appearance, this creature uses its large eyes and ears to keep track of any movement.
+Leghul
+EARTH
+Level 1
+Insect
+Effect
+ATK 300
+DEF 350
+This monster may attack your opponent's Life Points directly.
+Ooguchi
+WATER
+Level 1
+Aqua
+Effect
+ATK 300
+DEF 250
+This monster may attack your opponent's Life Points directly.
+Leogun
+EARTH
+Level 5
+Beast
+Normal
+ATK 1750
+DEF 1550
+Huge monster with a lion's mane similar to the King of Beasts.
+Blast Juggler
+FIRE
+Level 3
+Machine
+Effect
+ATK 800
+DEF 900
+You can only activate this effect during your Standby Phase. Offer this face-up card as a Tribute to select and destroy 2 face-up monsters with an ATK 1000 or less.
+Jinzo #7
+DARK
+Level 2
+Machine
+Effect
+ATK 500
+DEF 400
+This monster can attack your opponent's Life Points directly.
+Magician of Faith
+LIGHT
+Level 1
+Spellcaster
+Flip
+Effect
+ATK 300
+DEF 400
+FLIP: Target 1 Spell in your GY; add that target to your hand.
+Ancient Elf
+LIGHT
+Level 4
+Spellcaster
+Normal
+ATK 1450
+DEF 1200
+This elf is rumored to have lived for thousands of years. He leads an army of spirits against his enemies.
+Deepsea Shark
+WATER
+Level 5
+Fish
+Fusion
+ATK 1900
+DEF 1600
+Bottom Dweller + "Tongyo"
+Bottom Dweller
+WATER
+Level 5
+Fish
+Normal
+ATK 1650
+DEF 1700
+This is one sea creature whose wrath is something monsters fear to face.
+Destroyer Golem
+EARTH
+Level 4
+Rock
+Normal
+ATK 1500
+DEF 1000
+A golem with a massive right hand for crushing its victims.
+Kaminari Attack
+WIND
+Level 5
+Thunder
+Fusion
+ATK 1900
+DEF 1400
+"Ocubeam" + "Mega Thunderball"
+Rainbow Flower
+EARTH
+Level 2
+Plant
+Effect
+ATK 400
+DEF 500
+This monster may attack your opponent's Life Points directly.
+Morinphen
+DARK
+Level 5
+Fiend
+Normal
+ATK 1550
+DEF 1300
+A strange fiend with long arms and razor-sharp talons.
+Mega Thunderball
+WIND
+Level 2
+Thunder
+Normal
+ATK 750
+DEF 600
+Rolls along the ground releasing bolts of electricity to attack its enemies.
+Tongyo
+WATER
+Level 4
+Fish
+Normal
+ATK 1350
+DEF 800
+This monster captures other fish with its long tongue and sucks the energy out of them.
+Empress Judge
+EARTH
+Level 6
+Warrior
+Fusion
+ATK 2100
+DEF 1700
+"Queen's Double" + "Hibikime"
+Pale Beast
+EARTH
+Level 4
+Beast
+Normal
+ATK 1500
+DEF 1200
+With skin tinged a bluish-white, this strange creature is a fearsome sight to behold.
+Electric Lizard
+EARTH
+Level 3
+Thunder
+Effect
+ATK 850
+DEF 800
+A non Zombie-Type monster attacking "Electric Lizard" cannot attack on its following turn.
+Hunter Spider
+EARTH
+Level 5
+Insect
+Normal
+ATK 1600
+DEF 1400
+This monster feeds on whatever it catches in its web.
+Ancient Lizard Warrior
+EARTH
+Level 4
+Reptile
+Normal
+ATK 1400
+DEF 1100
+Before the dawn of man, this lizard warrior ruled supreme.
+Queen's Double
+EARTH
+Level 1
+Warrior
+Effect
+ATK 350
+DEF 300
+This monster may attack your opponent's Life Points directly.
+Trent
+EARTH
+Level 5
+Plant
+Normal
+ATK 1500
+DEF 1800
+A guardian of the woods, this massive tree is believed to be immortal.
+Disk Magician
+DARK
+Level 4
+Machine
+Normal
+ATK 1350
+DEF 1000
+This monster hides in a saucer and only appears when executing an attack.
+Hyosube
+WATER
+Level 4
+Aqua
+Normal
+ATK 1500
+DEF 900
+This amphibian is strong on the attack, but leaves much to be desired when defending.
+Hibikime
+EARTH
+Level 4
+Warrior
+Normal
+ATK 1450
+DEF 1000
+Confuses enemy monsters with a noise that is harsh to the ears.
+Fake Trap
+TRAP
+You can only activate this card when your opponent uses an effect of a Spell, Trap, or Effect Monster to destroy Trap Card(s) on your side of the field. Destroy this card as a substitute of those Trap Card(s) and the other Trap Card(s) are not destroyed. If a Set card(s) would have been destroyed, pick up and see the Set card(s).
+Tribute to The Doomed
+SPELL
+Discard 1 card, then target 1 monster on the field; destroy it.
+Soul Release
+SPELL
+Target up to 5 cards in any Graveyard(s); banish them.
+The Cheerful Coffin
+SPELL
+Discard up to 3 Monster Cards from your hand to the Graveyard.
+Change of Heart
+SPELL
+Target 1 monster your opponent controls; take control of it until the End Phase.
+Baby Dragon
+WIND
+Level 3
+Dragon
+Normal
+ATK 1200
+DEF 700
+Much more than just a child, this dragon is gifted with untapped power.
+Blackland Fire Dragon
+DARK
+Level 4
+Dragon
+Normal
+ATK 1500
+DEF 800
+A dragon that dwells in the depths of darkness, its vulnerability lies in its poor eyesight.
+Swamp Battleguard
+EARTH
+Level 5
+Warrior
+Effect
+ATK 1800
+DEF 1500
+This card gains 500 ATK for each "Lava Battleguard" you control.
+Battle Steer
+EARTH
+Level 5
+Beast-Warrior
+Normal
+ATK 1800
+DEF 1300
+A bull monster often found in the woods, it charges enemy monsters with a pair of deadly horns.
+Time Wizard
+LIGHT
+Level 2
+Spellcaster
+Effect
+ATK 500
+DEF 400
+Once per turn: You can toss a coin and call it. If you call it right, destroy all monsters your opponent controls. If you call it wrong, destroy as many monsters you control as possible, and if you do, take damage equal to half the total ATK those destroyed monsters had on the field.
+Saggi the Dark Clown
+DARK
+Level 3
+Spellcaster
+Normal
+ATK 600
+DEF 1500
+This clown appears from nowhere and executes very strange moves to avoid enemy attacks.
+Dragon Piper
+FIRE
+Level 3
+Pyro
+Effect
+ATK 200
+DEF 1800
+FLIP: Destroy all face-up "Dragon Capture Jar"(s) on the field. If you destroy any, change all face-up Dragon-Type monsters on the field to Attack Position.
+Illusionist Faceless Mage
+DARK
+Level 5
+Spellcaster
+Normal
+ATK 1200
+DEF 2200
+Manipulates enemy attacks with the power of illusion.
+Sangan
+DARK
+Level 3
+Fiend
+Effect
+ATK 1000
+DEF 600
+If this card is sent from the field to the GY: Add 1 monster with 1500 or less ATK from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of "Sangan" once per turn.
+Great Moth
+EARTH
+Level 8
+Insect
+Effect
+ATK 2600
+DEF 2500
+This monster cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing "Petit Moth" on the 4th of your turns after "Petit Moth" has been equipped with "Cocoon of Evolution".
+Kuriboh
+DARK
+Level 1
+Fiend
+Effect
+ATK 300
+DEF 200
+During your opponent's turn, at damage calculation: You can discard this card; you take no battle damage from that battle (this is a Quick Effect).
+Jellyfish
+WATER
+Level 4
+Aqua
+Normal
+ATK 1200
+DEF 1500
+An almost invisible, semi-transparent jellyfish that drifts in the sea.
+Castle of Dark Illusions
+DARK
+Level 4
+Fiend
+Effect
+ATK 920
+DEF 1930
+FLIP: Increases the ATK and DEF of all Zombie-Type monsters by 200 points. As long as this card remains face-up on the field, the ATK and DEF of Zombie-Type monsters continues to increase by 200 points during each of your Standby Phases. This effect continues until your 4th turn after the card is activated.
+King of Yamimakai
+DARK
+Level 5
+Fiend
+Normal
+ATK 2000
+DEF 1530
+Wields the power of darkness to destroy its enemies.
+Catapult Turtle
+WATER
+Level 5
+Aqua
+Effect
+ATK 1000
+DEF 2000
+Once per turn: You can Tribute 1 monster; inflict damage to your opponent equal to half the Tributed monster's ATK on the field.
+Mystic Horseman
+EARTH
+Level 4
+Beast
+Normal
+ATK 1300
+DEF 1550
+Half man and half horse, this monster is known for its extreme speed.
+Rabid Horseman
+EARTH
+Level 6
+Beast-Warrior
+Fusion
+ATK 2000
+DEF 1700
+"Battle Ox" + "Mystic Horseman"
+Crass Clown
+DARK
+Level 4
+Fiend
+Effect
+ATK 1350
+DEF 1400
+When this card is changed from Defense Position to Attack Position, return 1 monster on your opponent's side of the field to the owner's hand.
+Pumpking the King of Ghosts
+DARK
+Level 6
+Zombie
+Effect
+ATK 1800
+DEF 2000
+If "Castle of Dark Illusions" is face-up on the field, increase the ATK and DEF of this card by 100 points. As long as this "Castle of Dark Illusions" remains face-up on the field, the ATK and DEF of this card continues to increase by 100 points during each of your Standby Phases. This effect continues until your 4th turn after the card is activated.
+Dream Clown
+EARTH
+Level 3
+Warrior
+Effect
+ATK 1200
+DEF 900
+When this card is changed from Attack Position to Defense Position, destroy 1 monster on your opponent's side of the field.
+Tainted Wisdom
+DARK
+Level 3
+Fiend
+Effect
+ATK 1250
+DEF 800
+When this card is changed from Attack Position to Defense Position, shuffle your own Deck.
+Ancient Brain
+DARK
+Level 3
+Fiend
+Normal
+ATK 1000
+DEF 700
+A fallen fairy that is powerful in the dark.
+Guardian of the Labyrinth
+EARTH
+Level 4
+Warrior
+Normal
+ATK 1000
+DEF 1200
+A monster that guards the entrance to the Netherworld.
+Prevent Rat
+EARTH
+Level 4
+Beast
+Normal
+ATK 500
+DEF 2000
+This creature is shielded with a tough hide of hair and is excellent at defending itself.
+The Little Swordsman of Aile
+WATER
+Level 3
+Warrior
+Effect
+ATK 800
+DEF 1300
+Offer 1 monster on your side of the field as a Tribute to increase this monster's ATK by 700 points until the end of the turn.
+Princess of Tsurugi
+WIND
+Level 3
+Warrior
+Effect
+ATK 900
+DEF 700
+FLIP: Inflict 500 points of damage to your opponent's Life Points for each Spell and Trap Card on your opponent's side of the field.
+Protector of the Throne
+EARTH
+Level 4
+Warrior
+Normal
+ATK 800
+DEF 1500
+While the king is away, this queen protects his throne with a mighty defense.
+Tremendous Fire
+SPELL
+Inflict 1000 points of damage to your opponent's Life Points and 500 points of damage to your Life Points.
+Jirai Gumo
+EARTH
+Level 4
+Insect
+Effect
+ATK 2200
+DEF 100
+When this card declares an attack: Toss a coin and call it. If you call it wrong, lose half your Life Points.
+Shadow Ghoul
+DARK
+Level 5
+Zombie
+Effect
+ATK 1600
+DEF 1300
+This card gains 100 ATK for each monster in your Graveyard.
+Labyrinth Tank
+DARK
+Level 7
+Machine
+Fusion
+ATK 2400
+DEF 2400
+"Giga-Tech Wolf" + "Cannon Soldier"
+Ryu-Kishin Powered
+DARK
+Level 4
+Fiend
+Normal
+ATK 1600
+DEF 1200
+A gargoyle enhanced by the powers of darkness. Very sharp talons make it a worthy opponent.
+Bickuribox
+DARK
+Level 7
+Fiend
+Fusion
+ATK 2300
+DEF 2000
+"Crass Clown" + "Dream Clown"
+Giltia the D. Knight
+LIGHT
+Level 5
+Warrior
+Fusion
+ATK 1850
+DEF 1500
+"Guardian of the Labyrinth" + "Protector of the Throne"
+Launcher Spider
+FIRE
+Level 7
+Machine
+Normal
+ATK 2200
+DEF 2500
+A mechanical spider with rocket launchers capable of random fire.
+Giga-Tech Wolf
+FIRE
+Level 4
+Machine
+Normal
+ATK 1200
+DEF 1400
+An iron wolf with razor-sharp fangs that can penetrate any armor.
+Thunder Dragon
+LIGHT
+Level 5
+Thunder
+Effect
+ATK 1600
+DEF 1500
+You can discard this card; add up to 2 "Thunder Dragon" from your Deck to your hand.
+7 Colored Fish
+WATER
+Level 4
+Fish
+Normal
+ATK 1800
+DEF 800
+A rare rainbow fish that has never been caught by mortal man.
+The Immortal of Thunder
+LIGHT
+Level 4
+Thunder
+Effect
+ATK 1500
+DEF 1300
+FLIP: Increase your Life Points by 3000 points. When this card is sent from the field to the Graveyard, you lose 5000 Life Points.
+Punished Eagle
+WIND
+Level 6
+Winged Beast
+Fusion
+ATK 2100
+DEF 1800
+"Blue-Winged Crown" + "Niwatori"
+Insect Soldiers of the Sky
+WIND
+Level 3
+Insect
+Effect
+ATK 1000
+DEF 800
+The ATK of this card increases by 1000 points whenever it attacks a WIND monster.
+Hoshiningen
+LIGHT
+Level 2
+Fairy
+Effect
+ATK 500
+DEF 700
+All LIGHT monsters on the field gain 500 ATK, also all DARK monsters on the field lose 400 ATK.
+Musician King
+LIGHT
+Level 5
+Spellcaster
+Fusion
+ATK 1750
+DEF 1500
+"Witch of the Black Forest" + "Lady of Faith"
+Yado Karu
+WATER
+Level 4
+Aqua
+Effect
+ATK 900
+DEF 1700
+When this card is changed from Attack Position to Defense Position, you can place any number of cards from your hand at the bottom of your Deck in any order you desire.
+Cyber Saurus
+EARTH
+Level 5
+Machine
+Fusion
+ATK 1800
+DEF 1400
+"Blast Juggler" + "Two-Headed King Rex"
+Cannon Soldier
+DARK
+Level 4
+Machine
+Effect
+ATK 1400
+DEF 1300
+You can Tribute 1 monster; inflict 500 damage to your opponent.
+Muka Muka
+EARTH
+Level 2
+Rock
+Effect
+ATK 600
+DEF 300
+This card gains 300 ATK and DEF for each card in your hand.
+The Bistro Butcher
+DARK
+Level 4
+Fiend
+Effect
+ATK 1800
+DEF 1000
+When this card inflicts Battle Damage to your opponent's Life Points, your opponent draws 2 cards from their Deck.
+Star Boy
+WATER
+Level 2
+Aqua
+Effect
+ATK 550
+DEF 500
+As long as this card remains face-up on the field, increase the ATK of all WATER monsters by 500 points and decrease the ATK of all FIRE monsters by 400 points.
+Milus Radiant
+EARTH
+Level 1
+Beast
+Effect
+ATK 300
+DEF 250
+As long as this card remains face-up on the field, increase the ATK of all EARTH monsters by 500 points and decrease the ATK of all WIND monsters by 400 points.
+Flame Cerebrus
+FIRE
+Level 6
+Pyro
+Normal
+ATK 2100
+DEF 1800
+Known to many as the "Burning Executioner", this monster is capable of burning enemies to cinders.
+Niwatori
+EARTH
+Level 3
+Winged Beast
+Normal
+ATK 900
+DEF 800
+Swallows enemies whole and uses their essence as energy.
+Dark Elf
+DARK
+Level 4
+Spellcaster
+Effect
+ATK 2000
+DEF 800
+This card requires a cost of 1000 of your own Life Points to attack.
+Mushroom Man #2
+EARTH
+Level 3
+Warrior
+Effect
+ATK 1250
+DEF 800
+Lava Battleguard
+EARTH
+Level 5
+Warrior
+Effect
+ATK 1550
+DEF 1800
+This card gains 500 ATK for each "Swamp Battleguard" you control.
+Witch of the Black Forest
+DARK
+Level 4
+Spellcaster
+Effect
+ATK 1100
+DEF 1200
+If this card is sent from the field to the GY: Add 1 monster with 1500 or less DEF from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of "Witch of the Black Forest" once per turn.
+Little Chimera
+FIRE
+Level 2
+Beast
+Effect
+ATK 600
+DEF 550
+All FIRE monsters on the field gain 500 ATK. All WATER monsters on the field lose 400 ATK.
+Bladefly
+WIND
+Level 2
+Insect
+Effect
+ATK 600
+DEF 700
+As long as this card remains face-up on the field, increase the ATK of all WIND monsters by 500 points and decrease the ATK of all EARTH monsters by 400 points.
+Lady of Faith
+LIGHT
+Level 3
+Spellcaster
+Normal
+ATK 1100
+DEF 800
+Soothes the souls of others by chanting a mysterious spell.
+Twin-Headed Thunder Dragon
+LIGHT
+Level 7
+Thunder
+Fusion
+ATK 2800
+DEF 2100
+"Thunder Dragon" + "Thunder Dragon"
+Witch's Apprentice
+DARK
+Level 2
+Spellcaster
+Effect
+ATK 550
+DEF 500
+As long as this card remains face-up on the field, increase the ATK of all DARK monsters by 500 points and decrease the ATK of all LIGHT monsters by 400 points.
+Blue-Winged Crown
+WIND
+Level 4
+Winged Beast
+Normal
+ATK 1600
+DEF 1200
+With hair shaped like a crown and a body encased in bluish white flames, this bird is a formidable sight.
+Skull Knight
+DARK
+Level 7
+Spellcaster
+Fusion
+ATK 2650
+DEF 2250
+"Tainted Wisdom" + "Ancient Brain"
+Gazelle the King of Mythical Beasts
+EARTH
+Level 4
+Beast
+Normal
+ATK 1500
+DEF 1200
+This monster moves so fast that it looks like an illusion to mortal eyes.(This card is always treated as a "Phantom Beast" card.)
+Garnecia Elefantis
+EARTH
+Level 7
+Beast-Warrior
+Normal
+ATK 2400
+DEF 2000
+A monster so heavy that each step rocks the earth.
+Barrel Dragon
+DARK
+Level 7
+Machine
+Effect
+ATK 2600
+DEF 2200
+Once per turn: You can target 1 monster your opponent controls; toss a coin 3 times and destroy it if at least 2 of the results are heads.
+Solemn Judgment
+TRAP
+Counter
+Magic Jammer
+TRAP
+Counter
+When a Spell Card is activated: Discard 1 card; negate the activation, and if you do, destroy it.
+Seven Tools of the Bandit
+TRAP
+Counter
+When a Trap Card is activated: Pay 1000 LP; negate the activation, and if you do, destroy it.
+Horn of Heaven
+TRAP
+Counter
+When a monster(s) would be Summoned: Tribute 1 monster; negate the Summon, and if you do, destroy that monster(s).
+Shield & Sword
+SPELL
+Switch the original ATK and DEF of all face-up monsters currently on the field, until the End Phase.
+Sword of Deep-Seated
+SPELL
+Equip
+A Monster Card equipped with this card increases its ATK and DEF by 500 points. When this card is sent to the Graveyard, place it on top of your Deck.
+Block Attack
+SPELL
+Select 1 face-up Attack Position monster on your opponent's side of the field and change it to Defense Position.
+The Unhappy Maiden
+LIGHT
+Level 1
+Spellcaster
+Effect
+ATK 0
+DEF 100
+When this card is sent to the Graveyard as a result of battle, the Battle Phase for that turn ends immediately.
+Robbin' Goblin
+TRAP
+Continuous
+Each time a monster you control inflicts Battle Damage to your opponent, your opponent discards 1 random card.
+Germ Infection
+SPELL
+Equip
+The ATK of a non Machine-Type monster equipped with this card is decreased by 300 points at each of its Standby Phases.
+Paralyzing Potion
+SPELL
+Equip
+A non Machine-Type monster equipped with this card cannot attack.
+Mirror Force
+TRAP
+When an opponent's monster declares an attack: Destroy all your opponent's Attack Position monsters.
+Ring of Magnetism
+SPELL
+Equip
+You can only equip this card to a monster on your side of the field. Decrease the ATK and DEF of a monster equipped with this card by 500 points. In addition, all the monsters on your opponent's side of the field can only attack the monster equipped with this card, if they attack.
+Share the Pain
+SPELL
+Tribute 1 monster; make your opponent Tribute 1 monster (for no effect).
+Stim-Pack
+SPELL
+Equip
+The equipped monster gains 700 ATK. During each of your Standby Phases, the equipped monster loses 200 ATK.
+Heavy Storm
+SPELL
+Destroy all Spell and Trap Cards on the field.
+Thousand Dragon
+WIND
+Level 7
+Dragon
+Fusion
+ATK 2400
+DEF 2000
+Time Wizard + "Baby Dragon"
