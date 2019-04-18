@@ -8,6 +8,8 @@ import dataStructure.ProfileSettings;
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Album;
 import dataStructure.containerHierarchy.Deck;
+import programFunctions.builder.DeckBuilder;
+
 import java.util.ArrayList;
 public class SceneData {
     /**
@@ -49,7 +51,7 @@ public class SceneData {
     /**
      * cardSuggestor holds the CardSuggestor
      */
-    private CardSuggestor cardSuggestor;
+    private DeckBuilder cardSuggestor;
     /**
      * album holds an Album object
      */
@@ -170,7 +172,7 @@ public class SceneData {
      * </p>
      * @return the cardSuggestor
      */
-    public CardSuggestor getCardSuggestor() {
+    public DeckBuilder getCardSuggestor() {
         return cardSuggestor;
     }
     /**
@@ -280,7 +282,7 @@ public class SceneData {
      * </p>
      * @param cardSuggestor is the new object to use
      */
-    public void setCardSuggestor(CardSuggestor cardSuggestor) {
+    public void setCardSuggestor(DeckBuilder cardSuggestor) {
         this.cardSuggestor = cardSuggestor;
     }
     /**

@@ -109,7 +109,7 @@ public class AlbumBuilderController implements Initializable {
      */
     @FXML
     private void addCard() {
-        Card X = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().systemResults(ProgramFunctions.searchSystem(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for...", "Search:")));
+        Card X = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().systemResults(ProgramFunctions.getQuery().searchSystem(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for...", "Search:")));
         if(X == null) {
         }
         else {

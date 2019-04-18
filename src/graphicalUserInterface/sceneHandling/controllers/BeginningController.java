@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import programFunctions.ProgramFunctions;
+import programFunctions.builder.DeckBuilder;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -117,8 +118,8 @@ public class BeginningController implements Initializable {
                 String item = cell.getItem();
                 if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
                     deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new CardSuggestor(deck, 2, 1, 1));
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilderScene());
+                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new DeckBuilder(deck, 2, 1, 1));
+                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
                 } else {
                     album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
                     ProgramFunctions.getUtilities().getOutputter().outputStringList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards()));
