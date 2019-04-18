@@ -5,14 +5,17 @@
  */
 package programFunctions;
 
+import programFunctions.dataImporter.DataImporter;
 import dataStructure.UserProfile;
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Album;
 import dataStructure.containerHierarchy.Deck;
 import dataStructure.containerHierarchy.Series;
+import javafx.application.Application;
+import javafx.stage.Stage;
 import programFunctions.appData.AppData;
 import programFunctions.appData.Cache;
-import programFunctions.searching.SearchResult;
+import programFunctions.searching.Searcher;
 import programFunctions.utilities.Utils;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +23,8 @@ import java.util.List;
 public class ProgramFunctions {
     private static AppData programData;
     private static Utils utilities;
-
-
+    private static Searcher query;
+    private static DataImporter dataImporter;
 
     /**
      * Function definition for updateUserList()
@@ -484,83 +487,7 @@ public class ProgramFunctions {
     }
 
 
-    /**
-     * Function definition for searchCard()
-     * <p>
-     *     Searches for a card in all containers
-     * </p>
-     * @param name is the name of the card
-     * @return an ArrayList of cards and locations
-     */
-    public static ArrayList<SearchResult> searchCard(String name) {
-        /*Check the name is not null or whitespace*/
-        if(name.equals("") || name == null) {
-            /*Output an error*/
-            programData.getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
-            System.out.println("[ERROR] 013: Invalid input from user");
-            /*Return null*/
-            return null;
-        }
-        /*Make an ArrayList*/
-        ArrayList<SearchResult> cardList = new ArrayList<>();
-        /*For all containers*/
-        ArrayList<Album> albums = getUtilities().getFilter().filterAlbums(programData.getCurrentProfile().getUserContainers());
-        ArrayList<Deck> decks = new ArrayList<>();
-        if(programData.getCurrentProfile().getProfileSettings().isIncludeDecks()) {
-            decks = getUtilities().getFilter().filterDecks(programData.getCurrentProfile().getUserContainers());
-        }
-        for(Album a : albums) {
-            for(Card b : a.getCards()) {
-                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
-                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
-                }
-            }
-        }
-        for(Deck a : decks) {
-            for(Card b : a.getOnlyDeck()) {
-                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
-                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
-                }
-            }
-            for(Card b : a.getExtraDeck()) {
-                if(b.getCardName().equals(name) || b.getCardName().contains(name)) {
-                    cardList.add(new SearchResult(b.getCardName(), a.getContainerName(), b.getCardID()));
-                }
-            }
-        }
-        /*Return the cardList*/
-        return cardList;
-    }
-    /**
-     * Function definition for searchSystem()
-     * <p>
-     *     Searches the system for a card
-     * </p>
-     * @param name is the card to seach for
-     * @return the results
-     */
-    public static ArrayList<SearchResult> searchSystem(String name) {
-        /*Check the name is not null or whitespace*/
-        if(name.equals("") || name == null) {
-            /*Output an error*/
-            programData.getUserInterface().getBasicWindows().alert("ERROR", "013: Invalid input from user");
-            System.out.println("[ERROR] 013: Invalid input from user");
-            /*Return null*/
-            return null;
-        }
-        /*Make an ArrayList*/
-        ArrayList<SearchResult> cardList = new ArrayList<>();
-        /*For all containers*/
-        for (Card aTmpII : programData.getCache().getSystemCards()) {
-            if (name.equals(aTmpII.getCardName()) || aTmpII.getCardName().contains(name)) {
-                SearchResult tmpIII = new SearchResult(aTmpII.getCardName(), "System" , aTmpII.getCardID());
-                cardList.add(tmpIII);
-            }
-        }
-        /*If card is present*/
-        /*Return the cardList*/
-        return cardList;
-    }
+
     
     
     
@@ -589,6 +516,9 @@ public class ProgramFunctions {
     }
     public static Utils getUtilities() {
         return utilities;
+    }
+    public static Searcher getQuery() {
+        return query;
     }
     public static Card findCard(String name) {
         for(Card C : programData.getCache().getSystemCards()) {
@@ -692,5 +622,31 @@ public class ProgramFunctions {
 
     public static void exit() {
         System.exit(0);
+    }
+    /**
+     * Function definition for start()
+     * <p>
+     * Creates all the nodes for the mainStage and then shows the mainStage
+     * <p>
+     * @param S is a Stage
+     */
+    public void start(Stage S) throws Exception {
+        /*Creates a new base data scheme for the program*/
+        utilities = new Utils();
+        programData = new AppData();
+        dataImporter = new DataImporter();
+        /*Setup the UI*/
+        programData.getUserInterface().run(S);
+    }
+    /**
+     * Function definition for main()
+     * <p>
+     * Launches the application
+     * <p>
+     * @param args are the launch arguments
+     */
+    public static void main(String[] args) {
+        /*Launches the application*/
+        Application.launch(args);
     }
 }

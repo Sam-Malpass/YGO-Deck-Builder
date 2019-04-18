@@ -308,7 +308,7 @@ public class Windows {
         gc.setFill(Color.DARKGRAY);
         /*Draw a rectangle*/
         gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
         /*Create a ListView using results*/
         ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
         /*Set the cell factory*/
@@ -412,7 +412,7 @@ public class Windows {
         gc.setFill(Color.DARKGRAY);
         /*Draw a rectangle*/
         gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
         /*Create a ListView using results*/
         ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
         /*Set the cell factory*/

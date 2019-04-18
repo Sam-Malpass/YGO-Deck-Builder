@@ -30,6 +30,10 @@ public class Utils {
      */
     private PasswordAuthenticator authenticator;
     /**
+     * importExport holds the ImportExport object
+     */
+    private ImportExport importExport;
+    /**
      * Constructor with no arguments
      * <p>
      *     Creates the appropriate objects
@@ -104,6 +108,16 @@ public class Utils {
         return authenticator;
     }
     /**
+     * Function definition for getImportExport()
+     * <p>
+     *     Return the importExport object
+     * </p>
+     * @return importExport
+     */
+    public ImportExport getImportExport() {
+        return importExport;
+    }
+    /**
      * Function definition for setFilter()
      * <p>
      *     Sets the Filters object to the passed object
@@ -162,5 +176,15 @@ public class Utils {
      */
     public void setOutputter(Outputters outputter) {
         this.outputter = outputter;
+    }
+    /**
+     * Function definition for setImportExport()
+     * <p>
+     *     Sets the importExport to the passed object
+     * </p>
+     * @param importExport
+     */
+    public void setImportExport(ImportExport importExport) {
+        this.importExport = importExport;
     }
 }

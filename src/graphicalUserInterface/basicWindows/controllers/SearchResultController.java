@@ -43,7 +43,7 @@ public class SearchResultController implements Initializable {
             }
         });
 
-        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().resultsToString(results);
+        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
         ObservableList<String> containers = list.getItems();
         for(String C : resultsOutput) {
             containers.add(C);

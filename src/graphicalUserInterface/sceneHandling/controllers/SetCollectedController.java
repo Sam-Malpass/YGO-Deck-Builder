@@ -55,7 +55,7 @@ public class SetCollectedController implements Initializable {
                 }
             });
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.searchCard(cell.getItem()))));
+            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.getQuery().searchCard(cell.getItem()))));
             MenuItem cancel = new MenuItem("Cancel");
             contextMenu.getItems().addAll(view, findAll, cancel);
             /*Bind the itemProperty to the textProperty*/

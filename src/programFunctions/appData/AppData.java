@@ -45,7 +45,7 @@ public class AppData {
     /**
      * Constructor that sets up all objects
      */
-    AppData() {
+    public AppData() {
 
         /*Create a GUI*/
         //userInterface = new GUI();
