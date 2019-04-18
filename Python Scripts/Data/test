@@ -3,13 +3,8 @@
 
 
 
-
-
 View as Gallery
 View as List
-
-
-
 
 
 
@@ -34,12 +29,7 @@ Sort by Link Rating (Asc.)
 
 
 
-
-
-
-Total of 126 Card(s)
-
-
+Total of 39 Card(s)
 
 
 
@@ -53,7 +43,7 @@ Total of 126 Card(s)
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
 js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9";
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -83,13 +73,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 
-
-
-
-
-
-Tri-Horned Dragon
-
+Poseidra, the Atlantean Dragon
 
 
 
@@ -98,51 +82,32 @@ Tri-Horned Dragon
 
 
 
+WATER
 
 
 
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 8
-
-
-
+Level 7
 
 
 [
-Dragon
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 2850
-
-
-DEF 2350
-
-
-
+ATK 2800
+DEF 1600
  
 
 
 
+You can Tribute 3 Level 3 or lower WATER monsters; Special Summon this card from your hand or Graveyard. When you do: Return all Spell and Trap Cards on the field to the hand, and if you do, if 3 or more cards are returned to the hand by this effect, all monsters your opponent currently controls lose 300 ATK for each.
 
 
-An unworthy dragon with three sharp horns sprouting from its head.
 
 
 
@@ -154,208 +119,125 @@ An unworthy dragon with three sharp horns sprouting from its head.
 
 
 
+Atlantean Dragoons
 
 
 
 
 
 
-Blue-Eyes White Dragon
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 8
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 3000
-
-
-DEF 2500
-
-
-
- 
-
-
-
-
-
-This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hitotsu-Me Giant
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
-
-
-
 [
-Beast-Warrior
+Sea Serpent
 
 /
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A one-eyed behemoth with thick, powerful arms made for delivering punishing blows.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Swordsman
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
+Effect
 
 
 
 ]
 
 ATK 1800
+DEF 0
+ 
 
 
+
+All Level 3 or lower Sea Serpent-Type monsters you control can attack your opponent directly. When this card is sent to the Graveyard to activate a WATER monster's effect: Add 1 Sea Serpent-Type monster from your Deck to your hand, except "Atlantean Dragoons".
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atlantean Marksman
+
+
+
+
+
+WATER
+
+
+
+Level 3
+
+
+[
+Sea Serpent
+
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 0
+ 
+
+
+
+When this card inflicts Battle Damage to your opponent: You can Special Summon 1 Level 4 or lower "Atlantean" Sea Serpent-Type monster from your Deck, except "Atlantean Marksman". When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 Set card your opponent controls; destroy that target.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atlantean Heavy Infantry
+
+
+
+
+
+WATER
+
+
+
+Level 2
+
+
+[
+Sea Serpent
+
+/
+Effect
+
+
+
+]
+
+ATK 0
 DEF 1600
-
-
-
  
 
 
 
-
-
-Flame Manipulator + "Masaki the Legendary Swordsman"
-
+During your Main Phase, you can Normal Summon 1 Level 4 or lower Sea Serpent-Type monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 face-up card your opponent controls; destroy that target.
 
 
 
@@ -369,254 +251,21 @@ Flame Manipulator + "Masaki the Legendary Swordsman"
 
 
 
-
-
-
-Skull Servant
-
+Atlantean Pikeman
 
 
 
 
 
+WATER
 
 
 
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
+Level 2
 
 
 [
-Zombie
-
-/
-Normal
-
-
-
-]
-
-ATK 300
-
-
-DEF 200
-
-
-
- 
-
-
-
-
-
-A skeletal ghost that isn't strong but can mean trouble in large numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dark Magician
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 2500
-
-
-DEF 2100
-
-
-
- 
-
-
-
-
-
-The ultimate wizard in terms of attack and defense.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Gaia The Fierce Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 2300
-
-
-DEF 2100
-
-
-
- 
-
-
-
-
-
-A knight whose horse travels faster than the wind. His battle-charge is a force to be reckoned with.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Celtic Guardian
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
+Sea Serpent
 
 /
 Normal
@@ -626,19 +275,14 @@ Normal
 ]
 
 ATK 1400
-
-
-DEF 1200
-
-
-
+DEF 0
  
 
 
 
+The Great Ocean Lord, who reigns over the depths, is served by these lancers. Deep-sea creatures exist in fear of facing the stream of attacks their lances are capable of.
 
 
-An elf who learned to wield a sword, he baffles enemies with lightning-swift attacks.
 
 
 
@@ -650,132 +294,36 @@ An elf who learned to wield a sword, he baffles enemies with lightning-swift att
 
 
 
+Atlantean Attack Squad
 
 
 
 
 
-
-Basic Insect
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Insect
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-Usually found traveling in swarms, this creature's ideal environment is the forest.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mammoth Graveyard
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 3
 
 
-
-
-
 [
-Dinosaur
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 800
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
-
-
-A mammoth that protects the graves of its pack and is absolutely merciless when facing grave-robbers.
-
+This card gains 800 ATK while you control a face-up Fish, Sea Serpent, or Aqua-Type monster other than this card.
 
 
 
@@ -789,60 +337,38 @@ A mammoth that protects the graves of its pack and is absolutely merciless when 
 
 
 
-
-
-
-Silver Fang
-
+Lost Blue Breaker
 
 
 
 
 
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 3
 
 
-
-
-
 [
-Beast
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 800
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
+If there is another face-up Fish, Sea Serpent, or Aqua-Type monster on the field: You can Tribute this card to target 1 Spell/Trap Card on the field; destroy that target.
 
 
-A snow wolf that's beautiful to the eye, but absolutely vicious in battle.
 
 
 
@@ -854,131 +380,81 @@ A snow wolf that's beautiful to the eye, but absolutely vicious in battle.
 
 
 
+Armed Sea Hunter
 
 
 
 
 
-
-Dark Gray
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-Entirely gray, this beast has rarely been seen by mortal eyes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Trial of Nightmare
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
+[
+Sea Serpent
 
+/
+Effect
+
+
+
+]
+
+ATK 1800
+DEF 400
+ 
+
+
+
+After damage calculation, if this card battles an Effect Monster: Negate the effects of that monster (including in the Graveyard). You must control another face-up WATER monster to activate and to resolve this effect. If this card would be destroyed, you can destroy 1 face-up Level 3 or lower WATER monster you control instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spined Gillman
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Fiend
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
 ATK 1300
-
-
-DEF 900
-
-
-
+DEF 0
  
 
 
 
+All Fish, Sea Serpent, and Aqua-Type monsters you control gain 400 ATK.
 
 
-This fiend passes judgment on enemies that are locked in coffins.
 
 
 
@@ -990,408 +466,85 @@ This fiend passes judgment on enemies that are locked in coffins.
 
 
 
+Deep Sea Diva
 
 
 
 
 
 
-Nemuriko
 
 
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-A child-like creature that controls a sleep fiend to beckon enemies into eternal slumber.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The 13th Grave
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Zombie
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A zombie that suddenly appeared from plot #13 - an empty grave.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Charubin the Fire Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Pyro
-
-/
-Fusion
-
-
-
-]
-
-ATK 1100
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-"Monster Egg" + "Hinotama Soul"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Manipulator
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-This Spellcaster attacks enemies with fire-related spells such as "Sea of Flames" and "Wall of Fire".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Monster Egg
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A warrior hidden within an egg that attacks enemies by flinging eggshells.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Firegrass
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 2
 
 
+[
+Sea Serpent
 
+/
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 200
+DEF 400
+ 
+
+
+
+When this card is Normal Summoned: You can Special Summon 1 Level 3 or lower Sea Serpent-Type monster from your Deck.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mermaid Archer
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Plant
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 700
-
-
-DEF 600
-
-
-
+ATK 1200
+DEF 200
  
 
 
 
-
-
-A fire-breathing plant found growing near volcanoes.
-
+Once per turn: You can target 1 face-up Level 3 or lower monster you control; equip that target to this card. (You can only equip 1 monster at a time to this card with this effect.) While equipped with a monster by this effect, this card gains 800 ATK. If this card would be destroyed, you can destroy the monster equipped to it with this effect, instead.
 
 
 
@@ -1405,64 +558,167 @@ A fire-breathing plant found growing near volcanoes.
 
 
 
-
-
-
-Darkfire Dragon
-
+Codarus
 
 
 
 
 
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
+[
+Sea Serpent
 
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 1200
+ 
+
+
+
+You can send 1 face-up "Umi" you control to the Graveyard to target up to 2 cards your opponent controls; send those targets to the Graveyard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warrior of Atlantis
+
+
+
+
+
+WATER
+
+
+
+Level 4
 
 
 [
-Dragon
+Aqua
 
 /
-Fusion
+Effect
+
+
+
+]
+
+ATK 1900
+DEF 1200
+ 
+
+
+
+You can discard this card to the Graveyard; add 1 "A Legendary Ocean" from your Deck to your hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abyss Soldier
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Aqua
+
+/
+Effect
+
+
+
+]
+
+ATK 1800
+DEF 1300
+ 
+
+
+
+Once per turn: You can discard 1 WATER monster to the Graveyard to target 1 card on the field; return it to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Skreech
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Reptile
+
+/
+Effect
 
 
 
 ]
 
 ATK 1500
-
-
-DEF 1250
-
-
-
+DEF 400
  
 
 
 
+If this card is destroyed by battle: Send 2 WATER monsters from your Deck to the Graveyard.
 
 
-"Firegrass" + "Petit Dragon"
 
 
 
@@ -1474,226 +730,7 @@ DEF 1250
 
 
 
-
-
-
-
-
-
-Dark King of the Abyss
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-It's said that this King of the Netherworld once had the power to rule over the dark.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fiend Reflection #2
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1100
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-A bird-beast that summons reinforcements with a hand mirror.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fusionist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Fusion
-
-
-
-]
-
-ATK 900
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-"Petit Angel" + "Mystical Sheep #2"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Turtle Tiger
-
-
-
-
-
+Snowman Eater
 
 
 
@@ -1703,42 +740,28 @@ WATER
 
 
 
-
-
-
-
-
-
-Level 4
-
-
-
+Level 3
 
 
 [
 Aqua
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1000
-
-
-DEF 1500
-
-
-
+ATK 0
+DEF 1900
  
 
 
 
+If this card is flipped face-up: Target 1 face-up monster on the field; destroy that target.
 
 
-A tiger encased in a protective shell that attacks with razor-sharp fangs.
 
 
 
@@ -1750,479 +773,38 @@ A tiger encased in a protective shell that attacks with razor-sharp fangs.
 
 
 
-
-
-
-
-
-
-Petit Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-A very small dragon known for its vicious attacks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Petit Angel
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A quick-moving and tiny fairy that's very difficult to hit.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hinotama Soul
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Pyro
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 500
-
-
-
- 
-
-
-
-
-
-An intensely hot flame creature that rams anything standing in its way.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Aqua Madoor
-
-
-
-
-
-
-
-
-
+Nightmare Penguin
 
 
 
 
 
 WATER
-
-
-
-
-
-
 
 
 
 Level 4
 
 
-
-
-
 [
-Spellcaster
+Aqua
 
 /
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A wizard of the waters that conjures a liquid wall to crush any enemies that oppose him.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kagemusha of the Blue Flame
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 400
-
-
-
- 
-
-
-
-
-
-Serving as a double for the Ruler of the Blue Flame, he's a master swordsman that wields a fine blade.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Ghost
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Zombie
-
-/
-Fusion
-
-
-
-]
-
-ATK 1000
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-"Skull Servant" + "Dissolverock"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Two-Mouth Darkruler
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Dinosaur
-
-/
-Normal
+Effect
 
 
 
 ]
 
 ATK 900
-
-
-DEF 700
-
-
-
+DEF 1800
  
 
 
 
+All face-up WATER monsters you control gain 200 ATK. When this card is flipped face-up: Target 1 card your opponent controls; return that target to the hand.
 
 
-A dinosaur with two deadly jaws, it stores electricity in its horn and releases high voltage bolts from the mouth on its back.
 
 
 
@@ -2234,86 +816,7 @@ A dinosaur with two deadly jaws, it stores electricity in its horn and releases 
 
 
 
-
-
-
-
-
-
-Dissolverock
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Rock
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A monster born in the lava pits, it generates intense heat that can melt away its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Root Water
-
-
-
-
-
+Penguin Soldier
 
 
 
@@ -2323,42 +826,203 @@ WATER
 
 
 
+Level 2
+
+
+[
+Aqua
+
+/
+Effect
 
 
 
+]
+
+ATK 750
+DEF 500
+ 
+
+
+
+FLIP: You can target up to 2 monsters on the field; return those targets to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deep Diver
+
+
+
+
+
+WATER
 
 
 
 Level 3
 
 
+[
+Aqua
 
+/
+Effect
+
+
+
+]
+
+ATK 1000
+DEF 1100
+ 
+
+
+
+At the end of the Battle Phase, if this card was destroyed by battle and sent to the Graveyard: Choose 1 monster from your Deck and place it on top of your Deck.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reese the Ice Mistress
+
+
+
+
+
+WATER
+
+
+
+Level 2
+
+
+[
+Sea Serpent
+
+/
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 800
+DEF 800
+ 
+
+
+
+This card cannot be destroyed by battle with a Level 4 or higher monster.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mother Grizzly
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Beast-Warrior
+
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 1000
+ 
+
+
+
+When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 WATER monster with 1500 or less ATK from your Deck, in face-up Attack Position.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Friller Rabca
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
 Fish
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 900
-
-
-DEF 800
-
-
-
+ATK 700
+DEF 1500
  
 
 
 
+When a Fish, Sea Serpent, or Aqua-Type monster you control is targeted for an attack: You can banish this card from your Graveyard, then target the attacking monster; negate the attack, and if you do, that target loses 500 ATK until the end of the next turn. You can only use this effect of "Friller Rabca" once per turn.
 
 
-An amphibian capable of calling up a massive tidal wave from the dark seas to wipe out enemy monsters.
 
 
 
@@ -2370,491 +1034,7 @@ An amphibian capable of calling up a massive tidal wave from the dark seas to wi
 
 
 
-
-
-
-
-
-
-The Furious Sea King
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Aqua
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-Grand King of the Seven Seas, he's able to summon massive tidal waves to drown the enemy.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Green Phantom King
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 1600
-
-
-
- 
-
-
-
-
-
-This youthful king of the forests lives in a green world, abundant with trees and wildlife.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ray & Temperature
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-The Sun and the North Wind join hands to deliver a devastating combination of heat and gale-force winds.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-King Fog
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A fiend that dwells in a blinding curtain of smoke.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mystical Sheep #2
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A monstrous sheep with a long tail for hypnotizing enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Masaki the Legendary Swordsman
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1100
-
-
-DEF 1100
-
-
-
- 
-
-
-
-
-
-Legendary swordmaster Masaki is a veteran of over 100 battles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kurama
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-A vicious bird that attacks from the skies with its whip-like tail.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Legendary Sword
-
-
+Call of the Atlanteans
 
 
 
@@ -2867,23 +1047,13 @@ SPELL
 
 
 
-
-
-Equip
-
-
-
-
-
+Quick-Play
 
  
 
 
 
-
-
-A Warrior-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
+Target 3 Level 3 or lower Sea Serpent-Type monsters in your Graveyard; Special Summon all 3 of them. You cannot Special Summon any other monsters during the turn you activate this card.
 
 
 
@@ -2897,12 +1067,37 @@ A Warrior-Type monster equipped with this card increases its ATK and DEF by 300 
 
 
 
+A Legendary Ocean
 
 
 
-Beast Fangs
 
 
+SPELL
+
+
+
+Field
+
+ 
+
+
+
+(This card's name is always treated as "Umi".)All WATER monsters on the field gain 200 ATK/DEF. Reduce the Level of all WATER monsters in both players' hands and on the field by 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terraforming
 
 
 
@@ -2913,25 +1108,11 @@ Beast Fangs
 
 SPELL
 
-
-
-
-
-Equip
-
-
-
-
-
-
  
 
 
 
-
-
-A Beast-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
+Add 1 Field Spell from your Deck to your hand.
 
 
 
@@ -2945,189 +1126,23 @@ A Beast-Type monster equipped with this card increases its ATK and DEF by 300 po
 
 
 
-
-
-
-Violet Crystal
-
-
-
-
-
+Water Hazard
 
 
 
 
 
 SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-(This card is not treated as a "Crystal" card.)A Zombie-Type monster equipped with this card increases its ATK and DEF by 300 points.NotesCard Name updated from "Violet Crystal" on January 00, 1900.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Book of Secret Arts
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Spellcaster-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Power of Kaishin
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-An Aqua-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragon Capture Jar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TRAP
-
-
 
 
 
 Continuous
 
-
-
-
-
-
  
 
 
 
-
-
-Change all face-up Dragon-Type monsters on the field to Defense Position, also they cannot change their battle positions.
-
+Once per turn: You can Special Summon 1 Level 4 or lower WATER monster from your hand. You must control no monsters to activate and to resolve this effect.
 
 
 
@@ -3141,15 +1156,7 @@ Change all face-up Dragon-Type monsters on the field to Defense Position, also t
 
 
 
-
-
-
-Forest
-
-
-
-
-
+Aqua Jet
 
 
 
@@ -3157,25 +1164,11 @@ Forest
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Insect, Beast, Plant, and Beast-Warrior-Type monsters by 200 points.
-
+Target 1 face-up Fish, Sea Serpent, or Aqua-Type monster you control; it gains 1000 ATK.
 
 
 
@@ -3189,15 +1182,7 @@ Increases the ATK and DEF of all Insect, Beast, Plant, and Beast-Warrior-Type mo
 
 
 
-
-
-
-Wasteland
-
-
-
-
-
+Surface
 
 
 
@@ -3205,25 +1190,11 @@ Wasteland
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Dinosaur, Zombie, and Rock-Type monsters by 200 points.
-
+Target 1 Level 3 or lower Fish, Sea Serpent, or Aqua-Type monster in your Graveyard; Special Summon it in face-up Defense Position.
 
 
 
@@ -3237,15 +1208,7 @@ Increases the ATK and DEF of all Dinosaur, Zombie, and Rock-Type monsters by 200
 
 
 
-
-
-
-Mountain
-
-
-
-
-
+Moray of Greed
 
 
 
@@ -3253,25 +1216,11 @@ Mountain
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increase the ATK and DEF of all Dragon, Winged Beast, and Thunder-Type monsters by 200 points.
-
+Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.
 
 
 
@@ -3285,15 +1234,7 @@ Increase the ATK and DEF of all Dragon, Winged Beast, and Thunder-Type monsters 
 
 
 
-
-
-
-Sogen
-
-
-
-
-
+Salvage
 
 
 
@@ -3301,124 +1242,11 @@ Sogen
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Beast-Warrior and Warrior-Type monsters by 200 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Umi
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Field
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase the ATK and DEF of all Fish, Sea Serpent, Thunder, and Aqua-Type monsters by 200 points. Decrease the ATK and DEF of all Machine and Pyro-Type monsters by 200 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Yami
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Field
-
-
-
-
-
-
- 
-
-
-
-
-
-Increases the ATK and DEF of all Fiend and Spellcaster-Type monsters by 200 points. Also decreases the ATK and DEF of all Fairy-Type monsters by 200 points.
-
-
-
-
+Target 2 WATER monsters with 1500 or less ATK in your Graveyard; add those targets to your hand.
 
 
 
@@ -3441,27 +1269,9 @@ Dark Hole
 
 
 
-
-
-
-
-
-
-
-
-
-
 SPELL
 
-
-
-
-
-
-
  
-
-
 
 
 
@@ -3479,24 +1289,7 @@ Destroy all monsters on the field.
 
 
 
-
-
-
-
-Raigeki
-
-
-
-
-
-
-
-
-
-
-
-
-
+Big Wave Small Wave
 
 
 
@@ -3504,19 +1297,39 @@ Raigeki
 
 SPELL
 
+ 
+
+
+
+Destroy all face-up WATER monsters you control, then you can Special Summon WATER monsters from your hand, up to the number of monsters destroyed by this effect.
 
 
 
 
 
+
+
+
+
+
+
+
+
+Aegis of the Ocean Dragon Lord
+
+
+
+
+
+TRAP
 
  
 
 
 
+Until the End Phase, face-up Level 3 or lower WATER monsters you control cannot be destroyed by battle or by card effects.
 
 
-Destroy all monsters your opponent controls.
 
 
 
@@ -3528,198 +1341,7 @@ Destroy all monsters your opponent controls.
 
 
 
-
-
-
-
-
-
-Red Medicine
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase your Life Points by 500 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sparks
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 200 points of damage to your opponent's Life Points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hinotama
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 500 damage to your opponent.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fissure
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Destroy the 1 face-up monster your opponent controls that has the lowest ATK (your choice, if tied).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Trap Hole
-
-
-
-
-
-
-
-
-
+Forgotten Temple of the Deep
 
 
 
@@ -3729,17 +1351,15 @@ TRAP
 
 
 
-
-
-
+Continuous
 
  
 
 
 
+While this card is on the field, this card's name becomes "Umi". Once per turn: You can target 1 Level 4 or lower Fish, Sea Serpent or Aqua-Type monster you control; banish that target. During your End Phase: Special Summon the monster(s) banished by this effect.
 
 
-When your opponent Normal or Flip Summons 1 monster with 1000 or more ATK: Target that monster; destroy that target.
 
 
 
@@ -3751,112 +1371,7 @@ When your opponent Normal or Flip Summons 1 monster with 1000 or more ATK: Targe
 
 
 
-
-
-
-
-
-
-Polymerization
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Remove Trap
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 1 face-up Trap Card on the field and destroy it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Two-Pronged Attack
-
-
-
-
-
-
-
-
-
+Tornado Wall
 
 
 
@@ -3866,3902 +1381,41 @@ TRAP
 
 
 
+Continuous
 
-
-
-
- 
-
-
-
-
-
-Select and destroy 2 of your monsters and 1 of your opponent's monsters.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mystical Elf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A delicate elf that lacks offense, but has a terrific defense backed by mystical power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Tyhone
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-Capable of firing cannonballs from its mouth for long-range attacks, this creature is particularly effective in mountain battles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Beaver Warrior
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Beast-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1500
-
-
-
- 
-
-
-
-
-
-What this creature lacks in size it makes up for in defense when battling in the prairie.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Gravedigger Ghoul
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 2 Monster Cards from your opponent's Graveyard. These Monster Cards are removed from play for the remainder of the Duel.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Curse of Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 2000
-
-
-DEF 1500
-
-
-
- 
-
-
-
-
-
-A wicked dragon that taps into dark forces to execute a powerful attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Karbonala Warrior
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
-
-
-
-]
-
-ATK 1500
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-"M-Warrior #1" + "M-Warrior #2"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Giant Soldier of Stone
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Rock
-
-/
-Normal
-
-
-
-]
-
-ATK 1300
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A giant warrior made of stone. A punch from this creature has earth-shaking results.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Uraby
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Dinosaur
-
-/
-Normal
-
-
-
-]
-
-ATK 1500
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-Fast on its feet, this dinosaur rips enemies to shreds with its sharp claws.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Red-Eyes B. Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 2400
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A ferocious dragon with a deadly attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reaper of the Cards
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Fiend
-
-/
-Effect
-
-
-
-]
-
-ATK 1380
-
-
-DEF 1930
-
-
-
- 
-
-
-
-
-
-FLIP: Select 1 Trap Card on the field and destroy it. If the selected card is Set, pick up and see the card. If it is a Trap Card, it is destroyed. If it is a Spell Card, return it to its original position.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Witty Phantom
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1400
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-Dressed in a night-black tuxedo, this creature presides over the darkness.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Larvas
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A fast-moving, bird-like creature that strangles opposing monsters with its long, thin arms.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hard Armor
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 300
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-A living suit of armor that attacks enemies with a bone-jarring tackle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Man Eater
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 600
-
-
-
- 
-
-
-
-
-
-Man-eating plant with poison feelers for attacking enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-M-Warrior #1
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 500
-
-
-
- 
-
-
-
-
-
-Specializing in combination attacks, this warrior uses magnetism to block an enemy's escape.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-M-Warrior #2
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-Specializing in combination attacks, this warrior is equipped with a tough, magnetically coated armor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Spirit of the Harp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A spirit that soothes the soul with the music of its heavenly harp.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armaill
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-A strange warrior who manipulates three deadly blades with both hands and his tail.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Terra the Terrible
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-Known as a swamp dweller, this creature is a minion of the dark forces.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Frenzied Panda
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A savage beast that carries a big bamboo stick for beating down its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kumootoko
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Insect
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-A massive, intelligent spider that traps enemies with webbing.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Meda Bat
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 400
-
-
-
- 
-
-
-
-
-
-An eyeball fiend created by a servant of the wicked, it uses "Dark Blasts" to blow away its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Enchanting Mermaid
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fish
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A beautiful mermaid that lures voyagers to a watery grave.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fireyarou
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Pyro
-
-/
-Normal
-
-
-
-]
-
-ATK 1300
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A malevolent creature wrapped in flames that attacks enemies with intense fire.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragoness the Wicked Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-"Armaill" + "One-Eyed Shield Dragon"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-One-Eyed Shield Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-This dragon wears a shield not only for its own protection, but also for ramming its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dark Energy
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Fiend-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Laser Cannon Armor
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-An Insect-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Vile Germs
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Plant-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Silver Bow and Arrow
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Fairy-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragon Treasure
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Dragon-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Electro-Whip
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Thunder-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mystical Moon
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-Equip only to a Beast-Warrior-Type monster. It gains 300 ATK and DEF.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Stop Defense
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 1 Defense Position monster on your opponent's side of the field and change it to Attack Position.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Machine Conversion Factory
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Machine-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Raise Body Heat
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Dinosaur-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Follow Wind
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Winged Beast-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Goblin's Secret Remedy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase your Life Points by 600 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Final Flame
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 600 points of damage to your opponent's Life Points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Swords of Revealing Light
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-After this card's activation, it remains on the field, but you must destroy it during the End Phase of your opponent's 3rd turn. When this card is activated: If your opponent controls a face-down monster, flip all monsters they control face-up. While this card is face-up on the field, your opponent's monsters cannot declare an attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Metal Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 6
-
-
-
-
-
-[
-Machine
-
-/
-Fusion
-
-
-
-]
-
-ATK 1850
-
-
-DEF 1700
-
-
-
- 
-
-
-
-
-
-"Steel Ogre Grotto #1" + "Lesser Dragon"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Spike Seadra
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Sea Serpent
-
-/
-Normal
-
-
-
-]
-
-ATK 1600
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-Using the spikes sprouting from its body, this creature stabs its opponents and floods them with electricity.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Tripwire Beast
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Thunder
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-This creature attacks with electromagnetic waves.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Skull Red Bird
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1550
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-This monster swoops down and attacks with a rain of knives stored in its wings.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armed Ninja
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Warrior
-
-/
-Effect
-
-
-
-]
-
-ATK 300
-
-
-DEF 300
-
-
-
- 
-
-
-
-
-
-FLIP: Target 1 Spell Card on the field; destroy that target. (If the target is Set, reveal it, and destroy it if it is a Spell Card. Otherwise, return it to its original position.)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flower Wolf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Beast
-
-/
-Fusion
-
-
-
-]
-
-ATK 1800
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-"Silver Fang" + "Darkworld Thorns"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Man-Eater Bug
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Insect
-
-/
-Effect
-
-
-
-]
-
-ATK 450
-
-
-DEF 600
-
-
-
- 
-
-
-
-
-
-FLIP: Target 1 monster on the field; destroy that target.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sand Stone
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Rock
-
-/
-Normal
-
-
-
-]
-
-ATK 1300
-
-
-DEF 1600
-
-
-
- 
-
-
-
-
-
-Appears from underground and attacks with long, snake-like tentacles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hane-Hane
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Beast
-
-/
-Effect
-
-
-
-]
-
-ATK 450
-
-
-DEF 500
-
-
-
- 
-
-
-
-
-
-FLIP: Select 1 monster on the field and return it to its owner's hand.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Misairuzame
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Fish
-
-/
-Normal
-
-
-
-]
-
-ATK 1400
-
-
-DEF 1600
-
-
-
- 
-
-
-
-
-
-A missile-launching fish protected by deadly spikes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Steel Ogre Grotto #1
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Machine
-
-/
-Normal
-
-
-
-]
-
-ATK 1400
-
-
-DEF 1800
-
-
-
- 
-
-
-
-
-
-A steel idol worshipped in the Land of Machines.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Lesser Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A minor dragon incapable of breathing fire.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Darkworld Thorns
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A thorny plant found in the darklands that wraps itself around any unwary traveler.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Drooling Lizard
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Reptile
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-A blood-sucking snake in human form that attacks any living being that passes nearby.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armored Starfish
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Aqua
-
-/
-Normal
-
-
-
-]
-
-ATK 850
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-A bluish starfish with a solid hide capable of fending off attacks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Succubus Knight
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1650
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-A warrior wizard adept in casting bone-chilling spells.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Monster Reborn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Target 1 monster in either player's GY; Special Summon it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Pot of Greed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Draw 2 cards.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Right Leg of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
- 
-
-
-
-
-
-A forbidden right leg sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Left Leg of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
  
-
-
-
-
-
-A forbidden left leg sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Right Arm of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
 
 
 
+Activate only while "Umi" is on the field. While "Umi" is face-up on the field, you take no Battle Damage from attacking monsters. Destroy this card when "Umi" leaves the field.
 
 
 
 
-Level 1
 
 
 
 
 
-[
-Spellcaster
 
-/
-Normal
 
 
 
-]
+Torrential Tribute
 
-ATK 200
 
 
-DEF 300
 
 
+TRAP
 
  
 
 
 
+When a monster(s) is Summoned: Destroy all monsters on the field.
 
 
-A forbidden right arm sealed by magic. Whosoever breaks this seal will know infinite power.
 
 
 
@@ -7773,92 +1427,19 @@ A forbidden right arm sealed by magic. Whosoever breaks this seal will know infi
 
 
 
+Spiritual Water Art - Aoi
 
 
 
 
 
+TRAP
 
-Left Arm of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
  
-
-
-
-
-
-A forbidden left arm sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Exodia the Forbidden One
 
 
 
+Tribute 1 WATER monster; look at your opponent's hand, then send 1 card from their hand to the Graveyard.
 
 
 
@@ -7872,66 +1453,27 @@ Exodia the Forbidden One
 
 
 
+Gravity Bind
 
 
-DARK
 
 
 
+TRAP
 
 
 
+Continuous
 
-
-
-Level 3
-
-
-
-
-
-[
-Spellcaster
-
-/
-Effect
-
-
-
-]
-
-ATK 1000
-
-
-DEF 1000
-
-
-
  
-
-
-
-
-
-If you have "Right Leg of the Forbidden One", "Left Leg of the Forbidden One", "Right Arm of the Forbidden One" and "Left Arm of the Forbidden One" in addition to this card in your hand, you win the Duel.
-
-
-
-
-
-
-
-
-
-
 
 
 
+Level 4 or higher monsters cannot attack.
 
 
 
 
-Gaia the Dragon Champion
 
 
 
@@ -7941,59 +1483,19 @@ Gaia the Dragon Champion
 
 
 
+Poseidon Wave
 
 
 
 
 
-WIND
+TRAP
 
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Dragon
-
-/
-Fusion
-
-
-
-]
-
-ATK 2600
-
-
-DEF 2100
-
-
-
  
-
-
-
-
-
-Gaia The Fierce Knight + "Curse of Dragon"
-
-
-
-
-
 
 
 
+When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.
 
 
 
@@ -8018,9 +1520,6 @@ View as List
 
 
 
-
-
-
 Sort by Card Number
 Sort by Name
 Sort by Level/Rank (Desc.)
@@ -8040,12 +1539,7 @@ Sort by Link Rating (Asc.)
 
 
 
-
-
-
-Total of 126 Card(s)
-
-
+Total of 39 Card(s)
 
 
 
@@ -8059,7 +1553,7 @@ Total of 126 Card(s)
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
 js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9";
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -8089,13 +1583,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 
-
-
-
-
-
-Tri-Horned Dragon
-
+Poseidra, the Atlantean Dragon
 
 
 
@@ -8104,51 +1592,32 @@ Tri-Horned Dragon
 
 
 
+WATER
 
 
 
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 8
-
-
-
+Level 7
 
 
 [
-Dragon
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 2850
-
-
-DEF 2350
-
-
-
+ATK 2800
+DEF 1600
  
 
 
 
+You can Tribute 3 Level 3 or lower WATER monsters; Special Summon this card from your hand or Graveyard. When you do: Return all Spell and Trap Cards on the field to the hand, and if you do, if 3 or more cards are returned to the hand by this effect, all monsters your opponent currently controls lose 300 ATK for each.
 
 
-An unworthy dragon with three sharp horns sprouting from its head.
 
 
 
@@ -8160,208 +1629,125 @@ An unworthy dragon with three sharp horns sprouting from its head.
 
 
 
+Atlantean Dragoons
 
 
 
 
 
 
-Blue-Eyes White Dragon
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 8
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 3000
-
-
-DEF 2500
-
-
-
- 
-
-
-
-
-
-This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hitotsu-Me Giant
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
-
-
-
 [
-Beast-Warrior
+Sea Serpent
 
 /
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A one-eyed behemoth with thick, powerful arms made for delivering punishing blows.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Swordsman
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
+Effect
 
 
 
 ]
 
 ATK 1800
+DEF 0
+ 
 
 
+
+All Level 3 or lower Sea Serpent-Type monsters you control can attack your opponent directly. When this card is sent to the Graveyard to activate a WATER monster's effect: Add 1 Sea Serpent-Type monster from your Deck to your hand, except "Atlantean Dragoons".
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atlantean Marksman
+
+
+
+
+
+WATER
+
+
+
+Level 3
+
+
+[
+Sea Serpent
+
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 0
+ 
+
+
+
+When this card inflicts Battle Damage to your opponent: You can Special Summon 1 Level 4 or lower "Atlantean" Sea Serpent-Type monster from your Deck, except "Atlantean Marksman". When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 Set card your opponent controls; destroy that target.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atlantean Heavy Infantry
+
+
+
+
+
+WATER
+
+
+
+Level 2
+
+
+[
+Sea Serpent
+
+/
+Effect
+
+
+
+]
+
+ATK 0
 DEF 1600
-
-
-
  
 
 
 
-
-
-Flame Manipulator + "Masaki the Legendary Swordsman"
-
+During your Main Phase, you can Normal Summon 1 Level 4 or lower Sea Serpent-Type monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 face-up card your opponent controls; destroy that target.
 
 
 
@@ -8375,254 +1761,21 @@ Flame Manipulator + "Masaki the Legendary Swordsman"
 
 
 
-
-
-
-Skull Servant
-
+Atlantean Pikeman
 
 
 
 
 
+WATER
 
 
 
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
+Level 2
 
 
 [
-Zombie
-
-/
-Normal
-
-
-
-]
-
-ATK 300
-
-
-DEF 200
-
-
-
- 
-
-
-
-
-
-A skeletal ghost that isn't strong but can mean trouble in large numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dark Magician
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 2500
-
-
-DEF 2100
-
-
-
- 
-
-
-
-
-
-The ultimate wizard in terms of attack and defense.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Gaia The Fierce Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 2300
-
-
-DEF 2100
-
-
-
- 
-
-
-
-
-
-A knight whose horse travels faster than the wind. His battle-charge is a force to be reckoned with.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Celtic Guardian
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
+Sea Serpent
 
 /
 Normal
@@ -8632,19 +1785,14 @@ Normal
 ]
 
 ATK 1400
-
-
-DEF 1200
-
-
-
+DEF 0
  
 
 
 
+The Great Ocean Lord, who reigns over the depths, is served by these lancers. Deep-sea creatures exist in fear of facing the stream of attacks their lances are capable of.
 
 
-An elf who learned to wield a sword, he baffles enemies with lightning-swift attacks.
 
 
 
@@ -8656,132 +1804,36 @@ An elf who learned to wield a sword, he baffles enemies with lightning-swift att
 
 
 
+Atlantean Attack Squad
 
 
 
 
 
-
-Basic Insect
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Insect
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-Usually found traveling in swarms, this creature's ideal environment is the forest.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mammoth Graveyard
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 3
 
 
-
-
-
 [
-Dinosaur
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 800
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
-
-
-A mammoth that protects the graves of its pack and is absolutely merciless when facing grave-robbers.
-
+This card gains 800 ATK while you control a face-up Fish, Sea Serpent, or Aqua-Type monster other than this card.
 
 
 
@@ -8795,60 +1847,38 @@ A mammoth that protects the graves of its pack and is absolutely merciless when 
 
 
 
-
-
-
-Silver Fang
-
+Lost Blue Breaker
 
 
 
 
 
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 3
 
 
-
-
-
 [
-Beast
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 800
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
+If there is another face-up Fish, Sea Serpent, or Aqua-Type monster on the field: You can Tribute this card to target 1 Spell/Trap Card on the field; destroy that target.
 
 
-A snow wolf that's beautiful to the eye, but absolutely vicious in battle.
 
 
 
@@ -8860,131 +1890,81 @@ A snow wolf that's beautiful to the eye, but absolutely vicious in battle.
 
 
 
+Armed Sea Hunter
 
 
 
 
 
-
-Dark Gray
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-Entirely gray, this beast has rarely been seen by mortal eyes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Trial of Nightmare
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
+[
+Sea Serpent
 
+/
+Effect
+
+
+
+]
+
+ATK 1800
+DEF 400
+ 
+
+
+
+After damage calculation, if this card battles an Effect Monster: Negate the effects of that monster (including in the Graveyard). You must control another face-up WATER monster to activate and to resolve this effect. If this card would be destroyed, you can destroy 1 face-up Level 3 or lower WATER monster you control instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spined Gillman
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Fiend
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
 ATK 1300
-
-
-DEF 900
-
-
-
+DEF 0
  
 
 
 
+All Fish, Sea Serpent, and Aqua-Type monsters you control gain 400 ATK.
 
 
-This fiend passes judgment on enemies that are locked in coffins.
 
 
 
@@ -8996,408 +1976,85 @@ This fiend passes judgment on enemies that are locked in coffins.
 
 
 
+Deep Sea Diva
 
 
 
 
 
 
-Nemuriko
 
 
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-A child-like creature that controls a sleep fiend to beckon enemies into eternal slumber.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The 13th Grave
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Zombie
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A zombie that suddenly appeared from plot #13 - an empty grave.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Charubin the Fire Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Pyro
-
-/
-Fusion
-
-
-
-]
-
-ATK 1100
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-"Monster Egg" + "Hinotama Soul"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Manipulator
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-This Spellcaster attacks enemies with fire-related spells such as "Sea of Flames" and "Wall of Fire".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Monster Egg
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A warrior hidden within an egg that attacks enemies by flinging eggshells.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Firegrass
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 2
 
 
+[
+Sea Serpent
 
+/
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 200
+DEF 400
+ 
+
+
+
+When this card is Normal Summoned: You can Special Summon 1 Level 3 or lower Sea Serpent-Type monster from your Deck.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mermaid Archer
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Plant
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 700
-
-
-DEF 600
-
-
-
+ATK 1200
+DEF 200
  
 
 
 
-
-
-A fire-breathing plant found growing near volcanoes.
-
+Once per turn: You can target 1 face-up Level 3 or lower monster you control; equip that target to this card. (You can only equip 1 monster at a time to this card with this effect.) While equipped with a monster by this effect, this card gains 800 ATK. If this card would be destroyed, you can destroy the monster equipped to it with this effect, instead.
 
 
 
@@ -9411,64 +2068,167 @@ A fire-breathing plant found growing near volcanoes.
 
 
 
-
-
-
-Darkfire Dragon
-
+Codarus
 
 
 
 
 
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
+[
+Sea Serpent
 
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 1200
+ 
+
+
+
+You can send 1 face-up "Umi" you control to the Graveyard to target up to 2 cards your opponent controls; send those targets to the Graveyard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warrior of Atlantis
+
+
+
+
+
+WATER
+
+
+
+Level 4
 
 
 [
-Dragon
+Aqua
 
 /
-Fusion
+Effect
+
+
+
+]
+
+ATK 1900
+DEF 1200
+ 
+
+
+
+You can discard this card to the Graveyard; add 1 "A Legendary Ocean" from your Deck to your hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abyss Soldier
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Aqua
+
+/
+Effect
+
+
+
+]
+
+ATK 1800
+DEF 1300
+ 
+
+
+
+Once per turn: You can discard 1 WATER monster to the Graveyard to target 1 card on the field; return it to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Skreech
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Reptile
+
+/
+Effect
 
 
 
 ]
 
 ATK 1500
-
-
-DEF 1250
-
-
-
+DEF 400
  
 
 
 
+If this card is destroyed by battle: Send 2 WATER monsters from your Deck to the Graveyard.
 
 
-"Firegrass" + "Petit Dragon"
 
 
 
@@ -9480,226 +2240,7 @@ DEF 1250
 
 
 
-
-
-
-
-
-
-Dark King of the Abyss
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-It's said that this King of the Netherworld once had the power to rule over the dark.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fiend Reflection #2
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1100
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-A bird-beast that summons reinforcements with a hand mirror.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fusionist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Fusion
-
-
-
-]
-
-ATK 900
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-"Petit Angel" + "Mystical Sheep #2"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Turtle Tiger
-
-
-
-
-
+Snowman Eater
 
 
 
@@ -9709,42 +2250,28 @@ WATER
 
 
 
-
-
-
-
-
-
-Level 4
-
-
-
+Level 3
 
 
 [
 Aqua
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1000
-
-
-DEF 1500
-
-
-
+ATK 0
+DEF 1900
  
 
 
 
+If this card is flipped face-up: Target 1 face-up monster on the field; destroy that target.
 
 
-A tiger encased in a protective shell that attacks with razor-sharp fangs.
 
 
 
@@ -9756,479 +2283,38 @@ A tiger encased in a protective shell that attacks with razor-sharp fangs.
 
 
 
-
-
-
-
-
-
-Petit Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-A very small dragon known for its vicious attacks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Petit Angel
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A quick-moving and tiny fairy that's very difficult to hit.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hinotama Soul
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Pyro
-
-/
-Normal
-
-
-
-]
-
-ATK 600
-
-
-DEF 500
-
-
-
- 
-
-
-
-
-
-An intensely hot flame creature that rams anything standing in its way.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Aqua Madoor
-
-
-
-
-
-
-
-
-
+Nightmare Penguin
 
 
 
 
 
 WATER
-
-
-
-
-
-
 
 
 
 Level 4
 
 
-
-
-
 [
-Spellcaster
+Aqua
 
 /
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A wizard of the waters that conjures a liquid wall to crush any enemies that oppose him.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kagemusha of the Blue Flame
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 400
-
-
-
- 
-
-
-
-
-
-Serving as a double for the Ruler of the Blue Flame, he's a master swordsman that wields a fine blade.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flame Ghost
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Zombie
-
-/
-Fusion
-
-
-
-]
-
-ATK 1000
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-"Skull Servant" + "Dissolverock"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Two-Mouth Darkruler
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Dinosaur
-
-/
-Normal
+Effect
 
 
 
 ]
 
 ATK 900
-
-
-DEF 700
-
-
-
+DEF 1800
  
 
 
 
+All face-up WATER monsters you control gain 200 ATK. When this card is flipped face-up: Target 1 card your opponent controls; return that target to the hand.
 
 
-A dinosaur with two deadly jaws, it stores electricity in its horn and releases high voltage bolts from the mouth on its back.
 
 
 
@@ -10240,86 +2326,7 @@ A dinosaur with two deadly jaws, it stores electricity in its horn and releases 
 
 
 
-
-
-
-
-
-
-Dissolverock
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Rock
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A monster born in the lava pits, it generates intense heat that can melt away its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Root Water
-
-
-
-
-
+Penguin Soldier
 
 
 
@@ -10329,42 +2336,203 @@ WATER
 
 
 
+Level 2
+
+
+[
+Aqua
+
+/
+Effect
 
 
 
+]
+
+ATK 750
+DEF 500
+ 
+
+
+
+FLIP: You can target up to 2 monsters on the field; return those targets to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deep Diver
+
+
+
+
+
+WATER
 
 
 
 Level 3
 
 
+[
+Aqua
 
+/
+Effect
+
+
+
+]
+
+ATK 1000
+DEF 1100
+ 
+
+
+
+At the end of the Battle Phase, if this card was destroyed by battle and sent to the Graveyard: Choose 1 monster from your Deck and place it on top of your Deck.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reese the Ice Mistress
+
+
+
+
+
+WATER
+
+
+
+Level 2
+
+
+[
+Sea Serpent
+
+/
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 800
+DEF 800
+ 
+
+
+
+This card cannot be destroyed by battle with a Level 4 or higher monster.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mother Grizzly
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Beast-Warrior
+
+/
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 1000
+ 
+
+
+
+When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 WATER monster with 1500 or less ATK from your Deck, in face-up Attack Position.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Friller Rabca
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
 Fish
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 900
-
-
-DEF 800
-
-
-
+ATK 700
+DEF 1500
  
 
 
 
+When a Fish, Sea Serpent, or Aqua-Type monster you control is targeted for an attack: You can banish this card from your Graveyard, then target the attacking monster; negate the attack, and if you do, that target loses 500 ATK until the end of the next turn. You can only use this effect of "Friller Rabca" once per turn.
 
 
-An amphibian capable of calling up a massive tidal wave from the dark seas to wipe out enemy monsters.
 
 
 
@@ -10376,491 +2544,7 @@ An amphibian capable of calling up a massive tidal wave from the dark seas to wi
 
 
 
-
-
-
-
-
-
-The Furious Sea King
-
-
-
-
-
-
-
-
-
-
-WATER
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Aqua
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 700
-
-
-
- 
-
-
-
-
-
-Grand King of the Seven Seas, he's able to summon massive tidal waves to drown the enemy.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Green Phantom King
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 1600
-
-
-
- 
-
-
-
-
-
-This youthful king of the forests lives in a green world, abundant with trees and wildlife.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ray & Temperature
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-The Sun and the North Wind join hands to deliver a devastating combination of heat and gale-force winds.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-King Fog
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A fiend that dwells in a blinding curtain of smoke.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mystical Sheep #2
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A monstrous sheep with a long tail for hypnotizing enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Masaki the Legendary Swordsman
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1100
-
-
-DEF 1100
-
-
-
- 
-
-
-
-
-
-Legendary swordmaster Masaki is a veteran of over 100 battles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kurama
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-A vicious bird that attacks from the skies with its whip-like tail.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Legendary Sword
-
-
+Call of the Atlanteans
 
 
 
@@ -10873,23 +2557,13 @@ SPELL
 
 
 
-
-
-Equip
-
-
-
-
-
+Quick-Play
 
  
 
 
 
-
-
-A Warrior-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
+Target 3 Level 3 or lower Sea Serpent-Type monsters in your Graveyard; Special Summon all 3 of them. You cannot Special Summon any other monsters during the turn you activate this card.
 
 
 
@@ -10903,12 +2577,37 @@ A Warrior-Type monster equipped with this card increases its ATK and DEF by 300 
 
 
 
+A Legendary Ocean
 
 
 
-Beast Fangs
 
 
+SPELL
+
+
+
+Field
+
+ 
+
+
+
+(This card's name is always treated as "Umi".)All WATER monsters on the field gain 200 ATK/DEF. Reduce the Level of all WATER monsters in both players' hands and on the field by 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terraforming
 
 
 
@@ -10919,25 +2618,11 @@ Beast Fangs
 
 SPELL
 
-
-
-
-
-Equip
-
-
-
-
-
-
  
 
 
 
-
-
-A Beast-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
+Add 1 Field Spell from your Deck to your hand.
 
 
 
@@ -10951,189 +2636,23 @@ A Beast-Type monster equipped with this card increases its ATK and DEF by 300 po
 
 
 
-
-
-
-Violet Crystal
-
-
-
-
-
+Water Hazard
 
 
 
 
 
 SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-(This card is not treated as a "Crystal" card.)A Zombie-Type monster equipped with this card increases its ATK and DEF by 300 points.NotesCard Name updated from "Violet Crystal" on January 00, 1900.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Book of Secret Arts
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Spellcaster-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Power of Kaishin
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-An Aqua-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragon Capture Jar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TRAP
-
-
 
 
 
 Continuous
 
-
-
-
-
-
  
 
 
 
-
-
-Change all face-up Dragon-Type monsters on the field to Defense Position, also they cannot change their battle positions.
-
+Once per turn: You can Special Summon 1 Level 4 or lower WATER monster from your hand. You must control no monsters to activate and to resolve this effect.
 
 
 
@@ -11147,15 +2666,7 @@ Change all face-up Dragon-Type monsters on the field to Defense Position, also t
 
 
 
-
-
-
-Forest
-
-
-
-
-
+Aqua Jet
 
 
 
@@ -11163,25 +2674,11 @@ Forest
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Insect, Beast, Plant, and Beast-Warrior-Type monsters by 200 points.
-
+Target 1 face-up Fish, Sea Serpent, or Aqua-Type monster you control; it gains 1000 ATK.
 
 
 
@@ -11195,15 +2692,7 @@ Increases the ATK and DEF of all Insect, Beast, Plant, and Beast-Warrior-Type mo
 
 
 
-
-
-
-Wasteland
-
-
-
-
-
+Surface
 
 
 
@@ -11211,25 +2700,11 @@ Wasteland
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Dinosaur, Zombie, and Rock-Type monsters by 200 points.
-
+Target 1 Level 3 or lower Fish, Sea Serpent, or Aqua-Type monster in your Graveyard; Special Summon it in face-up Defense Position.
 
 
 
@@ -11243,15 +2718,7 @@ Increases the ATK and DEF of all Dinosaur, Zombie, and Rock-Type monsters by 200
 
 
 
-
-
-
-Mountain
-
-
-
-
-
+Moray of Greed
 
 
 
@@ -11259,25 +2726,11 @@ Mountain
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increase the ATK and DEF of all Dragon, Winged Beast, and Thunder-Type monsters by 200 points.
-
+Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.
 
 
 
@@ -11291,15 +2744,7 @@ Increase the ATK and DEF of all Dragon, Winged Beast, and Thunder-Type monsters 
 
 
 
-
-
-
-Sogen
-
-
-
-
-
+Salvage
 
 
 
@@ -11307,124 +2752,11 @@ Sogen
 
 SPELL
 
-
-
-
-
-Field
-
-
-
-
-
-
  
 
 
 
-
-
-Increases the ATK and DEF of all Beast-Warrior and Warrior-Type monsters by 200 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Umi
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Field
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase the ATK and DEF of all Fish, Sea Serpent, Thunder, and Aqua-Type monsters by 200 points. Decrease the ATK and DEF of all Machine and Pyro-Type monsters by 200 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Yami
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Field
-
-
-
-
-
-
- 
-
-
-
-
-
-Increases the ATK and DEF of all Fiend and Spellcaster-Type monsters by 200 points. Also decreases the ATK and DEF of all Fairy-Type monsters by 200 points.
-
-
-
-
+Target 2 WATER monsters with 1500 or less ATK in your Graveyard; add those targets to your hand.
 
 
 
@@ -11447,27 +2779,9 @@ Dark Hole
 
 
 
-
-
-
-
-
-
-
-
-
-
 SPELL
 
-
-
-
-
-
-
  
-
-
 
 
 
@@ -11485,24 +2799,7 @@ Destroy all monsters on the field.
 
 
 
-
-
-
-
-Raigeki
-
-
-
-
-
-
-
-
-
-
-
-
-
+Big Wave Small Wave
 
 
 
@@ -11510,19 +2807,39 @@ Raigeki
 
 SPELL
 
+ 
+
+
+
+Destroy all face-up WATER monsters you control, then you can Special Summon WATER monsters from your hand, up to the number of monsters destroyed by this effect.
 
 
 
 
 
+
+
+
+
+
+
+
+
+Aegis of the Ocean Dragon Lord
+
+
+
+
+
+TRAP
 
  
 
 
 
+Until the End Phase, face-up Level 3 or lower WATER monsters you control cannot be destroyed by battle or by card effects.
 
 
-Destroy all monsters your opponent controls.
 
 
 
@@ -11534,198 +2851,7 @@ Destroy all monsters your opponent controls.
 
 
 
-
-
-
-
-
-
-Red Medicine
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase your Life Points by 500 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sparks
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 200 points of damage to your opponent's Life Points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hinotama
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 500 damage to your opponent.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fissure
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Destroy the 1 face-up monster your opponent controls that has the lowest ATK (your choice, if tied).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Trap Hole
-
-
-
-
-
-
-
-
-
+Forgotten Temple of the Deep
 
 
 
@@ -11735,17 +2861,15 @@ TRAP
 
 
 
-
-
-
+Continuous
 
  
 
 
 
+While this card is on the field, this card's name becomes "Umi". Once per turn: You can target 1 Level 4 or lower Fish, Sea Serpent or Aqua-Type monster you control; banish that target. During your End Phase: Special Summon the monster(s) banished by this effect.
 
 
-When your opponent Normal or Flip Summons 1 monster with 1000 or more ATK: Target that monster; destroy that target.
 
 
 
@@ -11757,112 +2881,7 @@ When your opponent Normal or Flip Summons 1 monster with 1000 or more ATK: Targe
 
 
 
-
-
-
-
-
-
-Polymerization
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Remove Trap
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 1 face-up Trap Card on the field and destroy it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Two-Pronged Attack
-
-
-
-
-
-
-
-
-
+Tornado Wall
 
 
 
@@ -11872,6 +2891,181 @@ TRAP
 
 
 
+Continuous
+
+ 
+
+
+
+Activate only while "Umi" is on the field. While "Umi" is face-up on the field, you take no Battle Damage from attacking monsters. Destroy this card when "Umi" leaves the field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Torrential Tribute
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+When a monster(s) is Summoned: Destroy all monsters on the field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spiritual Water Art - Aoi
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+Tribute 1 WATER monster; look at your opponent's hand, then send 1 card from their hand to the Graveyard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gravity Bind
+
+
+
+
+
+TRAP
+
+
+
+Continuous
+
+ 
+
+
+
+Level 4 or higher monsters cannot attack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Poseidon Wave
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+View as Gallery
+View as List
+
+
+
+
+
+Sort by Card Number
+Sort by Name
+Sort by Level/Rank (Desc.)
+Sort by Level/Rank (Asc.)
+Sort by ATK (Desc.)
+Sort by ATK (Asc.)
+Sort by DEF (Desc.)
+Sort by DEF (Asc.)
+Sort by Pendulum Scale (Desc.)
+Sort by Pendulum Scale (Asc.)
+Sort by Link Rating (Desc.)
+Sort by Link Rating (Asc.)
+
+
+
+
+
+
+
+Total of 39 Card(s)
+
+
+
+
+
+
+
+
+
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
 
 
@@ -11882,7 +3076,6 @@ TRAP
 
 
 
-Select and destroy 2 of your monsters and 1 of your opponent's monsters.
 
 
 
@@ -11900,7 +3093,7 @@ Select and destroy 2 of your monsters and 1 of your opponent's monsters.
 
 
 
-Mystical Elf
+Poseidra, the Atlantean Dragon
 
 
 
@@ -11909,641 +3102,15 @@ Mystical Elf
 
 
 
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A delicate elf that lacks offense, but has a terrific defense backed by mystical power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Tyhone
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-Capable of firing cannonballs from its mouth for long-range attacks, this creature is particularly effective in mountain battles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Beaver Warrior
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Beast-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1500
-
-
-
- 
-
-
-
-
-
-What this creature lacks in size it makes up for in defense when battling in the prairie.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Gravedigger Ghoul
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 2 Monster Cards from your opponent's Graveyard. These Monster Cards are removed from play for the remainder of the Duel.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Curse of Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 2000
-
-
-DEF 1500
-
-
-
- 
-
-
-
-
-
-A wicked dragon that taps into dark forces to execute a powerful attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Karbonala Warrior
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
-
-
-
-]
-
-ATK 1500
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-"M-Warrior #1" + "M-Warrior #2"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Giant Soldier of Stone
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Rock
-
-/
-Normal
-
-
-
-]
-
-ATK 1300
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A giant warrior made of stone. A punch from this creature has earth-shaking results.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Uraby
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Dinosaur
-
-/
-Normal
-
-
-
-]
-
-ATK 1500
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-Fast on its feet, this dinosaur rips enemies to shreds with its sharp claws.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Red-Eyes B. Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 7
 
 
-
-
-
 [
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 2400
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A ferocious dragon with a deadly attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reaper of the Cards
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Fiend
+Sea Serpent
 
 /
 Effect
@@ -12552,21 +3119,13 @@ Effect
 
 ]
 
-ATK 1380
-
-
-DEF 1930
-
-
-
+ATK 2800
+DEF 1600
  
 
 
 
-
-
-FLIP: Select 1 Trap Card on the field and destroy it. If the selected card is Set, pick up and see the card. If it is a Trap Card, it is destroyed. If it is a Spell Card, return it to its original position.
-
+You can Tribute 3 Level 3 or lower WATER monsters; Special Summon this card from your hand or Graveyard. When you do: Return all Spell and Trap Cards on the field to the hand, and if you do, if 3 or more cards are returned to the hand by this effect, all monsters your opponent currently controls lose 300 ATK for each.
 
 
 
@@ -12580,11 +3139,7 @@ FLIP: Select 1 Trap Card on the field and destroy it. If the selected card is Se
 
 
 
-
-
-
-Witty Phantom
-
+Atlantean Dragoons
 
 
 
@@ -12593,47 +3148,75 @@ Witty Phantom
 
 
 
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 4
 
 
+[
+Sea Serpent
 
+/
+Effect
+
+
+
+]
+
+ATK 1800
+DEF 0
+ 
+
+
+
+All Level 3 or lower Sea Serpent-Type monsters you control can attack your opponent directly. When this card is sent to the Graveyard to activate a WATER monster's effect: Add 1 Sea Serpent-Type monster from your Deck to your hand, except "Atlantean Dragoons".
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atlantean Marksman
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Fiend
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
 ATK 1400
-
-
-DEF 1300
-
-
-
+DEF 0
  
 
 
 
+When this card inflicts Battle Damage to your opponent: You can Special Summon 1 Level 4 or lower "Atlantean" Sea Serpent-Type monster from your Deck, except "Atlantean Marksman". When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 Set card your opponent controls; destroy that target.
 
 
-Dressed in a night-black tuxedo, this creature presides over the darkness.
 
 
 
@@ -12645,770 +3228,7 @@ Dressed in a night-black tuxedo, this creature presides over the darkness.
 
 
 
-
-
-
-
-
-
-Larvas
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A fast-moving, bird-like creature that strangles opposing monsters with its long, thin arms.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hard Armor
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 300
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-A living suit of armor that attacks enemies with a bone-jarring tackle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Man Eater
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 600
-
-
-
- 
-
-
-
-
-
-Man-eating plant with poison feelers for attacking enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-M-Warrior #1
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 1000
-
-
-DEF 500
-
-
-
- 
-
-
-
-
-
-Specializing in combination attacks, this warrior uses magnetism to block an enemy's escape.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-M-Warrior #2
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 500
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-Specializing in combination attacks, this warrior is equipped with a tough, magnetically coated armor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Spirit of the Harp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LIGHT
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Fairy
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 2000
-
-
-
- 
-
-
-
-
-
-A spirit that soothes the soul with the music of its heavenly harp.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armaill
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-A strange warrior who manipulates three deadly blades with both hands and his tail.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Terra the Terrible
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-Known as a swamp dweller, this creature is a minion of the dark forces.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Frenzied Panda
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A savage beast that carries a big bamboo stick for beating down its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Kumootoko
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Insect
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1400
-
-
-
- 
-
-
-
-
-
-A massive, intelligent spider that traps enemies with webbing.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Meda Bat
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
-
-
-[
-Fiend
-
-/
-Normal
-
-
-
-]
-
-ATK 800
-
-
-DEF 400
-
-
-
- 
-
-
-
-
-
-An eyeball fiend created by a servant of the wicked, it uses "Dark Blasts" to blow away its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Enchanting Mermaid
-
-
-
-
-
+Atlantean Heavy Infantry
 
 
 
@@ -13418,42 +3238,28 @@ WATER
 
 
 
-
-
-
-
-
-
-Level 3
-
-
-
+Level 2
 
 
 [
-Fish
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 900
-
-
-
+ATK 0
+DEF 1600
  
 
 
 
+During your Main Phase, you can Normal Summon 1 Level 4 or lower Sea Serpent-Type monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 face-up card your opponent controls; destroy that target.
 
 
-A beautiful mermaid that lures voyagers to a watery grave.
 
 
 
@@ -13465,966 +3271,7 @@ A beautiful mermaid that lures voyagers to a watery grave.
 
 
 
-
-
-
-
-
-
-Fireyarou
-
-
-
-
-
-
-
-
-
-
-FIRE
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Pyro
-
-/
-Normal
-
-
-
-]
-
-ATK 1300
-
-
-DEF 1000
-
-
-
- 
-
-
-
-
-
-A malevolent creature wrapped in flames that attacks enemies with intense fire.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragoness the Wicked Knight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Warrior
-
-/
-Fusion
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-"Armaill" + "One-Eyed Shield Dragon"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-One-Eyed Shield Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Dragon
-
-/
-Normal
-
-
-
-]
-
-ATK 700
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-This dragon wears a shield not only for its own protection, but also for ramming its enemies.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dark Energy
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Fiend-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Laser Cannon Armor
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-An Insect-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Vile Germs
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Plant-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Silver Bow and Arrow
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Fairy-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Dragon Treasure
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Dragon-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Electro-Whip
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Thunder-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mystical Moon
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-Equip only to a Beast-Warrior-Type monster. It gains 300 ATK and DEF.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Stop Defense
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Select 1 Defense Position monster on your opponent's side of the field and change it to Attack Position.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Machine Conversion Factory
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Machine-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Raise Body Heat
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Dinosaur-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Follow Wind
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-Equip
-
-
-
-
-
-
- 
-
-
-
-
-
-A Winged Beast-Type monster equipped with this card increases its ATK and DEF by 300 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Goblin's Secret Remedy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Increase your Life Points by 600 points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Final Flame
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Inflict 600 points of damage to your opponent's Life Points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Swords of Revealing Light
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-After this card's activation, it remains on the field, but you must destroy it during the End Phase of your opponent's 3rd turn. When this card is activated: If your opponent controls a face-down monster, flip all monsters they control face-up. While this card is face-up on the field, your opponent's monsters cannot declare an attack.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Metal Dragon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 6
-
-
-
-
-
-[
-Machine
-
-/
-Fusion
-
-
-
-]
-
-ATK 1850
-
-
-DEF 1700
-
-
-
- 
-
-
-
-
-
-"Steel Ogre Grotto #1" + "Lesser Dragon"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Spike Seadra
-
-
-
-
-
+Atlantean Pikeman
 
 
 
@@ -14434,16 +3281,7 @@ WATER
 
 
 
-
-
-
-
-
-
-Level 5
-
-
-
+Level 2
 
 
 [
@@ -14456,21 +3294,13 @@ Normal
 
 ]
 
-ATK 1600
-
-
-DEF 1300
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
-
-
-Using the spikes sprouting from its body, this creature stabs its opponents and floods them with electricity.
-
+The Great Ocean Lord, who reigns over the depths, is served by these lancers. Deep-sea creatures exist in fear of facing the stream of attacks their lances are capable of.
 
 
 
@@ -14484,178 +3314,21 @@ Using the spikes sprouting from its body, this creature stabs its opponents and 
 
 
 
-
-
-
-Tripwire Beast
-
+Atlantean Attack Squad
 
 
 
 
 
+WATER
 
 
 
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
+Level 3
 
 
 [
-Thunder
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 1300
-
-
-
- 
-
-
-
-
-
-This creature attacks with electromagnetic waves.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Skull Red Bird
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 4
-
-
-
-
-
-[
-Winged Beast
-
-/
-Normal
-
-
-
-]
-
-ATK 1550
-
-
-DEF 1200
-
-
-
- 
-
-
-
-
-
-This monster swoops down and attacks with a rain of knives stored in its wings.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armed Ninja
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Warrior
+Sea Serpent
 
 /
 Effect
@@ -14664,21 +3337,13 @@ Effect
 
 ]
 
-ATK 300
-
-
-DEF 300
-
-
-
+ATK 1400
+DEF 0
  
 
 
 
-
-
-FLIP: Target 1 Spell Card on the field; destroy that target. (If the target is Set, reveal it, and destroy it if it is a Spell Card. Otherwise, return it to its original position.)
-
+This card gains 800 ATK while you control a face-up Fish, Sea Serpent, or Aqua-Type monster other than this card.
 
 
 
@@ -14692,65 +3357,79 @@ FLIP: Target 1 Spell Card on the field; destroy that target. (If the target is S
 
 
 
-
-
-
-Flower Wolf
-
+Lost Blue Breaker
 
 
 
 
 
+WATER
 
 
 
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
+Level 3
 
 
 [
-Beast
+Sea Serpent
 
 /
-Fusion
+Effect
+
+
+
+]
+
+ATK 1400
+DEF 0
+ 
+
+
+
+If there is another face-up Fish, Sea Serpent, or Aqua-Type monster on the field: You can Tribute this card to target 1 Spell/Trap Card on the field; destroy that target.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Armed Sea Hunter
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Sea Serpent
+
+/
+Effect
 
 
 
 ]
 
 ATK 1800
-
-
-DEF 1400
-
-
-
+DEF 400
  
 
 
 
-
-
-"Silver Fang" + "Darkworld Thorns"
-
+After damage calculation, if this card battles an Effect Monster: Negate the effects of that monster (including in the Graveyard). You must control another face-up WATER monster to activate and to resolve this effect. If this card would be destroyed, you can destroy 1 face-up Level 3 or lower WATER monster you control instead.
 
 
 
@@ -14764,133 +3443,36 @@ DEF 1400
 
 
 
-
-
-
-Man-Eater Bug
-
+Spined Gillman
 
 
 
 
 
+WATER
 
 
 
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 2
-
-
-
+Level 3
 
 
 [
-Insect
+Sea Serpent
 
 /
 Effect
-
-
-
-]
-
-ATK 450
-
-
-DEF 600
-
-
-
- 
-
-
-
-
-
-FLIP: Target 1 monster on the field; destroy that target.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sand Stone
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Rock
-
-/
-Normal
 
 
 
 ]
 
 ATK 1300
-
-
-DEF 1600
-
-
-
+DEF 0
  
 
 
 
-
-
-Appears from underground and attacks with long, snake-like tentacles.
-
+All Fish, Sea Serpent, and Aqua-Type monsters you control gain 400 ATK.
 
 
 
@@ -14904,11 +3486,7 @@ Appears from underground and attacks with long, snake-like tentacles.
 
 
 
-
-
-
-Hane-Hane
-
+Deep Sea Diva
 
 
 
@@ -14917,29 +3495,61 @@ Hane-Hane
 
 
 
-
-
-
-
-
-EARTH
-
-
-
-
-
-
+WATER
 
 
 
 Level 2
 
 
+[
+Sea Serpent
 
+/
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 200
+DEF 400
+ 
+
+
+
+When this card is Normal Summoned: You can Special Summon 1 Level 3 or lower Sea Serpent-Type monster from your Deck.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mermaid Archer
+
+
+
+
+
+WATER
+
+
+
+Level 3
 
 
 [
-Beast
+Sea Serpent
 
 /
 Effect
@@ -14948,21 +3558,13 @@ Effect
 
 ]
 
-ATK 450
-
-
-DEF 500
-
-
-
+ATK 1200
+DEF 200
  
 
 
 
-
-
-FLIP: Select 1 monster on the field and return it to its owner's hand.
-
+Once per turn: You can target 1 face-up Level 3 or lower monster you control; equip that target to this card. (You can only equip 1 monster at a time to this card with this effect.) While equipped with a monster by this effect, this card gains 800 ATK. If this card would be destroyed, you can destroy the monster equipped to it with this effect, instead.
 
 
 
@@ -14976,15 +3578,7 @@ FLIP: Select 1 monster on the field and return it to its owner's hand.
 
 
 
-
-
-
-Misairuzame
-
-
-
-
-
+Codarus
 
 
 
@@ -14994,178 +3588,28 @@ WATER
 
 
 
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Fish
-
-/
-Normal
-
-
-
-]
-
-ATK 1400
-
-
-DEF 1600
-
-
-
- 
-
-
-
-
-
-A missile-launching fish protected by deadly spikes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Steel Ogre Grotto #1
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
-
-
-[
-Machine
-
-/
-Normal
-
-
-
-]
-
-ATK 1400
-
-
-DEF 1800
-
-
-
- 
-
-
-
-
-
-A steel idol worshipped in the Land of Machines.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Lesser Dragon
-
-
-
-
-
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
 Level 4
 
 
-
-
-
 [
-Dragon
+Sea Serpent
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1200
-
-
-DEF 1000
-
-
-
+ATK 1400
+DEF 1200
  
 
 
 
+You can send 1 face-up "Umi" you control to the Graveyard to target up to 2 cards your opponent controls; send those targets to the Graveyard.
 
 
-A minor dragon incapable of breathing fire.
 
 
 
@@ -15177,154 +3621,7 @@ A minor dragon incapable of breathing fire.
 
 
 
-
-
-
-
-
-
-Darkworld Thorns
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Plant
-
-/
-Normal
-
-
-
-]
-
-ATK 1200
-
-
-DEF 900
-
-
-
- 
-
-
-
-
-
-A thorny plant found in the darklands that wraps itself around any unwary traveler.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Drooling Lizard
-
-
-
-
-
-
-
-
-
-
-EARTH
-
-
-
-
-
-
-
-
-
-Level 3
-
-
-
-
-
-[
-Reptile
-
-/
-Normal
-
-
-
-]
-
-ATK 900
-
-
-DEF 800
-
-
-
- 
-
-
-
-
-
-A blood-sucking snake in human form that attacks any living being that passes nearby.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Armored Starfish
-
-
-
-
-
+Warrior of Atlantis
 
 
 
@@ -15334,43 +3631,26 @@ WATER
 
 
 
-
-
-
-
-
-
 Level 4
-
-
-
 
 
 [
 Aqua
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 850
-
-
-DEF 1400
-
-
-
+ATK 1900
+DEF 1200
  
 
 
 
-
-
-A bluish starfish with a solid hide capable of fending off attacks.
-
+You can discard this card to the Graveyard; add 1 "A Legendary Ocean" from your Deck to your hand.
 
 
 
@@ -15384,60 +3664,38 @@ A bluish starfish with a solid hide capable of fending off attacks.
 
 
 
-
-
-
-Succubus Knight
-
+Abyss Soldier
 
 
 
 
 
+WATER
 
 
 
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 5
-
-
-
+Level 4
 
 
 [
-Warrior
+Aqua
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 1650
-
-
+ATK 1800
 DEF 1300
-
-
-
  
 
 
 
+Once per turn: You can discard 1 WATER monster to the Graveyard to target 1 card on the field; return it to the hand.
 
 
-A warrior wizard adept in casting bone-chilling spells.
 
 
 
@@ -15449,173 +3707,38 @@ A warrior wizard adept in casting bone-chilling spells.
 
 
 
+Skreech
 
 
 
 
 
+WATER
 
-Monster Reborn
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Target 1 monster in either player's GY; Special Summon it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Pot of Greed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SPELL
-
-
-
-
-
-
-
- 
-
-
-
-
-
-Draw 2 cards.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Right Leg of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
+Level 4
 
 
 [
-Spellcaster
+Reptile
 
 /
-Normal
+Effect
 
 
 
 ]
 
-ATK 200
-
-
-DEF 300
-
-
-
+ATK 1500
+DEF 400
  
 
 
 
+If this card is destroyed by battle: Send 2 WATER monsters from your Deck to the Graveyard.
 
 
-A forbidden right leg sealed by magic. Whosoever breaks this seal will know infinite power.
 
 
 
@@ -15627,277 +3750,150 @@ A forbidden right leg sealed by magic. Whosoever breaks this seal will know infi
 
 
 
+Snowman Eater
 
 
 
 
 
-
-Left Leg of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
- 
-
-
-
-
-
-A forbidden left leg sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Right Arm of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
- 
-
-
-
-
-
-A forbidden right arm sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Left Arm of the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
-
-
-
-Level 1
-
-
-
-
-
-[
-Spellcaster
-
-/
-Normal
-
-
-
-]
-
-ATK 200
-
-
-DEF 300
-
-
-
- 
-
-
-
-
-
-A forbidden left arm sealed by magic. Whosoever breaks this seal will know infinite power.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Exodia the Forbidden One
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DARK
-
-
-
-
-
-
+WATER
 
 
 
 Level 3
 
 
+[
+Aqua
 
+/
+Effect
+
+
+
+]
+
+ATK 0
+DEF 1900
+ 
+
+
+
+If this card is flipped face-up: Target 1 face-up monster on the field; destroy that target.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nightmare Penguin
+
+
+
+
+
+WATER
+
+
+
+Level 4
 
 
 [
-Spellcaster
+Aqua
+
+/
+Effect
+
+
+
+]
+
+ATK 900
+DEF 1800
+ 
+
+
+
+All face-up WATER monsters you control gain 200 ATK. When this card is flipped face-up: Target 1 card your opponent controls; return that target to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Penguin Soldier
+
+
+
+
+
+WATER
+
+
+
+Level 2
+
+
+[
+Aqua
+
+/
+Effect
+
+
+
+]
+
+ATK 750
+DEF 500
+ 
+
+
+
+FLIP: You can target up to 2 monsters on the field; return those targets to the hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deep Diver
+
+
+
+
+
+WATER
+
+
+
+Level 3
+
+
+[
+Aqua
 
 /
 Effect
@@ -15907,20 +3903,12 @@ Effect
 ]
 
 ATK 1000
-
-
-DEF 1000
-
-
-
+DEF 1100
  
 
 
 
-
-
-If you have "Right Leg of the Forbidden One", "Left Leg of the Forbidden One", "Right Arm of the Forbidden One" and "Left Arm of the Forbidden One" in addition to this card in your hand, you win the Duel.
-
+At the end of the Battle Phase, if this card was destroyed by battle and sent to the Graveyard: Choose 1 monster from your Deck and place it on top of your Deck.
 
 
 
@@ -15934,70 +3922,600 @@ If you have "Right Leg of the Forbidden One", "Left Leg of the Forbidden One", "
 
 
 
-
-
-
-Gaia the Dragon Champion
-
+Reese the Ice Mistress
 
 
 
 
 
+WATER
 
 
 
-
-
-
-
-
-WIND
-
-
-
-
-
-
-
-
-
-Level 7
-
-
-
+Level 2
 
 
 [
-Dragon
+Sea Serpent
 
 /
-Fusion
+Tuner
+
+
+/
+Effect
+
+
+]
+
+ATK 800
+DEF 800
+ 
+
+
+
+This card cannot be destroyed by battle with a Level 4 or higher monster.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mother Grizzly
+
+
+
+
+
+WATER
+
+
+
+Level 4
+
+
+[
+Beast-Warrior
+
+/
+Effect
 
 
 
 ]
 
-ATK 2600
+ATK 1400
+DEF 1000
+ 
 
 
-DEF 2100
+
+When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 WATER monster with 1500 or less ATK from your Deck, in face-up Attack Position.
 
 
+
+
+
+
+
+
+
+
+
+
+
+Friller Rabca
+
+
+
+
+
+WATER
+
+
+
+Level 3
+
+
+[
+Fish
+
+/
+Effect
+
+
+
+]
+
+ATK 700
+DEF 1500
+ 
+
+
+
+When a Fish, Sea Serpent, or Aqua-Type monster you control is targeted for an attack: You can banish this card from your Graveyard, then target the attacking monster; negate the attack, and if you do, that target loses 500 ATK until the end of the next turn. You can only use this effect of "Friller Rabca" once per turn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Call of the Atlanteans
+
+
+
+
+
+
+
+
+SPELL
+
+
+
+Quick-Play
 
  
 
 
 
-
-
-Gaia The Fierce Knight + "Curse of Dragon"
-
+Target 3 Level 3 or lower Sea Serpent-Type monsters in your Graveyard; Special Summon all 3 of them. You cannot Special Summon any other monsters during the turn you activate this card.
 
 
 
 
 
+
+
+
+
+
+
+
+
+A Legendary Ocean
+
+
+
+
+
+SPELL
+
+
+
+Field
+
+ 
+
+
+
+(This card's name is always treated as "Umi".)All WATER monsters on the field gain 200 ATK/DEF. Reduce the Level of all WATER monsters in both players' hands and on the field by 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terraforming
+
+
+
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Add 1 Field Spell from your Deck to your hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Water Hazard
+
+
+
+
+
+SPELL
+
+
+
+Continuous
+
+ 
+
+
+
+Once per turn: You can Special Summon 1 Level 4 or lower WATER monster from your hand. You must control no monsters to activate and to resolve this effect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aqua Jet
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Target 1 face-up Fish, Sea Serpent, or Aqua-Type monster you control; it gains 1000 ATK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Surface
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Target 1 Level 3 or lower Fish, Sea Serpent, or Aqua-Type monster in your Graveyard; Special Summon it in face-up Defense Position.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moray of Greed
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Salvage
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Target 2 WATER monsters with 1500 or less ATK in your Graveyard; add those targets to your hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dark Hole
+
+
+
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Destroy all monsters on the field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Big Wave Small Wave
+
+
+
+
+
+SPELL
+
+ 
+
+
+
+Destroy all face-up WATER monsters you control, then you can Special Summon WATER monsters from your hand, up to the number of monsters destroyed by this effect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aegis of the Ocean Dragon Lord
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+Until the End Phase, face-up Level 3 or lower WATER monsters you control cannot be destroyed by battle or by card effects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Forgotten Temple of the Deep
+
+
+
+
+
+TRAP
+
+
+
+Continuous
+
+ 
+
+
+
+While this card is on the field, this card's name becomes "Umi". Once per turn: You can target 1 Level 4 or lower Fish, Sea Serpent or Aqua-Type monster you control; banish that target. During your End Phase: Special Summon the monster(s) banished by this effect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tornado Wall
+
+
+
+
+
+TRAP
+
+
+
+Continuous
+
+ 
+
+
+
+Activate only while "Umi" is on the field. While "Umi" is face-up on the field, you take no Battle Damage from attacking monsters. Destroy this card when "Umi" leaves the field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Torrential Tribute
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+When a monster(s) is Summoned: Destroy all monsters on the field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spiritual Water Art - Aoi
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+Tribute 1 WATER monster; look at your opponent's hand, then send 1 card from their hand to the Graveyard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gravity Bind
+
+
+
+
+
+TRAP
+
+
+
+Continuous
+
+ 
+
+
+
+Level 4 or higher monsters cannot attack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Poseidon Wave
+
+
+
+
+
+TRAP
+
+ 
+
+
+
+When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.
 
 
 

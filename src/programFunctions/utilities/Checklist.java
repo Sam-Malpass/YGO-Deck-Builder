@@ -10,7 +10,6 @@ import programFunctions.ProgramFunctions;
 import programFunctions.searching.SearchResult;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Checklist {
     /**
      * Constructor with no arguments

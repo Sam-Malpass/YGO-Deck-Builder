@@ -563,14 +563,17 @@ public class DataImporter {
                     break;
             }
         }
+        int count = 0;
         for(Card C : series.getCards()) {
+            System.out.print("[SYSTEM] Currently processing: " + C.getCardName());
             if(C instanceof EffectMonster || C instanceof SpellCard || C instanceof TrapCard) {
                 C.setEffValue(PythonInterfacer.classifyEffect(C.getCardDescription()));
-                System.out.println("HERE");
             }
             else {
                 C.setEffValue(0);
             }
+            System.out.print(" with effect value: " + C.getEffValue() + "\n");
+            count++;
             if(!(C instanceof FusionMonster) && !(C instanceof SynchroMonster) && !(C instanceof XYZMonster) && !(C instanceof LinkMonster) && !(C instanceof SpellCard) && !(C instanceof TrapCard)) {
                 C = (MonsterCard) C;
                 ArrayList<Double> inputs = new ArrayList<>();
@@ -593,9 +596,9 @@ public class DataImporter {
                 net.setInput(inputs);
                 net.activate();
                 C.setValue(net.getOutput().get(0));
-                System.out.println("[SYSTEM] Card value set to: " + C.getValue());
             }
         }
+        System.out.println("[SYSTEM] Successfully processed " + count + " cards!");
         /*Return the series*/
         return series;
     }

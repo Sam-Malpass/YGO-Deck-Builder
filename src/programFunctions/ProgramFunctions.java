@@ -19,9 +19,21 @@ import programFunctions.utilities.Utils;
 import java.util.ArrayList;
 import java.util.List;
 public class ProgramFunctions extends Application {
+    /**
+     * programData holds the AppData
+     */
     private static AppData programData;
+    /**
+     * utilities holds the Utils
+     */
     private static Utils utilities;
+    /**
+     * query holds the Searcher
+     */
     private static Searcher query;
+    /**
+     * dataImporter holds the DataImporter
+     */
     private static DataImporter dataImporter;
     /**
      * Function definition for updateUserList()
@@ -59,7 +71,14 @@ public class ProgramFunctions extends Application {
         /*Return true*/
         return true;
     }
-
+    /**
+     * Function definition for checkVersion()
+     * <p>
+     *     Compares the online version number with the application version number
+     *     and alerts if there is a difference
+     * </p>
+     * @return whether update exists
+     */
     public static boolean checkVersion() {
         String onlineVer = utilities.getFileCollector().getVersionOnline();
         String currentVer = programData.getVersionNumber();
@@ -497,15 +516,54 @@ public class ProgramFunctions extends Application {
             return false;
         }
     }
+    /**
+     * Function definition for getProgramData()
+     * <p>
+     *     Return the programData
+     * </p>
+     * @return programData
+     */
     public static AppData getProgramData() {
         return programData;
     }
+    /**
+     * Function definition for getUtilities()
+     * <p>
+     *     Return utilities
+     * </p>
+     * @return utilities
+     */
     public static Utils getUtilities() {
         return utilities;
     }
+    /**
+     * Function definition for getQuery()
+     * <P>
+     *     Return query
+     * </P>
+     * @return query
+     */
     public static Searcher getQuery() {
         return query;
     }
+    /**
+     * Function definition for getDataImporter()
+     * <p>
+     *     Return the dataImporter
+     * </p>
+     * @return dataImporter
+     */
+    public static DataImporter getDataImporter() {
+        return dataImporter;
+    }
+    /**
+     * Function definition for findCard()
+     * <p>
+     *     Finds a Card with the given name
+     * </p>
+     * @param name is the name of the card
+     * @return the Card itself
+     */
     public static Card findCard(String name) {
         for(Card C : programData.getCache().getSystemCards()) {
             if(C.getCardName().equals(name)) {

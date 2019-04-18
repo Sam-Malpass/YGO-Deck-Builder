@@ -349,7 +349,7 @@ public class Filters {
     public ArrayList<SpellCard> filterSpellArchetype(ArrayList<SpellCard> cards, String archetype) {
         ArrayList<SpellCard> filtered = new ArrayList<>();
         for(SpellCard c : cards) {
-            if(c.getCardDescription().contains(archetype)) {
+            if(c.getCardName().contains(archetype) || c.getCardDescription().contains(archetype)) {
                 filtered.add(c);
             }
         }
@@ -367,7 +367,7 @@ public class Filters {
     public ArrayList<TrapCard> filterTrapArchetype(ArrayList<TrapCard> cards, String archetype) {
         ArrayList<TrapCard> filtered = new ArrayList<>();
         for(TrapCard c : cards) {
-            if(c.getCardDescription().contains(archetype)) {
+            if(c.getCardName().contains(archetype) || c.getCardDescription().contains(archetype)) {
                 filtered.add(c);
             }
         }
@@ -386,7 +386,7 @@ public class Filters {
         ArrayList<MonsterCard> filtered = new ArrayList<>();
         for(MonsterCard c : cards) {
             if(c instanceof EffectMonster || c instanceof FusionMonster || c instanceof SynchroMonster || c instanceof  XYZMonster || c instanceof PendulumMonster) {
-                if (c.getCardName().contains(archetype) || c.getCardName().contains(archetype)) {
+                if (c.getCardName().contains(archetype) || c.getCardDescription().contains(archetype)) {
                     filtered.add(c);
                 }
             }

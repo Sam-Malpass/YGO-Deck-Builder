@@ -51,6 +51,8 @@ public class GUI {
     public GUI() {
         basicWindows = new Windows();
         scenes = new Scenes();
+        cardViewer = new CardViewer();
+        results = new ArrayList<>();
     }
     /**
      * Function definition for getDefaultScene()
@@ -271,20 +273,6 @@ public class GUI {
         return basicWindows.yesNo(title, content);
     }
     /**
-     * Function definition for boxSelectorWindow()
-     * <p>
-     * Calls the boxSelector function in the basicWindows
-     * </P>
-     *
-     * @param content is the ArrayList to use for the drop down list
-     * @param title   is the title of the window
-     * @return the selected item
-     */
-    public String boxSelectorWindow(ArrayList<String> content, String title) {
-        /*Return the selected item*/
-        return basicWindows.boxSelector(content, title);
-    }
-    /**
      * Function definition for inputWindow()
      * <p>
      * Calls the input function in the basicWindows
@@ -299,90 +287,12 @@ public class GUI {
         return basicWindows.input(title, content);
     }
     /**
-     * Function definition for resultsWindow()
+     * Function definition for viewCard()
      * <p>
-     * Calls the searchResult function in the basicWindows
+     *     Opens a window of the card view
      * </p>
-     *
-     * @param results is a list of SearchResult objects
+     * @param X is the card to view
      */
-    public void resultsWindow(ArrayList<SearchResult> results) {
-        this.results = results;
-        /*Create a window to show the results*/
-        basicWindows.searchResult(results);
-    }
-    /**
-     * Function definition for exportWindow()
-     * <p>
-     * Calls the exportDialog function in the basicWindows
-     * </p>
-     *
-     * @return the File
-     */
-    public File exportWindow() {
-        /*Return the chosen file*/
-        return basicWindows.exportDialog();
-    }
-    /**
-     * Function definition for importWindow()
-     * <p>
-     * Calls the importDialog function in the basicWindows
-     * </p>
-     *
-     * @return the File
-     */
-    public File importWindow() {
-        /*Return the chosen file*/
-        return basicWindows.importDialog();
-    }
-    /**
-     * Function definition for passwordWindow()
-     * <p>
-     *     Gets the basicWindows object to create a passwordInput window with the provided title
-     *     and returns the result string
-     * </p>
-     * @param title is the title for the window
-     * @return the result string
-     */
-    public String passwordWindow(String title) {
-        return basicWindows.passwordInput(title);
-    }
-    /**
-     * Function definition for alertWindow()
-     * <p>
-     * Calls the alert function in basicWindows
-     * </p>
-     *
-     * @param title   is the title of the window
-     * @param content is the message for the window
-     */
-    public void alertWindow(String title, String content) {
-        /*Make an alert window*/
-        basicWindows.alert(title, content);
-    }
-    /**
-     * Function definition for systemResults()
-     * <p>
-     *     Opens a window for systemResults
-     * </p>
-     * @param results to show
-     * @return the selected card
-     */
-    public Card systemResults(ArrayList<SearchResult> results) {
-        return basicWindows.systemResults(results);
-    }
-    /**
-     * Function definition for deckBuilderResult()
-     * <p>
-     *     Show the deckBuilderResult window
-     * </p>
-     * @param results to show
-     * @return the list of strings
-     */
-    public ArrayList<String> deckBuilderResult(ArrayList<SearchResult> results) {
-        return basicWindows.searchResultDeckBuilder(results);
-    }
-
     public void viewCard(Card X) {
         cardViewer.determineCardType(X);
     }

@@ -23,7 +23,6 @@ public class PythonInterfacer {
             String val;
             BufferedReader br = new BufferedReader(new FileReader(new File("Python Scripts/tmp.txt")));
             val = br.readLine();
-            System.out.println("[SYSTEM] Python Script Executed Successfully!");
             return Integer.parseInt(val);
         }
         catch (Exception e) {

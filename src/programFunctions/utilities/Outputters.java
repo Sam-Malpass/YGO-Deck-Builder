@@ -78,6 +78,14 @@ public class Outputters {
         /*Return the banList as a string ArrayList*/
         return banList.outputBanList();
     }
+    /**
+     * Function definition for listDecks()
+     * <p>
+     *     Returns an arraylist of names of all the decks a user owns
+     * </p>
+     * @param decks is the list of decks
+     * @return list of names
+     */
     public ArrayList<String> listDecks(ArrayList<Deck> decks) {
         ArrayList<String> tmp = new ArrayList<>();
         for(Deck C : decks) {

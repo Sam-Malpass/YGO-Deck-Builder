@@ -4,6 +4,7 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
+import dataStructure.containerHierarchy.Series;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ public class DefaultSceneController implements Initializable {
      * exitButton holds the button to exit
      */
     @FXML private Button exitButton;
+    @FXML private Button seriesImport;
     /**
      * Function definition for initialize()
      * <p>
@@ -29,6 +31,19 @@ public class DefaultSceneController implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 ProgramFunctions.exit();
+            }
+        });
+        seriesImport.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                String name = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Import Series...", "Enter Series ID:");
+                Thread x = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ProgramFunctions.getUtilities().getFileHandler().saveSeries(ProgramFunctions.getDataImporter().importSeries(name));
+                    }
+                });
+                x.start();
             }
         });
     }

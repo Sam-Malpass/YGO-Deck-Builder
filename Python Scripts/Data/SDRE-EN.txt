@@ -29,6 +29,7 @@ Sea Serpent
 Effect
 ATK 0
 DEF 1600
+During your Main Phase, you can Normal Summon 1 Level 4 or lower Sea Serpent-Type monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) When this card is sent to the Graveyard to activate a WATER monster's effect: Target 1 face-up card your opponent controls; destroy that target.
 Atlantean Pikeman
 WATER
 Level 2
@@ -52,6 +53,7 @@ Sea Serpent
 Effect
 ATK 1400
 DEF 0
+If there is another face-up Fish, Sea Serpent, or Aqua-Type monster on the field: You can Tribute this card to target 1 Spell/Trap Card on the field; destroy that target.
 Armed Sea Hunter
 WATER
 Level 4
@@ -181,6 +183,7 @@ Target 3 Level 3 or lower Sea Serpent-Type monsters in your Graveyard; Special S
 A Legendary Ocean
 SPELL
 Field
+(This card's name is always treated as "Umi".) All WATER monsters on the field gain 200 ATK/DEF. Reduce the Level of all WATER monsters in both players' hands and on the field by 1.
 Terraforming
 SPELL
 Add 1 Field Spell from your Deck to your hand.
