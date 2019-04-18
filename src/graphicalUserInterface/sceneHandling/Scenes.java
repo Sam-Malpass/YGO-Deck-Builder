@@ -90,7 +90,7 @@ public class Scenes {
      * @return the scene
      */
     public Scene checklistScene() {
-        dataCache.setChecklist(ProgramFunctions.checklistChecker());
+        dataCache.setChecklist(ProgramFunctions.getUtilities().getChecker().checklistChecker());
         scene = null;
         try {
             root = FXMLLoader.load(getClass().getResource("controllersFXML/FXML/Checklist Scene.fxml"));

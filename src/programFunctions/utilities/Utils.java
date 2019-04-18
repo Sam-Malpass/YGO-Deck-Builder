@@ -34,6 +34,10 @@ public class Utils {
      */
     private ImportExport importExport;
     /**
+     * checker holds the Checklist object
+     */
+    private Checklist checker;
+    /**
      * Constructor with no arguments
      * <p>
      *     Creates the appropriate objects
@@ -118,6 +122,16 @@ public class Utils {
         return importExport;
     }
     /**
+     * Function definition for getChecker()
+     * <p>
+     *     Returns checker
+     * </p>
+     * @return checker
+     */
+    public Checklist getChecker() {
+        return checker;
+    }
+    /**
      * Function definition for setFilter()
      * <p>
      *     Sets the Filters object to the passed object
@@ -186,5 +200,15 @@ public class Utils {
      */
     public void setImportExport(ImportExport importExport) {
         this.importExport = importExport;
+    }
+    /**
+     * Function definition for setChecker()
+     * <p>
+     *     Sets the checker to the passed object
+     * </p>
+     * @param checker is the new Checklist object to use
+     */
+    public void setChecker(Checklist checker) {
+        this.checker = checker;
     }
 }
