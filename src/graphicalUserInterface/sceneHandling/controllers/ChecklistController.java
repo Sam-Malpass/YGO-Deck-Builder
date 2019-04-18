@@ -113,7 +113,7 @@ public class ChecklistController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : " + ProgramFunctions.getProgramData().getVersionNumber());
     }
     @FXML
     private void check(ActionEvent event) {

@@ -73,7 +73,6 @@
                               <TextArea fx:id="suggestionText" prefHeight="147.0" prefWidth="296.0" />
                               <HBox alignment="CENTER" prefHeight="31.0" prefWidth="296.0" spacing="160.0">
                                  <children>
-                                    <Button fx:id="refresh" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="66.0" text="Refresh" />
                                     <Button fx:id="addCard" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="69.0" text="Add Card" />
                                  </children>
                               </HBox>

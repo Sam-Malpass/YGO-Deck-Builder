@@ -591,10 +591,21 @@ public class ProgramFunctions extends Application {
             }
             UserProfile user = utilities.getFileHandler().loadUserProfile(name);
             if(user != null) {
+                if(user.getProfileSettings().isHasPassword()) {
+                    if(!utilities.getAuthenticator().authenticate(programData.getUserInterface().getBasicWindows().passwordInput("Enter Password..."), user.getProfileSettings().getPassword())){
+                        System.out.println("[ERROR] Password does not match");
+                        return false;
+                    }
+                }
                 /*Set the active profile to the given one*/
                 programData.setCurrentProfile(user);
                 /*Output success*/
                 System.out.println("[SYSTEM] Set " + programData.getCurrentProfile().getProfileName() + " as active profile");
+                /*
+                DEBUG CODE
+                 */
+                //utilities.getGenerator().genSDREAlbum();
+
                 programData.setCache(new Cache(user));
                 programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
                 programData.getUserInterface().updateTitle();
@@ -684,6 +695,12 @@ public class ProgramFunctions extends Application {
         programData = new AppData();
         query = new Searcher();
         dataImporter = new DataImporter();
+
+        /*
+        SET UP DATA ON FIRST RUN
+         */
+        //utilities.getGenerator().genBanList();
+
         /*Setup the UI*/
         programData.getUserInterface().run(S);
     }

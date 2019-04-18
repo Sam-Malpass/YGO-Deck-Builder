@@ -18,7 +18,6 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import programFunctions.ProgramFunctions;
 import programFunctions.builder.DeckBuilder;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -117,13 +116,22 @@ public class BeginningController implements Initializable {
                 /*Get the cell contents*/
                 String item = cell.getItem();
                 if (ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item) instanceof Deck) {
-                    deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new DeckBuilder(deck, 2, 1, 1));
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
+                    try {
+                        deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new DeckBuilder(deck, 2, 1, 1));
+                        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
+                    }
+                    catch (Exception e) {
+                        System.out.println("[ERROR] Cloning Deck failed");
+                    }
                 } else {
-                    album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
-                    ProgramFunctions.getUtilities().getOutputter().outputStringList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards()));
-                    ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getAlbumBuilder());
+                    try {
+                        album = (Album) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item).clone();
+                        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getAlbumBuilder());
+                    }
+                    catch (Exception e) {
+                        System.out.println("[ERROR] Cloning Album failed");
+                    }
                 }
             });
             /*Create a MenuItem*/
@@ -397,7 +405,7 @@ public class BeginningController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : " + ProgramFunctions.getProgramData().getVersionNumber());
     }
     @FXML
     private void check(ActionEvent event) {

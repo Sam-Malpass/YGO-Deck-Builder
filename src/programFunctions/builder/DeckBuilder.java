@@ -592,7 +592,12 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
-        return spellList.get(0);
+        if(spellList.size() > 0) {
+            return spellList.get(0);
+        }
+        else {
+            return null;
+        }
     }
     /**
      * Function definition for suggestTrap()

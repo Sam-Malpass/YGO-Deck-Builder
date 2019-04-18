@@ -97,7 +97,7 @@ public class ProfileSettingsController implements Initializable {
      */
     @FXML
     private void changePassword() {
-        ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input New Password..."));
+        ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getUtilities().getAuthenticator().hash(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input New Password...")));
         ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
     }
     /**
@@ -130,7 +130,7 @@ public class ProfileSettingsController implements Initializable {
         if (passwordCheck.isSelected()) {
             if (!ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isHasPassword()) {
                 ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setHasPassword(true);
-                ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input Password: "));
+                ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setPassword(ProgramFunctions.getUtilities().getAuthenticator().hash(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().passwordInput("Input Password: ")));
             }
         } else {
             ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().setHasPassword(false);
@@ -174,7 +174,7 @@ public class ProfileSettingsController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : " + ProgramFunctions.getProgramData().getVersionNumber());
     }
     @FXML
     private void check(ActionEvent event) {

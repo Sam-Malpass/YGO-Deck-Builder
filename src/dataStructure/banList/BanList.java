@@ -4,8 +4,9 @@
  * @since 0.0.0.d
  */
 package dataStructure.banList;
+import java.io.Serializable;
 import java.util.ArrayList;
-public class BanList {
+public class BanList implements Serializable {
     /**
      * list holds all the ForbiddenLimited information
      */

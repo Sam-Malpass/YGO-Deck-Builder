@@ -40,7 +40,6 @@ public class Outputters {
     public ArrayList<String> outputCardList(ArrayList<Card> list) {
         ArrayList<String> tmp = new ArrayList<>();
         for(Card c : list) {
-            System.out.println(c.getCardName());
             tmp.add(c.getCardName());
         }
         return tmp;

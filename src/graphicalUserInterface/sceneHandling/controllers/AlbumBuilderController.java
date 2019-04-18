@@ -6,6 +6,7 @@
 package graphicalUserInterface.sceneHandling.controllers;
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Album;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -114,7 +115,8 @@ public class AlbumBuilderController implements Initializable {
         }
         else {
             album.addCard(X);
-            initialize(thing, test);
+            cardList.setItems(FXCollections.observableArrayList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards())));
+            cardList.refresh();
         }
     }
     /**
@@ -129,7 +131,7 @@ public class AlbumBuilderController implements Initializable {
             ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setAlbum(null);
             ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
         } else {
-            return;
+
         }
     }
     /**
@@ -168,7 +170,7 @@ public class AlbumBuilderController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : " + ProgramFunctions.getProgramData().getVersionNumber());
     }
     @FXML
     private void check(ActionEvent event) {

@@ -42,6 +42,10 @@ public class Utils {
      */
     private OnlinePricing pricing;
     /**
+     * generator holds the Generator object
+     */
+    private Generator generator;
+    /**
      * Constructor with no arguments
      * <p>
      *     Creates the appropriate objects
@@ -57,6 +61,7 @@ public class Utils {
         importExport = new ImportExport();
         checker = new Checklist();
         pricing = new OnlinePricing();
+        generator = new Generator();
     }
     /**
      * Function definition for getFilter()
@@ -149,6 +154,16 @@ public class Utils {
         return pricing;
     }
     /**
+     * Function definition for getGenerator()
+     * <P>
+     *     Returns the generator
+     * </P>
+     * @return generator
+     */
+    public Generator getGenerator() {
+        return generator;
+    }
+    /**
      * Function definition for setFilter()
      * <p>
      *     Sets the Filters object to the passed object
@@ -237,5 +252,15 @@ public class Utils {
      */
     public void setPricing(OnlinePricing pricing) {
         this.pricing = pricing;
+    }
+    /**
+     * Function definition for setGenerator()
+     * <p>
+     *     Sets the generator to the passed object
+     * </p>
+     * @param generator is the new object to use
+     */
+    public void setGenerator(Generator generator) {
+        this.generator = generator;
     }
 }

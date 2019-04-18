@@ -37,14 +37,6 @@ public class DeckBuilderController implements Initializable {
      */
     private ArrayList<Card> suggestionList;
     /**
-     * thing holds the URL
-     */
-    private URL thing;
-    /**
-     * test holds the ResourceBundle
-     */
-    private ResourceBundle test;
-    /**
      * Function definition for initialize()
      * <p>
      *     Sets up the controller
@@ -52,8 +44,6 @@ public class DeckBuilderController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        thing =url;
-        test = resourceBundle;
         contentsList.getItems().removeAll();
         ObservableList<String> checkers = contentsList.getItems();
         for(String C : ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()) {
@@ -192,7 +182,7 @@ public class DeckBuilderController implements Initializable {
     }
     @FXML
     private void about(ActionEvent event) {
-        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : 0.3.0.d");
+        ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("About", "Yu-Gi-Oh! Deck Builder by Samuel John Malpass\nVersion : " + ProgramFunctions.getProgramData().getVersionNumber());
     }
     @FXML
     private void check(ActionEvent event) {

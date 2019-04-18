@@ -194,7 +194,7 @@ public class Scenes {
             scene = new Scene(root, width, height);
         }
         catch (Exception e) {
-
+            System.out.println("[ERROR] Resource not found");
         }
         return scene;
     }
