@@ -309,7 +309,7 @@ public class GUI {
     public void resultsWindow(ArrayList<SearchResult> results) {
         this.results = results;
         /*Create a window to show the results*/
-        basicWindows.searchResult();
+        basicWindows.searchResult(results);
     }
     /**
      * Function definition for exportWindow()

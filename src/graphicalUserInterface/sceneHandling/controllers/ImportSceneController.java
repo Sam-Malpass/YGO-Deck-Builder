@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import programFunctions.ProgramFunctions;
+import programFunctions.builder.DeckBuilder;
 import programFunctions.searching.SearchResult;
 
 import java.net.URL;
@@ -73,7 +74,7 @@ public class ImportSceneController implements Initializable {
                     for(String S : tst) {
                         ProgramFunctions.moveCard(S.substring(S.indexOf("in ")).replace("in ", ""), name,S.substring(0, S.indexOf(" (")).replace(" (", ""),S.substring(S.indexOf("("), S.indexOf(")")).replace("(", "").replace(")", ""));
                     }
-                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new CardSuggestor((Deck)ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(name), 2, 1, 1));
+                    ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new DeckBuilder((Deck)ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(name), 2, 1, 1));
                     ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
                 }
                 else {

@@ -149,7 +149,7 @@ public class DeckBuilderController implements Initializable {
     @FXML
     private void add() {
         ArrayList<String> command = new ArrayList<>();
-        command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult(DeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for Card", "Search:"))));
+        command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for Card", "Search:")));
         if(command.size() > 0) {
             if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
                 for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
