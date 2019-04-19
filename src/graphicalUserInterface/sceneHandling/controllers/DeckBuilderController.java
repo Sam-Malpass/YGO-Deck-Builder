@@ -87,6 +87,9 @@ public class DeckBuilderController implements Initializable {
         suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
         suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
         suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
+        suggestionText.setText(suggestionList.get(0).getCardDescription());
+        suggestionText1.setText(suggestionList.get(1).getCardDescription());
+        suggestionText2.setText(suggestionList.get(2).getCardDescription());
     }
     /**
      * Function definition for cancel()
