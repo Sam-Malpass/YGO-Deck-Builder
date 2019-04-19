@@ -84,12 +84,9 @@ public class DeckBuilderController implements Initializable {
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
             suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
-        String exe = "";
-        for(Card c  : suggestionList) {
-            exe = exe + c.getCardName() + "\n-> " +  "\"" + c.getCardDescription() + "\"\n";
-        }
-        suggestionText.setText(exe);
-        suggestionText.setWrapText(true);
+        suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
+        suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
+        suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
     }
     /**
      * Function definition for cancel()
