@@ -90,6 +90,9 @@ public class DeckBuilderController implements Initializable {
         suggestionText.setText(suggestionList.get(0).getCardDescription());
         suggestionText1.setText(suggestionList.get(1).getCardDescription());
         suggestionText2.setText(suggestionList.get(2).getCardDescription());
+        suggestionText.setWrapText(true);
+        suggestionText1.setWrapText(true);
+        suggestionText2.setWrapText(true);
     }
     /**
      * Function definition for cancel()
