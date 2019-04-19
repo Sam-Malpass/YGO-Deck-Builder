@@ -11,10 +11,10 @@ import dataStructure.containerHierarchy.Deck;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import programFunctions.ProgramFunctions;
 import java.net.URL;
 import java.util.ArrayList;
@@ -58,12 +58,183 @@ public class DeckBuilderController implements Initializable {
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
             suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
-        String exe = "";
-        for(Card c  : suggestionList) {
-            exe = exe + c.getCardName() + "\n-> " +  "\"" + c.getCardDescription() + "\"\n";
-        }
-        suggestionText.setText(exe);
-        suggestionText.setWrapText(true);
+        suggestion.setCellFactory(lv -> {
+            /*Create a ListCell*/
+            ListCell<String> cell = new ListCell<>();
+            /*Create a ContextMenu*/
+            ContextMenu contextMenu = new ContextMenu();
+            /*Create a MenuItem*/
+            MenuItem view = new MenuItem("View...");
+            view.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
+                }
+            });
+            MenuItem findCopy = new MenuItem("Find Copy...");
+            findCopy.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ArrayList<String> command = new ArrayList<>();
+                    command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(cell.getItem()));
+                    if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
+                        for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
+                            if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(command.get(0)),ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName()),c);
+                            }
+                        }
+                    }
+                    else {
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
+                    }
+                    contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
+                    contentsList.refresh();
+                    suggest();
+                }
+            });
+            MenuItem cancel = new MenuItem("Cancel");
+            cancel.setOnAction(event -> {
+                /*Get the cell contents*/
+                String item = cell.getItem();
+            });
+            /*Add the MenuItems to the context menu*/
+            contextMenu.getItems().addAll(view, findCopy, cancel);
+            /*Set the cell text property*/
+            cell.textProperty().bind(cell.itemProperty());
+            /*Determine if the cell is empty*/
+            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
+                /*If it is*/
+                if (isNowEmpty) {
+                    /*Set the context menu to null*/
+                    cell.setContextMenu(null);
+                    /*Otherwise*/
+                } else {
+                    /*Apply the context menu*/
+                    cell.setContextMenu(contextMenu);
+                }
+            });
+            /*Return the cell*/
+            return cell;
+        });
+        suggestion1.setCellFactory(lv -> {
+            /*Create a ListCell*/
+            ListCell<String> cell = new ListCell<>();
+            /*Create a ContextMenu*/
+            ContextMenu contextMenu = new ContextMenu();
+            /*Create a MenuItem*/
+            MenuItem view = new MenuItem("View...");
+            view.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
+                }
+            });
+            MenuItem findCopy = new MenuItem("Find Copy...");
+            findCopy.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ArrayList<String> command = new ArrayList<>();
+                    command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(cell.getItem()));
+                    if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
+                        for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
+                            if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(command.get(0)),ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName()),c);
+                            }
+                        }
+                    }
+                    else {
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
+                    }
+                    contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
+                    contentsList.refresh();
+                    suggest();
+                }
+            });
+            MenuItem cancel = new MenuItem("Cancel");
+            cancel.setOnAction(event -> {
+                /*Get the cell contents*/
+                String item = cell.getItem();
+            });
+            /*Add the MenuItems to the context menu*/
+            contextMenu.getItems().addAll(view, findCopy, cancel);
+            /*Set the cell text property*/
+            cell.textProperty().bind(cell.itemProperty());
+            /*Determine if the cell is empty*/
+            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
+                /*If it is*/
+                if (isNowEmpty) {
+                    /*Set the context menu to null*/
+                    cell.setContextMenu(null);
+                    /*Otherwise*/
+                } else {
+                    /*Apply the context menu*/
+                    cell.setContextMenu(contextMenu);
+                }
+            });
+            /*Return the cell*/
+            return cell;
+        });
+        suggestion2.setCellFactory(lv -> {
+            /*Create a ListCell*/
+            ListCell<String> cell = new ListCell<>();
+            /*Create a ContextMenu*/
+            ContextMenu contextMenu = new ContextMenu();
+            /*Create a MenuItem*/
+            MenuItem view = new MenuItem("View...");
+            view.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
+                }
+            });
+            MenuItem findCopy = new MenuItem("Find Copy...");
+            findCopy.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ArrayList<String> command = new ArrayList<>();
+                    command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(cell.getItem()));
+                    if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
+                        for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
+                            if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
+                                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(command.get(0)),ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().determineContainer(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName()),c);
+                            }
+                        }
+                    }
+                    else {
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
+                    }
+                    contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
+                    contentsList.refresh();
+                    suggest();
+                }
+            });
+            MenuItem cancel = new MenuItem("Cancel");
+            cancel.setOnAction(event -> {
+                /*Get the cell contents*/
+                String item = cell.getItem();
+            });
+            /*Add the MenuItems to the context menu*/
+            contextMenu.getItems().addAll(view, findCopy, cancel);
+            /*Set the cell text property*/
+            cell.textProperty().bind(cell.itemProperty());
+            /*Determine if the cell is empty*/
+            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
+                /*If it is*/
+                if (isNowEmpty) {
+                    /*Set the context menu to null*/
+                    cell.setContextMenu(null);
+                    /*Otherwise*/
+                } else {
+                    /*Apply the context menu*/
+                    cell.setContextMenu(contextMenu);
+                }
+            });
+            /*Return the cell*/
+            return cell;
+        });
         String info;
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 0) {
             info = "DECK NOT AT MINIMUM LIMIT";
@@ -78,6 +249,7 @@ public class DeckBuilderController implements Initializable {
         info = info + "\nNumber of cards in extra deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getExtraDeck().size();
         infoText.setText(info);
         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().handleSuggestion(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().determineNextCard());
+        suggest();
     }
     private void suggest() {
         suggestionList = new ArrayList<>();
