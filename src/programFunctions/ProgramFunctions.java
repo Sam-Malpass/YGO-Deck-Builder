@@ -437,66 +437,6 @@ public class ProgramFunctions extends Application {
         }
     }
     /**
-     * Function definition for createSeries()
-     * <p>
-     *      Creates a Series
-     * </p>
-     * @param name is the name of the Container
-     * @return whether the creation was successful
-     */
-    public static boolean createSeries(String name) {
-        /*For all existing containers in profile*/
-        List<String> tmp = utilities.getFileHandler().searchSeriesFolder();
-        for (String aTmp : tmp) {
-            /*Check name against these containers*/
-            System.out.println("[SYSTEM] testing " + name + " against " + aTmp);
-            if (name.equals(aTmp)) {
-                /*Output error*/
-                programData.getUserInterface().getBasicWindows().alert("ERROR", "005: Series already exists");
-                System.out.println("[ERROR] 005: Series already exists");
-                /*Return false*/
-                return false;
-            }
-        }
-        /*Otherwise create a deck*/
-        Series series = new Series(name);
-        /*Output success*/
-        System.out.println("[SYSTEM] Series created successfully");
-        /*Save the profile*/
-        utilities.getFileHandler().saveSeries(series);
-        /*Return true*/
-        return true;
-    }
-    /**
-     * Function definition for deleteSeries()
-     * <p>
-     *      Deletes a Series with a given name.
-     * </p>
-     * @param name the name of the series to be deleted
-     * @return whether deletion was successful or not
-     */
-    public static boolean deleteSeries(String name) {
-        /*Update the user list*/
-        List<String> list = utilities.getFileHandler().searchSeriesFolder();
-        /*For all elements in the list*/
-        for (String aList : list) {
-            /*If name equals the element*/
-            if ((name).equals(aList)) {
-                /*Delete the series*/
-                utilities.getFileHandler().deleteSeries(name);
-                /*Output success*/
-                System.out.println("[SYSTEM] Series deleted successfully");
-                /*Return true*/
-                return true;
-            }
-        }
-        /*Output error*/
-        programData.getUserInterface().getBasicWindows().alert("ERROR", "006: Series not found");
-        System.out.println("[ERROR] 006: Series not found");
-        /*Return false*/
-        return false;
-    }
-    /**
      * Function definition for profileActive()
      * <p>
      *      Check whether there is an active profile in the application.
@@ -648,32 +588,6 @@ public class ProgramFunctions extends Application {
         else {
             programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Container already exists");
             System.out.println("[ERROR] 003a: Container already exists");
-        }
-    }
-    /**
-     * Function definition for renameUser()
-     * <P>
-     *     Handles the renaming of the current user, checking whether the name is
-     *     already in use
-     * </P>
-     * @param newName is the new name for the profile
-     */
-    public static void renameUser(String newName) {
-        if(checkUser(newName)) {
-            /*Is the name of the current profile*/
-            String tmp = programData.getCurrentProfile().getProfileName();
-            /*Attempts to change the name of the profile*/
-            programData.getCurrentProfile().setProfileName(newName);
-            /*Saves the new profile*/
-            utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
-            /*Deletes the old user*/
-            deleteProfile(tmp);
-            /*Update the title of the main window*/
-            programData.getUserInterface().updateTitle();
-        }
-        else {
-            System.out.println("[ERROR] 001a: Profile already exists");
-            programData.getUserInterface().getBasicWindows().alert("ERROR", "Profile with that name already exists");
         }
     }
     /**

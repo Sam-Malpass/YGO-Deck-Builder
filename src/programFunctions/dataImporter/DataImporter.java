@@ -572,7 +572,7 @@ public class DataImporter {
             else {
                 C.setEffValue(0);
             }
-            System.out.print(" with effect value: " + C.getEffValue() + "\n");
+            System.out.println("[SYSTEM] Currently processing: " + C.getCardName() + " with effect value: " + C.getEffValue() + "\n");
             count++;
             if(!(C instanceof FusionMonster) && !(C instanceof SynchroMonster) && !(C instanceof XYZMonster) && !(C instanceof LinkMonster) && !(C instanceof SpellCard) && !(C instanceof TrapCard)) {
                 C = (MonsterCard) C;
