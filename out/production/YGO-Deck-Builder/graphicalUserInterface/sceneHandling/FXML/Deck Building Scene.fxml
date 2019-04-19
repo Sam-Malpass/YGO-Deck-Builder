@@ -70,11 +70,11 @@
                      <center>
                         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ListView prefHeight="13.0" prefWidth="292.0" />
+                              <ListView fx:id="suggestion" prefHeight="13.0" prefWidth="292.0" />
                               <TextArea fx:id="suggestionText" prefHeight="30.0" prefWidth="292.0" />
-                              <ListView prefHeight="13.0" prefWidth="292.0" />
+                              <ListView fx:id="suggestion1" prefHeight="13.0" prefWidth="292.0" />
                               <TextArea fx:id="suggestionText1" prefHeight="30.0" prefWidth="292.0" />
-                              <ListView prefHeight="13.0" prefWidth="292.0" />
+                              <ListView fx:id="suggestion2" prefHeight="13.0" prefWidth="292.0" />
                               <TextArea fx:id="suggestionText2" prefHeight="30.0" prefWidth="292.0" />
                               <HBox alignment="CENTER" prefHeight="31.0" prefWidth="296.0" spacing="160.0">
                                  <children>
