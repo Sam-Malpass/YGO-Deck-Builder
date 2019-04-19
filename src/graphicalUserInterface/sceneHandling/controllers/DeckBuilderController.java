@@ -28,6 +28,7 @@ public class DeckBuilderController implements Initializable {
      * suggestionTexts holds the suggestion information
      */
     @FXML private TextArea suggestionText;
+    @FXML private ListView<String> suggestion;
     /**
      * infoText holds the deck's information
      */
