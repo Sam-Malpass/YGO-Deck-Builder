@@ -112,15 +112,10 @@ public class ProgramFunctions extends Application {
         for (String aTmpI : tmpI) {
             /*If the name matches an existing container*/
             if (name.equals(aTmpI)) {
-                /*Output an error*/
-                programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Container already exists");
-                System.out.println("[ERROR] 003a: Container already exists");
                 /*Return false*/
                 return false;
             }
         }
-        /*Output success*/
-        System.out.println("[SYSTEM] Name available");
         /*Return true*/
         return true;
     }
@@ -357,7 +352,9 @@ public class ProgramFunctions extends Application {
     public static boolean moveCard(String con1Name, String con2Name, String cardName, String cardID) {
         /*If there is an active profile*/
         if(profileActive()) {
+            ProgramFunctions.getProgramData().getUserInterface().setVerboseEnabled(false);
             if(!checkContainerName(con1Name) && !checkContainerName(con2Name)) {
+                ProgramFunctions.getProgramData().getUserInterface().setVerboseEnabled(true);
                 for(Card C : programData.getCurrentProfile().determineContainer(con1Name).getCards()) {
                     if(C.getCardID().equals(cardID) && C.getCardName().equals(cardName)) {
                         if(programData.getCurrentProfile().determineContainer(con2Name).addCard(C)) {
@@ -406,7 +403,9 @@ public class ProgramFunctions extends Application {
     public static boolean removeCard(String cName, String uName, String cID) {
         /*If profile is active*/
         if(profileActive()) {
+            ProgramFunctions.getProgramData().getUserInterface().setVerboseEnabled(false);
             if(!checkContainerName(uName)) {
+                ProgramFunctions.getProgramData().getUserInterface().setVerboseEnabled(true);
                 for(Card C : programData.getCurrentProfile().determineContainer(uName).getCards()) {
                     if(C.getCardName().equals(cName) && C.getCardID().equals(cID)) {
                         programData.getCurrentProfile().determineContainer(uName).removeCard(C);
@@ -645,6 +644,10 @@ public class ProgramFunctions extends Application {
             System.out.println("[SYSTEM] Name changed successfully");
             /*Update the Scene*/
             programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
+        }
+        else {
+            programData.getUserInterface().getBasicWindows().alert("ERROR", "003a: Container already exists");
+            System.out.println("[ERROR] 003a: Container already exists");
         }
     }
     /**

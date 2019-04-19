@@ -219,7 +219,10 @@ public class BeginningController implements Initializable {
             MenuItem view = new MenuItem("View...");
             view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem())));
             MenuItem findAll = new MenuItem("Find All...");
-            findAll.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.getQuery().searchCard(cell.getItem()))));
+            findAll.setOnAction(event -> {
+                ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.getQuery().searchCard(cell.getItem())));
+                cardList.setItems(FXCollections.observableList(ProgramFunctions.getProgramData().getCurrentProfile().listAllCards()));
+            });
             MenuItem cancel = new MenuItem("Cancel");
             cancel.setOnAction(event -> {
 
@@ -253,6 +256,8 @@ public class BeginningController implements Initializable {
                         ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.getQuery().searchCard(searchCard.getText())));
                         /*Clear the TextField*/
                         searchCard.clear();
+                        cardList.setItems(FXCollections.observableList(ProgramFunctions.getProgramData().getCurrentProfile().listAllCards()));
+                        cardList.refresh();
                         /*Return*/
                         return;
                     }
@@ -375,6 +380,7 @@ public class BeginningController implements Initializable {
             ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResult((ProgramFunctions.getQuery().searchCard(searchCard.getText())));
             /*Clear the TextField*/
             searchCard.clear();
+            cardList.setItems(FXCollections.observableList(ProgramFunctions.getProgramData().getCurrentProfile().listAllCards()));
             /*Return*/
             return;
         }

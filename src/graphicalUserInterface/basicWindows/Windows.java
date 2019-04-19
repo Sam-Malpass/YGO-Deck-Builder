@@ -5,6 +5,8 @@
  */
 package graphicalUserInterface.basicWindows;
 import dataStructure.cardHierarchy.Card;
+import graphicalUserInterface.basicWindows.controllers.SearchResultDeckController;
+import graphicalUserInterface.basicWindows.controllers.SearchResultSystemController;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -243,6 +245,7 @@ public class Windows {
      * </p>
      */
     public void searchResult(ArrayList<SearchResult> results) {
+        ProgramFunctions.getProgramData().getUserInterface().setResults(results);
         /*If results are null*/
         if (results == null) {
             /*Return*/
@@ -277,6 +280,7 @@ public class Windows {
      * @return the selected result
      */
     public ArrayList<String> searchResultDeckBuilder(ArrayList<SearchResult> results) {
+        ProgramFunctions.getProgramData().getUserInterface().setResults(results);
         result = new ArrayList<>();
         /*If results are null*/
         if (results == null) {
@@ -290,86 +294,19 @@ public class Windows {
             /*Return*/
             return result;
         }
-        /*Create a stage*/
-        Stage searchResult = new Stage();
-        /*Set the title*/
-        searchResult.setTitle("Search Results");
-        /*Set the icon*/
-        searchResult.getIcons().add(ProgramFunctions.getProgramData().getIcon());
-        /*Create a StackPane*/
-        StackPane stackPane = new StackPane();
-        /*Create a GridPane*/
-        GridPane gridPane = new GridPane();
-        /*Create a canvas*/
-        Canvas canvas = new Canvas(300, 305);
-        /*Create a graphics context*/
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        /*Set the fill*/
-        gc.setFill(Color.DARKGRAY);
-        /*Draw a rectangle*/
-        gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
-        /*Create a ListView using results*/
-        ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
-        /*Set the cell factory*/
-        list.setCellFactory(lv -> {
-            /*Make a ListCell*/
-            ListCell<String> cell = new ListCell<>();
-            /*Make a ContextMenu*/
-            ContextMenu contextMenu = new ContextMenu();
-            /*Make a MenuItem*/
-            MenuItem view = new MenuItem("View...");
-            /*Set an action*/
-            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
-            /*Make a MenuItem*/
-            MenuItem move = new MenuItem("Select...");
-            /*Set an action*/
-            move.setOnAction(event -> {
-                /*Get a destination container name*/
-                result.add(results.get(cell.getIndex()).getContainerName());
-                result.add(results.get(cell.getIndex()).getCardName());
-                result.add(results.get(cell.getIndex()).getSetID());
-                searchResult.close();
-
-            });
-            /*Make a MenuItem*/
-            MenuItem cancel = new MenuItem("Cancel");
-            /*Set an action*/
-            cancel.setOnAction(event -> {
-                /*Do nothing*/
-            });
-            /*Add all MenuItems to context menu*/
-            contextMenu.getItems().addAll(view, move, cancel);
-            /*Bind the itemProperty to the textProperty*/
-            cell.textProperty().bind(cell.itemProperty());
-            /*If the cell was empty*/
-            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
-                if (isNowEmpty) {
-                    /*Remove the context menu*/
-                    cell.setContextMenu(null);
-                    /*Otherwise*/
-                } else {
-                    /*Add the context menu*/
-                    cell.setContextMenu(contextMenu);
-                }
-            });
-            /*Return the cell*/
-            return cell;
-        });
-        /*Set the size of the list*/
-        list.setPrefSize(300, 305);
-        /*Add the list to the grid*/
-        gridPane.add(list, 1, 1);
-        /*Add the grid and canvas to the stackpane*/
-        stackPane.getChildren().addAll(canvas, gridPane);
-        /*Create the Scene*/
-        Scene scene = new Scene(stackPane, 300, 305);
-        /*Set the scene*/
-        searchResult.setScene(scene);
-        /*Make un-resizable*/
-        searchResult.setResizable(false);
-        /*Show and wait*/
-        searchResult.showAndWait();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Search Result Deck Pop-Up.fxml"));
+            Scene scene = new Scene(root, 400, 400);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.setTitle("Search Results");
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
+            stage.showAndWait();
+        }
+        catch (Exception e) {
+        }
+        result = SearchResultDeckController.result;
         return result;
     }
     /**
@@ -381,6 +318,7 @@ public class Windows {
      * @return the selected Card
      */
     public Card systemResults(ArrayList<SearchResult> results) {
+        ProgramFunctions.getProgramData().getUserInterface().setResults(results);
         card = null;
         /*If results are null*/
         if (results == null) {
@@ -394,83 +332,19 @@ public class Windows {
             /*Return*/
             return card;
         }
-        /*Create a stage*/
-        Stage searchResult = new Stage();
-        /*Set the title*/
-        searchResult.setTitle("Search Results");
-        /*Set the icon*/
-        searchResult.getIcons().add(ProgramFunctions.getProgramData().getIcon());
-        /*Create a StackPane*/
-        StackPane stackPane = new StackPane();
-        /*Create a GridPane*/
-        GridPane gridPane = new GridPane();
-        /*Create a canvas*/
-        Canvas canvas = new Canvas(300, 305);
-        /*Create a graphics context*/
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        /*Set the fill*/
-        gc.setFill(Color.DARKGRAY);
-        /*Draw a rectangle*/
-        gc.fillRect(0, 0, 300, 305);
-        ArrayList<String> resultsOutput = ProgramFunctions.getUtilities().getOutputter().outputSearchResults(results);
-        /*Create a ListView using results*/
-        ListView<String> list = new ListView<>(FXCollections.observableArrayList(resultsOutput));
-        /*Set the cell factory*/
-        list.setCellFactory(lv -> {
-            /*Make a ListCell*/
-            ListCell<String> cell = new ListCell<>();
-            /*Make a ContextMenu*/
-            ContextMenu contextMenu = new ContextMenu();
-            /*Make a MenuItem*/
-            MenuItem view = new MenuItem("View...");
-            /*Set an action*/
-            view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
-            /*Make a MenuItem*/
-            MenuItem move = new MenuItem("Select...");
-            /*Set an action*/
-            move.setOnAction(event -> {
-                String item = cell.getItem();
-                card = ProgramFunctions.getUtilities().getFileHandler().loadSeries(item.substring(item.indexOf("(")+1, item.indexOf(")"))).findCard(item.substring(0, item.indexOf(" (")));
-                searchResult.close();
-            });
-            /*Make a MenuItem*/
-            MenuItem cancel = new MenuItem("Cancel");
-            /*Set an action*/
-            cancel.setOnAction(event -> {
-                /*Do nothing*/
-            });
-            /*Add all MenuItems to context menu*/
-            contextMenu.getItems().addAll(view, move, cancel);
-            /*Bind the itemProperty to the textProperty*/
-            cell.textProperty().bind(cell.itemProperty());
-            /*If the cell was empty*/
-            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
-                if (isNowEmpty) {
-                    /*Remove the context menu*/
-                    cell.setContextMenu(null);
-                    /*Otherwise*/
-                } else {
-                    /*Add the context menu*/
-                    cell.setContextMenu(contextMenu);
-                }
-            });
-            /*Return the cell*/
-            return cell;
-        });
-        /*Set the size of the list*/
-        list.setPrefSize(300, 305);
-        /*Add the list to the grid*/
-        gridPane.add(list, 1, 1);
-        /*Add the grid and canvas to the stackpane*/
-        stackPane.getChildren().addAll(canvas, gridPane);
-        /*Create the Scene*/
-        Scene scene = new Scene(stackPane, 300, 305);
-        /*Set the scene*/
-        searchResult.setScene(scene);
-        /*Make un-resizable*/
-        searchResult.setResizable(false);
-        /*Show and wait*/
-        searchResult.showAndWait();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Search Result Deck Pop-Up.fxml"));
+            Scene scene = new Scene(root, 400, 400);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.setTitle("Search Results");
+            stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
+            stage.showAndWait();
+        }
+        catch (Exception e) {
+        }
+        card = SearchResultSystemController.result;
         return card;
     }
     /**

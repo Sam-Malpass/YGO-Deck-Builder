@@ -48,7 +48,6 @@ public class Cache {
         loadUserCards(userData);
         albums = ProgramFunctions.getUtilities().getFilter().filterAlbums(userData.getUserContainers());
         decks = ProgramFunctions.getUtilities().getFilter().filterDecks(userData.getUserContainers());
-        System.out.println(albums.size());
         systemCards = loadSystemCards();
     }
     /**
@@ -141,6 +140,7 @@ public class Cache {
         }
         return tmp;
     }
+
     /**
      * Function definition for getDeckCards()
      * <p>

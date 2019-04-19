@@ -17,7 +17,8 @@ import programFunctions.searching.SearchResult;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-public class SearchResultController implements Initializable {
+
+public class SearchResultDeckController implements Initializable {
     /**
      * list holds a list of results
      */
@@ -26,6 +27,7 @@ public class SearchResultController implements Initializable {
      * Close holds the close button
      */
     @FXML private Button close;
+    public static ArrayList result = new ArrayList();
     /**
      * Function definition for initialize()
      * <p>
@@ -35,6 +37,7 @@ public class SearchResultController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<SearchResult> results = ProgramFunctions.getProgramData().getUserInterface().getResults();
+        result = new ArrayList();
         close.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -59,36 +62,14 @@ public class SearchResultController implements Initializable {
             /*Set an action*/
             view.setOnAction(event -> ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(results.get(cell.getIndex()).getCardName())));
             /*Make a MenuItem*/
-            MenuItem move = new MenuItem("Move...");
+            MenuItem move = new MenuItem("Select...");
             /*Set an action*/
             move.setOnAction(event -> {
-                /*Get a destination container name*/
-                String test = "";
-                if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeDecks()) {
-                     test = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getProgramData().getCurrentProfile().listContainers(), "Select Destination...");
-                }
-                else {
-                     test = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getOutputter().listAlbums(ProgramFunctions.getUtilities().getFilter().filterAlbums(ProgramFunctions.getProgramData().getCurrentProfile().getUserContainers())), "Select Destination...");
-                }
-                /*Move the card between the containers*/
-                if (ProgramFunctions.moveCard(results.get(cell.getIndex()).getContainerName(), test, results.get(cell.getIndex()).getCardName(), results.get(cell.getIndex()).getSetID())) {
-                    results.get(cell.getIndex()).setContainerName(test);
-                }
-                /*Update the cell information*/
-                list.getItems().set(cell.getIndex(), results.get(cell.getIndex()).outputResult());
-            });
-            /*Make a MenuItem*/
-            MenuItem delete = new MenuItem("Delete...");
-            /*Set an action*/
-            delete.setOnAction(event -> {
-                /*Remove the card*/
-                ProgramFunctions.removeCard(results.get(cell.getIndex()).getCardName(), results.get(cell.getIndex()).getContainerName(), results.get(cell.getIndex()).getSetID());
-                /*Remove the cell*/
-                list.getItems().remove(cell.getIndex());
-                if (list.getItems().isEmpty()) {
-                    Stage stage = (Stage) close.getScene().getWindow();
-                    stage.close();
-                }
+                result.add(results.get(cell.getIndex()).getContainerName());
+                result.add(results.get(cell.getIndex()).getCardName());
+                result.add(results.get(cell.getIndex()).getSetID());
+                Stage stage = (Stage) close.getScene().getWindow();
+                stage.close();
             });
             /*Make a MenuItem*/
             MenuItem cancel = new MenuItem("Cancel");
@@ -97,7 +78,7 @@ public class SearchResultController implements Initializable {
                 /*Do nothing*/
             });
             /*Add all MenuItems to context menu*/
-            contextMenu.getItems().addAll(view, move, delete, cancel);
+            contextMenu.getItems().addAll(view, move, cancel);
             /*Bind the itemProperty to the textProperty*/
             cell.textProperty().bind(cell.itemProperty());
             /*If the cell was empty*/

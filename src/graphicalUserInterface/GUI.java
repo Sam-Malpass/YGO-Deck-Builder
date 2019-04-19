@@ -229,6 +229,11 @@ public class GUI {
     public void setVerboseEnabled(boolean flag) {
         basicWindows.setVerboseFlag(flag);
     }
+
+    public void setResults(ArrayList<SearchResult> results) {
+        this.results = results;
+    }
+
     /**
      * Function definition for updateTitle()
      * <p>

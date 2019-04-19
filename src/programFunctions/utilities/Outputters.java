@@ -6,6 +6,7 @@
 package programFunctions.utilities;
 import dataStructure.banList.BanList;
 import dataStructure.cardHierarchy.Card;
+import dataStructure.containerHierarchy.Album;
 import dataStructure.containerHierarchy.Container;
 import dataStructure.containerHierarchy.Deck;
 import programFunctions.ProgramFunctions;
@@ -88,6 +89,13 @@ public class Outputters {
     public ArrayList<String> listDecks(ArrayList<Deck> decks) {
         ArrayList<String> tmp = new ArrayList<>();
         for(Deck C : decks) {
+            tmp.add(C.getContainerName());
+        }
+        return tmp;
+    }
+    public ArrayList<String> listAlbums(ArrayList<Album>albums) {
+        ArrayList<String> tmp = new ArrayList<>();
+        for(Album C : albums) {
             tmp.add(C.getContainerName());
         }
         return tmp;

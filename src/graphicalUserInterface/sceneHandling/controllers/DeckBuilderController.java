@@ -90,6 +90,7 @@ public class DeckBuilderController implements Initializable {
                     }
                     contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
                     contentsList.refresh();
+                    update();
                     suggest();
                 }
             });
@@ -150,6 +151,7 @@ public class DeckBuilderController implements Initializable {
                     contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
                     contentsList.refresh();
                     suggest();
+                    update();
                 }
             });
             MenuItem cancel = new MenuItem("Cancel");
@@ -209,6 +211,7 @@ public class DeckBuilderController implements Initializable {
                     contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
                     contentsList.refresh();
                     suggest();
+                    update();
                 }
             });
             MenuItem cancel = new MenuItem("Cancel");
@@ -265,6 +268,22 @@ public class DeckBuilderController implements Initializable {
         suggestionText.setWrapText(true);
         suggestionText1.setWrapText(true);
         suggestionText2.setWrapText(true);
+    }
+    private void update() {
+        System.out.println("HERE");
+        String info;
+        if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 0) {
+            info = "DECK NOT AT MINIMUM LIMIT";
+        }
+        else if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 1) {
+            info = "DECK CONTAINS LIMITED CARDS";
+        }
+        else {
+            info = "OKAY";
+        }
+        info = info + "\nNumber of cards in deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size();
+        info = info + "\nNumber of cards in extra deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getExtraDeck().size();
+        infoText.setText(info);
     }
     /**
      * Function definition for cancel()
@@ -334,6 +353,7 @@ public class DeckBuilderController implements Initializable {
             }
             contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
             contentsList.refresh();
+            update();
             suggest();
         }
         else {
