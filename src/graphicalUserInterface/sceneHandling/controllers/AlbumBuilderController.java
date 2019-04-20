@@ -29,14 +29,6 @@ public class AlbumBuilderController implements Initializable {
      */
     @FXML private Album album;
     /**
-     * thing holds the URL
-     */
-    private URL thing;
-    /**
-     * test holds the ResourceBundle
-     */
-    private ResourceBundle test;
-    /**
      * Function definition for initialize()
      * <p>
      *     Sets up the controller
@@ -44,8 +36,6 @@ public class AlbumBuilderController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        thing = url;
-        test = resourceBundle;
         album = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getAlbum();
         getOverviewData();
         ObservableList<String> cards = cardList.getItems();
@@ -114,7 +104,10 @@ public class AlbumBuilderController implements Initializable {
         if(X == null) {
         }
         else {
+            System.out.println("Card is " + X.getCardName());
+            System.out.println("Album Size " + album.getCards().size());
             album.addCard(X);
+            System.out.println("Album Size " + album.getCards().size());
             cardList.setItems(FXCollections.observableArrayList(ProgramFunctions.getUtilities().getOutputter().outputCardList(album.getCards())));
             cardList.refresh();
         }
@@ -145,6 +138,7 @@ public class AlbumBuilderController implements Initializable {
         ProgramFunctions.getProgramData().getCurrentProfile().removeContainer(ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(album.getContainerName()));
         ProgramFunctions.getProgramData().getCurrentProfile().addContainer(album);
         ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+        ProgramFunctions.getProgramData().getCache().updateCache();
         ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     /**

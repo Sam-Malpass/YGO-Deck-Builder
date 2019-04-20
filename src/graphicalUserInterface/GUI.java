@@ -189,6 +189,10 @@ public class GUI {
     public Scene getSettingsScene() {
         return scenes.settings();
     }
+
+    public Scene getDemo() {
+        return scenes.demo();
+    }
     /**
      * Function definition for getStage()
      * <p>

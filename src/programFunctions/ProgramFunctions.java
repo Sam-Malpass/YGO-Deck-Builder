@@ -361,7 +361,7 @@ public class ProgramFunctions extends Application {
                             programData.getCurrentProfile().determineContainer(con1Name).removeCard(C);
                             utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
                             System.out.println("[SYSTEM] Card " + C.getCardName() + " with SetID " + C.getCardID() + " moved from " + con1Name + " to " + con2Name);
-                            programData.getCache().swapCard(programData.getCurrentProfile().determineContainer(con1Name),programData.getCurrentProfile().determineContainer(con2Name), C);
+                            programData.getCache().swapCard(con1Name,con2Name, C);
                             return true;
                         }
                         else {
@@ -411,7 +411,7 @@ public class ProgramFunctions extends Application {
                         programData.getCurrentProfile().determineContainer(uName).removeCard(C);
                         utilities.getFileHandler().saveUserProfile(programData.getCurrentProfile());
                         System.out.println("[SYSTEM] Card " + C.getCardName() + " with setID " + C.getCardID() + " removed from " + uName);
-                        programData.getCache().removeCard(programData.getCurrentProfile().determineContainer(uName), C);
+                        programData.getCache().removeCard(uName, C);
                         return true;
                     }
                 }
@@ -549,6 +549,7 @@ public class ProgramFunctions extends Application {
                 programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
                 programData.getUserInterface().updateTitle();
                 programData.getCache().updateCache();
+
                 /*Return true*/
                 return true;
             }
@@ -631,5 +632,9 @@ public class ProgramFunctions extends Application {
     public static void main(String[] args) {
         /*Launches the application*/
         Application.launch(args);
+    }
+
+    public static void demo() {
+        programData.getUserInterface().updateScene(programData.getUserInterface().getDemo());
     }
 }

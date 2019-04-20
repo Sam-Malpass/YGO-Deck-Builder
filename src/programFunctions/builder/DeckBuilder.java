@@ -190,7 +190,7 @@ public class DeckBuilder {
         }
         suggestions = new ArrayList<>();
         while(suggestions.size() < 3) {
-            suggestions.add(handleSuggestion(determineNextCard()));
+                suggestions.add(handleSuggestion(determineNextCard()));
         }
         /*Return*/
         return;
@@ -268,6 +268,7 @@ public class DeckBuilder {
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
+        /*
         if(deckFusions.size() > 0) {
             for(FusionMonster f : deckFusions) {
                 ArrayList<String> dummy = f.getFusionMaterial();
@@ -292,6 +293,7 @@ public class DeckBuilder {
                 }
             }
         }
+        */
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
@@ -309,6 +311,7 @@ public class DeckBuilder {
         /*
         CHECK FOR XYZ REQUIREMENTS
          */
+        /*
         ArrayList<XYZMonster> xyzMonsters = ProgramFunctions.getUtilities().getFilter().filterXYZs(tmpDeck.getExtraDeck());
         boolean xyzflag = false;
         if(xyzMonsters.size() > 0) {
@@ -341,6 +344,7 @@ public class DeckBuilder {
                 }
             }
         }
+        */
         /*
         CHECK FOR XYZ REQUIREMENTS
          */
@@ -373,6 +377,7 @@ public class DeckBuilder {
             for(MonsterCard c : monsters) {
                 if(c.getValue() >= suggestion.getValue()) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                        System.out.println("Monster Stuck 1");
                         suggestion = c;
                     }
                 }
@@ -398,6 +403,7 @@ public class DeckBuilder {
             if(c.getValue() >= suggestion.getValue()) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                     suggestion = c;
+                    System.out.println("Monster Stuck 2");
                     suggestionFlag = true;
                 }
             }
@@ -406,6 +412,7 @@ public class DeckBuilder {
             if(c.getValue() >= suggestion.getValue()) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                     suggestion = c;
+                    System.out.println("Monster Stuck 3");
                     suggestionFlag = true;
                 }
             }
@@ -426,13 +433,16 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
-        while(true) {
-            int i = 0;
-            if(suggestions.contains(monsterlist.get(i))) {
-                return monsterlist.get(i);
+        for(int i = 0; i < monsterlist.size(); i++) {
+                for (Card C : suggestions) {
+                        System.out.println("Testing " + C.getCardName() + " against " + monsterlist.get(i).getCardName());
+                        if (!(C.getCardName().equals(monsterlist.get(i).getCardName()))) {
+                            return monsterlist.get(i);
+                        }
+                    }
+
             }
-            i++;
-        }
+        return monsterlist.get(0);
         /*
         IF EVERYTHING ELSE GOES WRONG
          */
@@ -465,6 +475,7 @@ public class DeckBuilder {
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
+        /*
         boolean fusionCheck = false;
         if(deckFusions.size() > 0) {
             for(SpellCard S : deckSpells) {
@@ -488,6 +499,7 @@ public class DeckBuilder {
                 }
             }
         }
+        */
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
@@ -495,6 +507,7 @@ public class DeckBuilder {
         /*
         CHECK IF THERE ARE RITUAL CARDS NEEDED
          */
+        /*
         boolean ritualCheck = false;
         for(RitualMonster c : deckRituals) {
             for(SpellCard s : deckSpells) {
@@ -516,6 +529,7 @@ public class DeckBuilder {
                 }
             }
         }
+        */
         /*
         CHECK IF THERE ARE RITUAL CARDS NEEDED
          */
@@ -528,8 +542,9 @@ public class DeckBuilder {
         if(archetype != "" || archetype != null) {
             ArrayList<SpellCard> spells = ProgramFunctions.getUtilities().getFilter().filterSpellArchetype(spellList, archetpyeNoSpace);
             for(SpellCard c : spells) {
-                if(c.getValue() >= suggestion.getValue()) {
+                if(c.getEffValue() >= suggestion.getValue()) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                        System.out.println("Spell Stuck 1");
                         suggestion = c;
                     }
                 }
@@ -548,6 +563,7 @@ public class DeckBuilder {
         for(SpellCard c : spellList) {
             if(c.getCardDescription().contains(commonAttr.toString())) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                    System.out.println("Spell Stuck 2");
                     suggestion = c;
                 }
             }
@@ -555,6 +571,7 @@ public class DeckBuilder {
         for(SpellCard c : spellList) {
             if(c.getCardDescription().toUpperCase().contains(commonType.toString().replace("_", " "))) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                    System.out.println("Spell Stuck 3");
                     suggestion = c;
                 }
             }
@@ -571,6 +588,7 @@ public class DeckBuilder {
                 if(c.getCardName().equals(s)) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                         suggestion = c;
+                        System.out.println("Spell Stuck 4");
                         suggestionFlag = true;
                     }
                 }
@@ -593,11 +611,10 @@ public class DeckBuilder {
             }
         });
         if(spellList.size() > 0) {
+            System.out.println("Spell is " + spellList.get(0));
             return spellList.get(0);
         }
-        else {
-            return null;
-        }
+        return spellList.get(0);
     }
     /**
      * Function definition for suggestTrap()
@@ -630,7 +647,7 @@ public class DeckBuilder {
             ArrayList<TrapCard> traps = ProgramFunctions.getUtilities().getFilter().filterTrapArchetype(trapList, archetype);
             if(traps.size() > 0) {
                 for (TrapCard c : traps) {
-                    if (c.getValue() >= suggestion.getValue()) {
+                    if (c.getEffValue() >= suggestion.getValue()) {
                         if (canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                             suggestion = c;
                         }
@@ -650,6 +667,7 @@ public class DeckBuilder {
         for(TrapCard c : trapList) {
             if(c.getCardDescription().contains(commonAttr.toString())) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                    System.out.println("Trap Stuck 1");
                     suggestion = c;
                 }
             }
@@ -657,6 +675,7 @@ public class DeckBuilder {
         for(TrapCard c : trapList) {
             if(c.getCardDescription().toUpperCase().contains(commonType.toString().replace("_", " "))) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
+                    System.out.println("Trap Stuck 2");
                     suggestion = c;
                 }
             }
@@ -674,7 +693,9 @@ public class DeckBuilder {
                 if(c.getCardName().equals(s)) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                         suggestion = c;
+                        System.out.println("Trap Stuck 3");
                         suggestionFlag = true;
+                        break;
                     }
                 }
             }
@@ -692,6 +713,7 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
+        System.out.println("Trap is " + trapList.get(0).getCardName());
         return trapList.get(0);
     }
     /**

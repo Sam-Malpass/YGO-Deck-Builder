@@ -199,6 +199,25 @@ public class Scenes {
         return scene;
     }
     /**
+     * Function definition for deckBuilder()
+     * <p>
+     *     Creates a Scene and adds elements to it that allow for the the user to
+     *     build decks
+     * </p>
+     * @return the scene
+     */
+    public Scene demo() {
+        scene = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("FXML/Demo Scene.fxml"));
+            scene = new Scene(root, width, height);
+        }
+        catch (Exception e) {
+            System.out.println("[ERROR] Resource not found");
+        }
+        return scene;
+    }
+    /**
      * Function definition for albumBuilder()
      * <p>
      *      Create a Scene

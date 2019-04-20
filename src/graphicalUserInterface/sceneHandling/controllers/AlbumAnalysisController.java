@@ -4,6 +4,7 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
+import dataStructure.cardHierarchy.Card;
 import dataStructure.cardHierarchy.MonsterCard;
 import dataStructure.cardHierarchy.enumerators.MonsterAttribute;
 import dataStructure.cardHierarchy.enumerators.MonsterType;

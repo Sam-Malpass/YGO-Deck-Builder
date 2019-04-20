@@ -119,7 +119,12 @@ public class BeginningController implements Initializable {
                     try {
                         deck = (Deck) ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(item);
                         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(new DeckBuilder(deck, 2, 1, 1));
-                        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
+                        if(!deck.getContainerName().equals("demo")) {
+                            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDeckBuilder());
+                        }
+                        else {
+                            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getDemo());
+                        }
                     }
                     catch (Exception e) {
                         System.out.println("[ERROR] Cloning Deck failed");

@@ -4,6 +4,7 @@
  * @since 0.0.0.d
  */
 package graphicalUserInterface.sceneHandling.controllers;
+
 import dataStructure.cardHierarchy.Card;
 import dataStructure.containerHierarchy.Album;
 import dataStructure.containerHierarchy.Container;
@@ -16,10 +17,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import programFunctions.ProgramFunctions;
+import programFunctions.searching.SearchResult;
+
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
-public class DeckBuilderController implements Initializable {
+
+public class DemoController implements Initializable {
     /**
      * contentsList holds the current contents
      */
@@ -33,6 +38,7 @@ public class DeckBuilderController implements Initializable {
     @FXML private ListView<String> suggestion1;
     @FXML private TextArea suggestionText2;
     @FXML private ListView<String> suggestion2;
+    public Thread t1;
     /**
      * infoText holds the deck's information
      */
@@ -254,10 +260,15 @@ public class DeckBuilderController implements Initializable {
         info = info + "\nNumber of cards in deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size();
         info = info + "\nNumber of cards in extra deck: " + ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getExtraDeck().size();
         infoText.setText(info);
+        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().handleSuggestion(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().determineNextCard());
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
-            ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().handleSuggestion(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().determineNextCard());
             suggest();
+            update();
         }
+        else {
+            //add("Atlantean Marksman");
+        }
+
     }
     private void suggest() {
         suggestionList = new ArrayList<>();
@@ -273,9 +284,17 @@ public class DeckBuilderController implements Initializable {
         suggestionText.setWrapText(true);
         suggestionText1.setWrapText(true);
         suggestionText2.setWrapText(true);
+                if (ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() < 41) {
+                    Random rnd = new Random();
+                    int pick = rnd.nextInt(3);
+                    System.out.println("Selecting " + suggestionList.get(pick).getCardName());
+                    add(suggestionList.get(pick).getCardName());
+                } else {
+                    System.out.println("COMPELTE");
+                }
+
     }
     private void update() {
-        System.out.println("HERE");
         String info;
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 0) {
             info = "DECK NOT AT MINIMUM LIMIT";
@@ -340,14 +359,16 @@ public class DeckBuilderController implements Initializable {
      *     Opens dialogue to find and add a card
      * </p>
      */
-    @FXML
-    private void add() {
+    private void add(String name) {
         ArrayList<String> command = new ArrayList<>();
-        command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for Card", "Search:")));
+        SearchResult tmp = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(name).get(0);
+        command.add(tmp.getContainerName());
+        command.add(tmp.getCardName());
+        command.add(tmp.getSetID());
         if(command.size() > 0) {
             if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
                 for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
-                    if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                    if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(command.get(2))) {
                         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(command.get(0), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName(), c);
                         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
                         break;
@@ -359,8 +380,36 @@ public class DeckBuilderController implements Initializable {
             }
             contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
             contentsList.refresh();
-            update();
-            suggest();
+
+                    update();
+                    suggest();
+
+
+        }
+        else {
+        }
+    }
+    @FXML
+    private void addCard() {
+        ArrayList<String> command = new ArrayList<>();
+        command = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().searchResultDeckBuilder(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().searchCard(ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().input("Search for Card", "Search:")));
+        if(command.size() > 0) {
+            if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
+                for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
+                    if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(command.get(0), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName(), c);
+                        break;
+                    }
+                }
+            }
+            else {
+                ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().getSystemCards().get(Integer.parseInt(command.get(0))));
+            }
+            contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
+            contentsList.refresh();
+                update();
+                suggest();
         }
         else {
         }

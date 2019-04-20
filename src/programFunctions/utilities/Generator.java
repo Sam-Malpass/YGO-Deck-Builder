@@ -13,6 +13,34 @@ public class Generator {
     public Generator(){
 
     }
+    public void genMegaAlbum() {
+        if(ProgramFunctions.profileActive()) {
+            ProgramFunctions.createAlbum("megaAlbum");
+            /*Output beginning of generator*/
+            System.out.println("#####    GENERATOR   #####");
+            for(String S : ProgramFunctions.getUtilities().getFileHandler().searchSeriesFolder()) {
+                Series loaded = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S);
+                System.out.println("Series: " + loaded.getContainerName());
+                System.out.println("Size: " + loaded.getCards().size());
+                Random rnd = new Random();
+                int num = rnd.nextInt(200);
+                for(int i = 0; i < num; i++) {
+                    int newNum = rnd.nextInt(loaded.getCards().size());
+                    Card c = loaded.getCards().get(newNum);
+                    ProgramFunctions.getProgramData().getCurrentProfile().determineContainer("megaAlbum").addCard(c);
+                    System.out.print("#");
+                }
+                System.out.println("");
+            }
+            System.out.println("#####    GENERATION COMPLETE     #####");
+            ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
+            ProgramFunctions.getProgramData().getUserInterface().updateTitle();
+        }
+        else {
+
+        }
+    }
     /**
      * Function definition for genSDREAlbum()
      * <p>

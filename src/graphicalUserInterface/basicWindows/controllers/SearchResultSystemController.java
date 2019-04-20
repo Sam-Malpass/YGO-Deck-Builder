@@ -28,7 +28,7 @@ public class SearchResultSystemController implements Initializable {
      * Close holds the close button
      */
     @FXML private Button close;
-    public static Card result = null;
+    public static Card result;
     /**
      * Function definition for initialize()
      * <p>
@@ -67,7 +67,10 @@ public class SearchResultSystemController implements Initializable {
             /*Set an action*/
             move.setOnAction(event -> {
                 String item = cell.getItem();
+                System.out.println("Series: " + item.substring(item.indexOf("(")+1, item.indexOf(")")));
+                System.out.println("Card: " +item.substring(0, item.indexOf(" (")));
                 result = ProgramFunctions.getUtilities().getFileHandler().loadSeries(item.substring(item.indexOf("(")+1, item.indexOf(")"))).findCard(item.substring(0, item.indexOf(" (")));
+                System.out.println("Result = " + result.getCardName());
                 Stage stage = (Stage) close.getScene().getWindow();
                 stage.close();
             });

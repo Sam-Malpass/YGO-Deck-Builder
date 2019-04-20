@@ -333,7 +333,7 @@ public class Windows {
             return card;
         }
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FXML/Search Result Deck Pop-Up.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Search Result System Pop-Up.fxml"));
             Scene scene = new Scene(root, 400, 400);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -341,10 +341,10 @@ public class Windows {
             stage.setTitle("Search Results");
             stage.getIcons().add(ProgramFunctions.getProgramData().getIcon());
             stage.showAndWait();
+            card = SearchResultSystemController.result;
         }
         catch (Exception e) {
         }
-        card = SearchResultSystemController.result;
         return card;
     }
     /**

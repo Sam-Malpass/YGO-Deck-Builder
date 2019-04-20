@@ -73,6 +73,8 @@ public class Cache {
      */
     public void loadUserCards(UserProfile user) {
         System.out.println("[SYSTEM] Caching user cards...");
+        deckCards = new ArrayList<>();
+        albumCards = new ArrayList<>();
         for(String s : user.listContainers()) {
             if(user.determineContainer(s) instanceof Deck) {
                 deckCards.addAll(user.determineContainer(s).getCards());
@@ -104,15 +106,7 @@ public class Cache {
      * @param destination is the new container
      * @param card is the card to move
      */
-    public void swapCard(Container source, Container destination, Card card) {
-        if(source instanceof Deck) {
-            deckCards.remove(card);
-            albumCards.add(card);
-        }
-        else {
-            albumCards.remove(card);
-            deckCards.add(card);
-        }
+    public void swapCard(String source, String destination, Card card) {
         removeCard(source, card);
         addCard(destination, card);
     }
@@ -199,36 +193,58 @@ public class Cache {
      * @param container is the container to have the card removed from
      * @param card is the card to be removed
      */
-    public void removeCard(Container container, Card card) {
-        if(container instanceof Deck) {
+    public void removeCard(String container, Card card) {
+        if(determineContainer(container) instanceof Deck) {
             deckCards.remove(card);
-            decks.get(decks.indexOf(container)).removeCard(card);
             for(Deck d : decks) {
-                if(d.getContainerName().equals(container.getContainerName())) {
+                if(d.getContainerName().equals(container)) {
                     Card remover = null;
                     for(Card c : d.getCards()) {
                         if(c.getCardName().equals(card.getCardName())) {
                             remover = c;
+                            break;
                         }
                     }
-                    d.removeCard(remover);
+                    if(remover != null) {
+                        d.removeCard(remover);
+                    }
                 }
+            }
+            Card remover = null;
+            for(Card C : deckCards) {
+                if(C.getCardName().equals(card.getCardName()) && C.getCardID().equals(card.getCardID())) {
+                    remover = C;
+                    break;
+                }
+            }
+            if(remover != null) {
+                deckCards.remove(remover);
             }
         }
         else {
-            albumCards.remove(card);
             for(Album a : albums){
-                if(a.getContainerName().equals(container.getContainerName())){
+                if(a.getContainerName().equals(container)){
                     Card remover = null;
                     for(Card c : a.getCards()) {
                         if(c.getCardName().equals(card.getCardName())) {
                             remover = c;
+                            break;
                         }
                     }
                     if(remover != null) {
                         a.removeCard(remover);
                     }
                 }
+            }
+            Card remover = null;
+            for(Card C : albumCards) {
+                if(C.getCardName().equals(card.getCardName()) && C.getCardID().equals(card.getCardID())) {
+                    remover = C;
+                    break;
+                }
+            }
+            if(remover != null) {
+                albumCards.remove(remover);
             }
         }
     }
@@ -240,11 +256,11 @@ public class Cache {
      * @param container is the container the card is being added to
      * @param card is the card to be added
      */
-    public void addCard(Container container, Card card) {
-        if(container instanceof Deck) {
+    public void addCard(String container, Card card) {
+        if(determineContainer(container) instanceof Deck) {
             deckCards.add(card);
             for(Deck d : decks) {
-                if(d.getContainerName().equals(container.getContainerName())) {
+                if(d.getContainerName().equals(container)) {
                     d.addCard(card);
                 }
             }
@@ -252,7 +268,7 @@ public class Cache {
         else {
             albumCards.add(card);
             for(Album a : albums) {
-                if(a.getContainerName().equals(container.getContainerName())) {
+                if(a.getContainerName().equals(container)) {
                     a.addCard(card);
                 }
             }
