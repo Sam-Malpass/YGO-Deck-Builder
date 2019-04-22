@@ -264,15 +264,27 @@ public class DeckBuilderController implements Initializable {
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
             suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
-        suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
-        suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
-        suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
-        suggestionText.setText(suggestionList.get(0).getCardDescription());
-        suggestionText1.setText(suggestionList.get(1).getCardDescription());
-        suggestionText2.setText(suggestionList.get(2).getCardDescription());
-        suggestionText.setWrapText(true);
-        suggestionText1.setWrapText(true);
-        suggestionText2.setWrapText(true);
+        suggestion.setItems(FXCollections.observableArrayList());
+        suggestion1.setItems(FXCollections.observableArrayList());
+        suggestion2.setItems(FXCollections.observableArrayList());
+        suggestionText.setText("");
+        suggestionText1.setText("");
+        suggestionText2.setText("");
+        if(suggestionList.get(0).getCardName() != null) {
+            suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
+            suggestionText.setText(suggestionList.get(0).getCardDescription());
+            suggestionText.setWrapText(true);
+        }
+        if(suggestionList.get(1).getCardName() != null) {
+            suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
+            suggestionText1.setText(suggestionList.get(1).getCardDescription());
+            suggestionText1.setWrapText(true);
+        }
+        if(suggestionList.get(1).getCardName() != null) {
+            suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
+            suggestionText2.setText(suggestionList.get(2).getCardDescription());
+            suggestionText2.setWrapText(true);
+        }
     }
     private void update() {
         System.out.println("HERE");

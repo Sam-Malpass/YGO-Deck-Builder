@@ -54,6 +54,11 @@ public class DeckBuilder {
      * cpyCache is a copy of the user's Cache
      */
     private Cache cpyCache;
+
+    public boolean isOut = false;
+    private boolean spellFlag = true;
+    private boolean trapFlag = true;
+    private boolean monsFlag = true;
     /**
      * suggestions holds a list of potential cards to suggest
      */
@@ -377,7 +382,6 @@ public class DeckBuilder {
             for(MonsterCard c : monsters) {
                 if(c.getValue() >= suggestion.getValue()) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                        System.out.println("Monster Stuck 1");
                         suggestion = c;
                     }
                 }
@@ -397,22 +401,22 @@ public class DeckBuilder {
         MonsterType commonType = findMostCommonType();
         ArrayList<MonsterCard> typeList = ProgramFunctions.getUtilities().getFilter().filterMonsterType(monsterlist, commonType);
         ArrayList<MonsterCard> attrList = ProgramFunctions.getUtilities().getFilter().filterMonsterAttribute(typeList, commonAttr);
-        System.out.println("[SYSTEM] Attribute is : " + commonAttr + " and Type is : " + commonType);
         boolean suggestionFlag = false;
         for(MonsterCard c : attrList) {
             if(c.getValue() >= suggestion.getValue()) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                     suggestion = c;
-                    System.out.println("Monster Stuck 2");
                     suggestionFlag = true;
                 }
             }
+        }
+        if(suggestionFlag) {
+            return suggestion;
         }
         for(MonsterCard c : typeList) {
             if(c.getValue() >= suggestion.getValue()) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                     suggestion = c;
-                    System.out.println("Monster Stuck 3");
                     suggestionFlag = true;
                 }
             }
@@ -433,16 +437,18 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
-        for(int i = 0; i < monsterlist.size(); i++) {
-                for (Card C : suggestions) {
-                        System.out.println("Testing " + C.getCardName() + " against " + monsterlist.get(i).getCardName());
-                        if (!(C.getCardName().equals(monsterlist.get(i).getCardName()))) {
-                            return monsterlist.get(i);
-                        }
-                    }
-
+        if(monsterlist.size() == 1) {
+            monsFlag = false;
+            return monsterlist.get(0);
+        }
+        else {
+            for (int i = 0; i < monsterlist.size(); i++) {
+                if(!cardNameChecker(monsterlist.get(i).getCardName())) {
+                    suggestion = monsterlist.get(i);
+                }
             }
-        return monsterlist.get(0);
+        }
+        return suggestion;
         /*
         IF EVERYTHING ELSE GOES WRONG
          */
@@ -475,7 +481,6 @@ public class DeckBuilder {
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
-        /*
         boolean fusionCheck = false;
         if(deckFusions.size() > 0) {
             for(SpellCard S : deckSpells) {
@@ -499,7 +504,6 @@ public class DeckBuilder {
                 }
             }
         }
-        */
         /*
         CHECK IF THERE ARE FUSION CARDS NEEDED
          */
@@ -507,7 +511,6 @@ public class DeckBuilder {
         /*
         CHECK IF THERE ARE RITUAL CARDS NEEDED
          */
-        /*
         boolean ritualCheck = false;
         for(RitualMonster c : deckRituals) {
             for(SpellCard s : deckSpells) {
@@ -529,7 +532,6 @@ public class DeckBuilder {
                 }
             }
         }
-        */
         /*
         CHECK IF THERE ARE RITUAL CARDS NEEDED
          */
@@ -544,7 +546,6 @@ public class DeckBuilder {
             for(SpellCard c : spells) {
                 if(c.getEffValue() >= suggestion.getValue()) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                        System.out.println("Spell Stuck 1");
                         suggestion = c;
                     }
                 }
@@ -563,15 +564,16 @@ public class DeckBuilder {
         for(SpellCard c : spellList) {
             if(c.getCardDescription().contains(commonAttr.toString())) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                    System.out.println("Spell Stuck 2");
                     suggestion = c;
                 }
             }
         }
+        if(suggestion.getCardName() != null) {
+            return suggestion;
+        }
         for(SpellCard c : spellList) {
             if(c.getCardDescription().toUpperCase().contains(commonType.toString().replace("_", " "))) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                    System.out.println("Spell Stuck 3");
                     suggestion = c;
                 }
             }
@@ -588,7 +590,6 @@ public class DeckBuilder {
                 if(c.getCardName().equals(s)) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                         suggestion = c;
-                        System.out.println("Spell Stuck 4");
                         suggestionFlag = true;
                     }
                 }
@@ -610,11 +611,18 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
-        if(spellList.size() > 0) {
-            System.out.println("Spell is " + spellList.get(0));
+        if(spellList.size() == 1) {
+            spellFlag = false;
             return spellList.get(0);
         }
-        return spellList.get(0);
+        else {
+            for (int i = 0; i < spellList.size(); i++) {
+                if(!cardNameChecker(spellList.get(i).getCardName())) {
+                    suggestion = spellList.get(i);
+                }
+            }
+        }
+        return suggestion;
     }
     /**
      * Function definition for suggestTrap()
@@ -667,7 +675,6 @@ public class DeckBuilder {
         for(TrapCard c : trapList) {
             if(c.getCardDescription().contains(commonAttr.toString())) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                    System.out.println("Trap Stuck 1");
                     suggestion = c;
                 }
             }
@@ -675,7 +682,6 @@ public class DeckBuilder {
         for(TrapCard c : trapList) {
             if(c.getCardDescription().toUpperCase().contains(commonType.toString().replace("_", " "))) {
                 if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
-                    System.out.println("Trap Stuck 2");
                     suggestion = c;
                 }
             }
@@ -693,7 +699,6 @@ public class DeckBuilder {
                 if(c.getCardName().equals(s)) {
                     if(canAdd(c) && cardNameChecker(c.getCardName()) == false) {
                         suggestion = c;
-                        System.out.println("Trap Stuck 3");
                         suggestionFlag = true;
                         break;
                     }
@@ -713,8 +718,18 @@ public class DeckBuilder {
                 return Double.compare(c1.getValue(), c2.getValue());
             }
         });
-        System.out.println("Trap is " + trapList.get(0).getCardName());
-        return trapList.get(0);
+        if(trapList.size() == 1) {
+            trapFlag = false;
+            return trapList.get(0);
+        }
+        else {
+            for (int i = 0; i < trapList.size(); i++) {
+                if(!cardNameChecker(trapList.get(i).getCardName())) {
+                    suggestion = trapList.get(i);
+                }
+            }
+        }
+        return suggestion;
     }
     /**
      * Function definition for handleSuggestion()
@@ -737,6 +752,7 @@ public class DeckBuilder {
                 c = suggestTrap();
                 return c;
             default:
+                isOut = true;
                 break;
         }
         return null;
@@ -770,13 +786,85 @@ public class DeckBuilder {
         float trapDiff = (numberOfTraps - optimalTraps) * -1;
         float largest = findLargest(monDiff, spellDiff, trapDiff);
         if(largest == monDiff) {
-            return "MONSTER";
+            if(monsFlag == true) {
+                return "MONSTER";
+            }
+            else if(spellDiff > trapDiff) {
+                if(spellFlag == true) {
+                    return "SPELL";
+                }
+                else if (trapFlag == true) {
+                    return "TRAP";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
+            else {
+                if(trapFlag == true) {
+                    return "TRAP";
+                }
+                else if (spellFlag == true) {
+                    return "SPELL";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
         }
         else if(largest == spellDiff) {
-            return "SPELL";
+            if(spellFlag == true) {
+                return "SPELL";
+            }
+            else if(monDiff > trapDiff) {
+                if(monsFlag == true) {
+                    return "MONSTER";
+                }
+                else if (trapFlag == true) {
+                    return "TRAP";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
+            else {
+                if(trapFlag == true) {
+                    return "TRAP";
+                }
+                else if (monsFlag == true) {
+                    return "MONSTER";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
         }
         else if(largest == trapDiff) {
-            return "TRAP";
+            if(trapFlag == true) {
+                return "TRAP";
+            }
+            else if(monDiff > spellDiff) {
+                if(monsFlag == true) {
+                    return "MONSTER";
+                }
+                else if (spellFlag == true) {
+                    return "SPELL";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
+            else {
+                if(spellFlag == true) {
+                    return "SPELL";
+                }
+                else if (monsFlag == true) {
+                    return "MONSTER";
+                }
+                else {
+                    return "ERROR";
+                }
+            }
         }
         else {
             return "ERROR";

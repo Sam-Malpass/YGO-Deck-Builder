@@ -11,18 +11,23 @@ import dataStructure.containerHierarchy.Container;
 import dataStructure.containerHierarchy.Deck;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
+import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import programFunctions.ProgramFunctions;
+import programFunctions.builder.DeckBuilder;
 import programFunctions.searching.SearchResult;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
+
+import static graphicalUserInterface.sceneHandling.controllers.BeginningController.deck;
 
 public class DemoController implements Initializable {
     /**
@@ -38,7 +43,8 @@ public class DemoController implements Initializable {
     @FXML private ListView<String> suggestion1;
     @FXML private TextArea suggestionText2;
     @FXML private ListView<String> suggestion2;
-    public Thread t1;
+    private String status = "";
+    private Thread t1;
     /**
      * infoText holds the deck's information
      */
@@ -275,24 +281,65 @@ public class DemoController implements Initializable {
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() > 0) {
             suggestionList = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getSuggestions();
         }
-        suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
-        suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
-        suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
-        suggestionText.setText(suggestionList.get(0).getCardDescription());
-        suggestionText1.setText(suggestionList.get(1).getCardDescription());
-        suggestionText2.setText(suggestionList.get(2).getCardDescription());
-        suggestionText.setWrapText(true);
-        suggestionText1.setWrapText(true);
-        suggestionText2.setWrapText(true);
-                if (ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() < 41) {
+        suggestion.setItems(FXCollections.observableArrayList());
+        suggestion1.setItems(FXCollections.observableArrayList());
+        suggestion2.setItems(FXCollections.observableArrayList());
+        suggestionText.setText("");
+        suggestionText1.setText("");
+        suggestionText2.setText("");
+        if(suggestionList.get(0).getCardName() != null) {
+            suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
+            suggestionText.setText(suggestionList.get(0).getCardDescription());
+            suggestionText.setWrapText(true);
+        }
+        if(suggestionList.get(1).getCardName() != null) {
+            suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
+            suggestionText1.setText(suggestionList.get(1).getCardDescription());
+            suggestionText1.setWrapText(true);
+        }
+        if(suggestionList.get(2).getCardName() != null) {
+            suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
+            suggestionText2.setText(suggestionList.get(2).getCardDescription());
+            suggestionText2.setWrapText(true);
+        }
+        suggestion.refresh();
+        suggestion1.refresh();
+        suggestion2.refresh();
+        Task<String> task = new Task<String>() {
+            @Override
+            protected String call() throws Exception {
+                if (ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getOnlyDeck().size() < 40) {
                     Random rnd = new Random();
                     int pick = rnd.nextInt(3);
-                    System.out.println("Selecting " + suggestionList.get(pick).getCardName());
+                    Thread.sleep(1500);
                     add(suggestionList.get(pick).getCardName());
+                    return "INCOMPLETE";
                 } else {
-                    System.out.println("COMPELTE");
+                    status = "COMPLETE";
+                    return "COMPLETE";
                 }
+            }
+        };
+        if(status.equals("")) {
+            new Thread(task).start();
+        }
+        task.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+            @Override
+            public void handle(WorkerStateEvent workerStateEvent) {
+                if(status.equals("COMPLETE")) {
+                    ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().alert("Complete", "Process Completed Successfully!");
+                    ohnoes();
+                    task.cancel(true);
+                }
+                else {
 
+                }
+            }
+        });
+    }
+    private void ohnoes() {
+        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().setCardSuggestor(null);
+        ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
     }
     private void update() {
         String info;
@@ -381,8 +428,8 @@ public class DemoController implements Initializable {
             contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
             contentsList.refresh();
 
-                    update();
-                    suggest();
+            update();
+            suggest();
 
 
         }
