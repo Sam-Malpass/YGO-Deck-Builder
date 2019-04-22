@@ -67,18 +67,50 @@ public class Generator {
 
         }
     }
+    public void genDemoAlbum() {
+        if(ProgramFunctions.profileActive()) {
+            ProgramFunctions.createAlbum("collectorAlbum");
+            /*Output beginning of generator*/
+            System.out.println("#####    GENERATOR   #####");
+            for(String S : ProgramFunctions.getUtilities().getFileHandler().searchSeriesFolder()) {
+                if(S.equals("SDRE-EN")) {
+                    Series loaded = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S);
+                    for(int k = 0; k < 3; k++) {
+                        Random rnd = new Random();
+                        int num = rnd.nextInt(200);
+                        for (int i = 0; i < num; i++) {
+                            int newNum = rnd.nextInt(loaded.getCards().size());
+                            Card c = loaded.getCards().get(newNum);
+                            ProgramFunctions.getProgramData().getCurrentProfile().determineContainer("collectorAlbum").addCard(c);
+                            System.out.print("#");
+                        }
+                        System.out.println("");
+                    }
+                }
+            }
+            System.out.println("#####    GENERATION COMPLETE     #####");
+            ProgramFunctions.getUtilities().getFileHandler().saveUserProfile(ProgramFunctions.getProgramData().getCurrentProfile());
+            ProgramFunctions.getProgramData().getUserInterface().updateScene(ProgramFunctions.getProgramData().getUserInterface().getBeginningScene());
+            ProgramFunctions.getProgramData().getUserInterface().updateTitle();
+        }
+    }
     public void genBanList() {
         Random rnd = new Random();
         BanList banList = new BanList();
         ArrayList<LimitedCard> cards = new ArrayList<>();
         for(String S : ProgramFunctions.getUtilities().getFileHandler().searchSeriesFolder()) {
-            for(int i = 0; i < 10; i++) {
-                int tmp = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S).getCards().size();
-                int index = rnd.nextInt(tmp);
-                String name = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S).getCards().get(index).getCardName();
-                int numCopies = rnd.nextInt(3)+1;
-                LimitedCard C = new LimitedCard(name, numCopies);
-                cards.add(C);
+            if(!S.equals("SDRE-EN")) {
+                for (int i = 0; i < 25; i++) {
+                    int tmp = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S).getCards().size();
+                    int index = rnd.nextInt(tmp);
+                    String name = ProgramFunctions.getUtilities().getFileHandler().loadSeries(S).getCards().get(index).getCardName();
+                    int numCopies = rnd.nextInt(3) + 1;
+                    if(numCopies == 3) {
+                        numCopies = 0;
+                    }
+                    LimitedCard C = new LimitedCard(name, numCopies);
+                    cards.add(C);
+                }
             }
         }
         banList.setList(cards);

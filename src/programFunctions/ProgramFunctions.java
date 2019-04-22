@@ -540,11 +540,6 @@ public class ProgramFunctions extends Application {
                 programData.setCurrentProfile(user);
                 /*Output success*/
                 System.out.println("[SYSTEM] Set " + programData.getCurrentProfile().getProfileName() + " as active profile");
-                /*
-                DEBUG CODE
-                 */
-                //utilities.getGenerator().genSDREAlbum();
-
                 programData.setCache(new Cache(user));
                 programData.getUserInterface().updateScene(programData.getUserInterface().getBeginningScene());
                 programData.getUserInterface().updateTitle();
@@ -613,12 +608,6 @@ public class ProgramFunctions extends Application {
         programData = new AppData();
         query = new Searcher();
         dataImporter = new DataImporter();
-
-        /*
-        SET UP DATA ON FIRST RUN
-         */
-        //utilities.getGenerator().genBanList();
-
         /*Setup the UI*/
         programData.getUserInterface().run(S);
     }
