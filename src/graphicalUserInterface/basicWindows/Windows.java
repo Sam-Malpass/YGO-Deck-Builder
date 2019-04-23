@@ -75,6 +75,9 @@ public class Windows {
     public List<String> getItems() {
         return items;
     }
+    public String getsResult() {
+        return sResult;
+    }
     /**
      * Function definition for setsResult()
      * <p>

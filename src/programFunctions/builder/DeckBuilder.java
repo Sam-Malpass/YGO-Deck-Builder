@@ -767,15 +767,6 @@ public class DeckBuilder {
     public String determineNextCard() {
         /*Create an integer to hold the total cards in the deck*/
         float total = numberOfMonsters + numberOfTraps + numberOfSpells;
-        /*Determine the smallest ratio*/
-        float smolBoi = findSmallest(numberOfMonsters, numberOfSpells, numberOfTraps);
-        /*Divide by the smallest ratio*/
-        float currentRatMons = numberOfMonsters / smolBoi;
-        /*Divide by the smallest ratio*/
-        float currentRatSpells = numberOfSpells / smolBoi;
-        /*Divide by the smallest ratio*/
-        float currentRatTraps = numberOfTraps / smolBoi;
-        System.out.println("[SYSTEM] Deck Builder determines final ration of " + currentRatMons + ":" + currentRatSpells + ":" + currentRatTraps);
         System.out.println("[SYSTEM] Optimal ratio is " + ratioMonsters + ":" + ratioSpells + ":" + ratioTraps);
         float totalRatios = ratioMonsters + ratioTraps + ratioSpells;
         float optimalMonsters = (total / totalRatios) * ratioMonsters;

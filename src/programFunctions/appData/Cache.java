@@ -195,7 +195,6 @@ public class Cache {
      */
     public void removeCard(String container, Card card) {
         if(determineContainer(container) instanceof Deck) {
-            deckCards.remove(card);
             for(Deck d : decks) {
                 if(d.getContainerName().equals(container)) {
                     Card remover = null;

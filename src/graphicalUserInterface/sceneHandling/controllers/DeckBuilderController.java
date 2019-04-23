@@ -241,6 +241,64 @@ public class DeckBuilderController implements Initializable {
             /*Return the cell*/
             return cell;
         });
+        contentsList.setCellFactory(lv -> {
+            /*Create a ListCell*/
+            ListCell<String> cell = new ListCell<>();
+            /*Create a ContextMenu*/
+            ContextMenu contextMenu = new ContextMenu();
+            /*Create a MenuItem*/
+            MenuItem view = new MenuItem("View...");
+            view.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ProgramFunctions.getProgramData().getUserInterface().viewCard(ProgramFunctions.findCard(cell.getItem()));
+                }
+            });
+            MenuItem putBack = new MenuItem("Remove...");
+            putBack.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().boxSelector(ProgramFunctions.getUtilities().getOutputter().listAlbums(ProgramFunctions.getUtilities().getFilter().filterAlbums(ProgramFunctions.getProgramData().getCurrentProfile().getUserContainers())), "Select Album...");
+                    String name = ProgramFunctions.getProgramData().getUserInterface().getBasicWindows().getsResult();
+                    if(name.equals("") || name.isEmpty() || name == null) {
+
+                    }
+                    else {
+                        int index = cell.getIndex();
+                        Card remove = ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getCards().get(index);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName(), name, remove);
+                        ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().removeCard(remove);
+                        contentsList.setItems(FXCollections.observableArrayList(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().listCardsString()));
+                        contentsList.refresh();
+                        suggest();
+                        update();
+                    }
+                }
+            });
+            MenuItem cancel = new MenuItem("Cancel");
+            cancel.setOnAction(event -> {
+                /*Get the cell contents*/
+                String item = cell.getItem();
+            });
+            /*Add the MenuItems to the context menu*/
+            contextMenu.getItems().addAll(view, putBack, cancel);
+            /*Set the cell text property*/
+            cell.textProperty().bind(cell.itemProperty());
+            /*Determine if the cell is empty*/
+            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
+                /*If it is*/
+                if (isNowEmpty) {
+                    /*Set the context menu to null*/
+                    cell.setContextMenu(null);
+                    /*Otherwise*/
+                } else {
+                    /*Apply the context menu*/
+                    cell.setContextMenu(contextMenu);
+                }
+            });
+            /*Return the cell*/
+            return cell;
+        });
         String info;
         if(ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getStatusFlag() == 0) {
             info = "DECK NOT AT MINIMUM LIMIT";
@@ -270,20 +328,22 @@ public class DeckBuilderController implements Initializable {
         suggestionText.setText("");
         suggestionText1.setText("");
         suggestionText2.setText("");
-        if(suggestionList.get(0).getCardName() != null) {
-            suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
-            suggestionText.setText(suggestionList.get(0).getCardDescription());
-            suggestionText.setWrapText(true);
-        }
-        if(suggestionList.get(1).getCardName() != null) {
-            suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
-            suggestionText1.setText(suggestionList.get(1).getCardDescription());
-            suggestionText1.setWrapText(true);
-        }
-        if(suggestionList.get(1).getCardName() != null) {
-            suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
-            suggestionText2.setText(suggestionList.get(2).getCardDescription());
-            suggestionText2.setWrapText(true);
+        if(suggestionList.size() > 0) {
+            if (suggestionList.get(0).getCardName() != null) {
+                suggestion.setItems(FXCollections.observableArrayList(suggestionList.get(0).getCardName()));
+                suggestionText.setText(suggestionList.get(0).getCardDescription());
+                suggestionText.setWrapText(true);
+            }
+            if (suggestionList.get(1).getCardName() != null) {
+                suggestion1.setItems(FXCollections.observableArrayList(suggestionList.get(1).getCardName()));
+                suggestionText1.setText(suggestionList.get(1).getCardDescription());
+                suggestionText1.setWrapText(true);
+            }
+            if (suggestionList.get(2).getCardName() != null) {
+                suggestion2.setItems(FXCollections.observableArrayList(suggestionList.get(2).getCardName()));
+                suggestionText2.setText(suggestionList.get(2).getCardDescription());
+                suggestionText2.setWrapText(true);
+            }
         }
     }
     private void update() {
@@ -359,7 +419,7 @@ public class DeckBuilderController implements Initializable {
         if(command.size() > 0) {
             if(ProgramFunctions.getProgramData().getCurrentProfile().getProfileSettings().isIncludeUnowned() != true) {
                 for(Card c : ProgramFunctions.getProgramData().getCurrentProfile().determineContainer(command.get(0)).getCards()) {
-                    if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(c.getCardID())) {
+                    if(c.getCardName().equals(command.get(1)) && c.getCardID().equals(command.get(2))) {
                         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getCpyCache().swapCard(command.get(0), ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().getTmpDeck().getContainerName(), c);
                         ProgramFunctions.getProgramData().getUserInterface().accessSceneCache().getCardSuggestor().addCard(c);
                         break;

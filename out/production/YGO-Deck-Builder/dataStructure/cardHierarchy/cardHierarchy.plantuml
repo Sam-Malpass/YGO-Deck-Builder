@@ -1,0 +1,243 @@
+@startuml
+
+title __CARDHIERARCHY's Class Diagram__\n
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      abstract class Card {
+          {static} + serialVersionUID : long
+          - cardName : String
+          - cardDescription : String
+          - setID : String
+          - value : double
+          - effValue : int
+          ~ Card()
+          ~ Card()
+          + getCardName()
+          + getCardDescription()
+          + setCardID()
+          + getCardID()
+          + getEffValue()
+          + getValue()
+          + setValue()
+          + setEffValue()
+          + setCardName()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class EffectMonster {
+          {static} + serialVersionUID : long
+          + EffectMonster()
+          + EffectMonster()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class FusionMonster {
+          {static} + serialVersionUID : long
+          - fusionMaterial : ArrayList<String>
+          + FusionMonster()
+          + FusionMonster()
+          + getFusionMaterial()
+          + setFusionMaterial()
+          + listFusionMaterial()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class LinkMonster {
+          {static} + serialVersionUID : long
+          - sumReq : String
+          - links : ArrayList<LinkDirection>
+          - attackPoints : int
+          - subTypes : ArrayList<MonsterSubType>
+          + LinkMonster()
+          + LinkMonster()
+          + getAttackPoints()
+          + getType()
+          + getSumReq()
+          + getSubTypes()
+          + getLinks()
+          + getAttribute()
+          + setAttackPoints()
+          + setAttribute()
+          + setType()
+          + setSumReq()
+          + setLinks()
+          + listLinks()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class MonsterCard {
+          {static} + serialVersionUID : long
+          - attackPoints : int
+          - defencePoints : int
+          - level : int
+          - subTypes : ArrayList<MonsterSubType>
+          + MonsterCard()
+          + MonsterCard()
+          + getAttackPoints()
+          + getDefencePoints()
+          + getLevel()
+          + getMonsterAttribute()
+          + getMonsterType()
+          + getSubTypes()
+          + setAttackPoints()
+          + setDefencePoints()
+          + setLevel()
+          + setMonsterAttribute()
+          + setMonsterType()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class PendulumMonster {
+          {static} + serialVersionUID : long
+          - spellEffect : String
+          - redScale : int
+          - blueScale : int
+          + PendulumMonster()
+          + PendulumMonster()
+          + getSpellEffect()
+          + getRedScale()
+          + getBlueScale()
+          + setSpellEffect()
+          + setRedScale()
+          + setBlueScale()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class RitualMonster {
+          {static} + serialVersionUID : long
+          - spellName : String
+          + RitualMonster()
+          + RitualMonster()
+          + getSpellName()
+          + setSpellName()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class SpellCard {
+          {static} + serialVersionUID : long
+          + SpellCard()
+          + SpellCard()
+          + getSpellType()
+          + setSpellType()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class SynchroMonster {
+          {static} + serialVersionUID : long
+          - nTuners : int
+          - nNTuners : int
+          + SynchroMonster()
+          + SynchroMonster()
+          + getNumberOfTuners()
+          + getNumberOfNonTuners()
+          + setNumberOfNonTuners()
+          + setNumberOfTuners()
+          + listSynchroMaterials()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class TrapCard {
+          {static} + serialVersionUID : long
+          + TrapCard()
+          + TrapCard()
+          + getTrapType()
+          + setTrapType()
+          + clone()
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class XYZMonster {
+          {static} + serialVersionUID : long
+          - nMonsters : int
+          - lMonsters : int
+          + XYZMonster()
+          + XYZMonster()
+          + getNumberXYZMaterials()
+          + getLevelXYZMaterials()
+          + setNumberXYZMaterials()
+          + setLevelXYZMaterials()
+          + listXYZMaterials()
+          + clone()
+      }
+    }
+  }
+  
+
+  Card -up-|> Serializable
+  Card -up-|> Cloneable
+  EffectMonster -up-|> MonsterCard
+  FusionMonster -up-|> EffectMonster
+  LinkMonster -up-|> Card
+  LinkMonster o-- MonsterAttribute : attribute
+  LinkMonster o-- MonsterType : type
+  MonsterCard -up-|> Card
+  MonsterCard o-- MonsterAttribute : attribute
+  MonsterCard o-- MonsterType : type
+  PendulumMonster -up-|> EffectMonster
+  RitualMonster -up-|> EffectMonster
+  SpellCard -up-|> Card
+  SpellCard o-- SpellType : spellType
+  SynchroMonster -up-|> EffectMonster
+  TrapCard -up-|> Card
+  TrapCard o-- TrapType : trapType
+  XYZMonster -up-|> EffectMonster
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
