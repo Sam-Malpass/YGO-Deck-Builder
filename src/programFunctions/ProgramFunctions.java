@@ -11,6 +11,7 @@ import dataStructure.containerHierarchy.Deck;
 import dataStructure.containerHierarchy.Series;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import neuralNetwork.mlp.NeuralNetwork;
 import programFunctions.appData.AppData;
 import programFunctions.appData.Cache;
 import programFunctions.dataImporter.DataImporter;
@@ -623,7 +624,29 @@ public class ProgramFunctions extends Application {
         Application.launch(args);
     }
 
-    public static void demo() {
-        programData.getUserInterface().updateScene(programData.getUserInterface().getDemo());
+    public static void runAI(int iterator) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < iterator; i++) {
+                    int neurons = i;
+                    Thread t1 = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            NeuralNetwork.run(neurons, false);
+                        }
+                    });
+                    t1.start();
+                    try {
+                        t1.join();
+                        double percentage = ((double) i / (double) iterator) * 100.0;
+                        System.out.println("[SYSTEM] Currently at " + percentage + "%");
+                    } catch (Exception e) {
+                    }
+                }
+                System.out.println("[SYSTEM] Currently at 100%. Task Complete!");
+            }
+        });
+        thread.start();
     }
 }

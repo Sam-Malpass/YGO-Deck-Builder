@@ -1,0 +1,770 @@
+@startuml
+
+title __YGO-DECK-BUILDER's Class Diagram__\n
+
+  package neuralNetwork.function.activation {
+    interface ActivationFunction {
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.containerHierarchy {
+      class Album {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class AlbumAnalysisController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class AlbumBuilderController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.appData {
+      class AppData {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.banList {
+      class BanList {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class BanListController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class BeginningController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class BoxSelectorController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.appData {
+      class Cache {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      abstract class Card {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      class CardViewer {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Checklist {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ChecklistController {
+        }
+      }
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class Connection {
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.containerHierarchy {
+      abstract class Container {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.dataImporter {
+      class DataImporter {
+      }
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class DataReader {
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class DataWriter {
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.containerHierarchy {
+      class Deck {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DeckAnalysisController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.builder {
+      class DeckBuilder {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DeckBuilderController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DefaultSceneController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DemoController {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class EffectMonster {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class FileCollector {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class FileHandler {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Filters {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class FusionMonster {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    class GUI {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Generator {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class GlobalSettingsController {
+        }
+      }
+    }
+  }
+  
+
+  package neuralNetwork.function.activation {
+    class IdentityActivation {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class ImportExport {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ImportSceneController {
+        }
+      }
+    }
+  }
+  
+
+  package neuralNetwork.function.input {
+    interface InputSummingFunction {
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.banList {
+      class LimitedCard {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum LinkDirection {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class LinkMonster {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum MonsterAttribute {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class MonsterCard {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum MonsterSubType {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum MonsterType {
+        }
+      }
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class NeuralNetwork {
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class Neuron {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class OnlinePricing {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Outputters {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class PasswordAuthenticator {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class PasswordController {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class PendulumMonster {
+      }
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    interface Processor {
+    }
+  }
+  
+
+  package dataStructure {
+    class ProfileSettings {
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ProfileSettingsController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    class ProgramFunctions {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.dataImporter {
+      class PythonInterfacer {
+      }
+    }
+  }
+  
+
+  package neuralNetwork.mlp {
+    class Randomizer {
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class RitualMonster {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      class SceneData {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      class Scenes {
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.searching {
+      class SearchResult {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class SearchResultController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class SearchResultDeckController {
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class SearchResultSystemController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.searching {
+      class Searcher {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.containerHierarchy {
+      class Series {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class SetCollectedController {
+        }
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.appData {
+      class Settings {
+      }
+    }
+  }
+  
+
+  package neuralNetwork.function.activation {
+    class SigmoidActivation {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Sorters {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class SpellCard {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum SpellType {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class SynchroMonster {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class TrapCard {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      package dataStructure.cardHierarchy.enumerators {
+        enum TrapType {
+        }
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    class UserProfile {
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Utils {
+      }
+    }
+  }
+  
+
+  package neuralNetwork.function.input {
+    class WeightedSum {
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      class Windows {
+      }
+    }
+  }
+  
+
+  package dataStructure {
+    package dataStructure.cardHierarchy {
+      class XYZMonster {
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.basicWindows {
+      package graphicalUserInterface.basicWindows.controllers {
+        class YesNoController {
+        }
+      }
+    }
+  }
+  
+
+  Album -up-|> Container
+  AlbumAnalysisController -up-|> Initializable
+  AlbumAnalysisController o-- Album : album
+  AlbumBuilderController -up-|> Initializable
+  AlbumBuilderController o-- Album : album
+  AppData o-- GUI : userInterface
+  AppData o-- UserProfile : currentProfile
+  AppData o-- Cache : cache
+  AppData o-- Settings : globalSettings
+  BanList -up-|> Serializable
+  BanListController -up-|> Initializable
+  BeginningController -up-|> Initializable
+  BoxSelectorController -up-|> Initializable
+  Card -up-|> Serializable
+  Card -up-|> Cloneable
+  ChecklistController -up-|> Initializable
+  Connection o-- Processor : fromNeuron
+  Connection o-- Processor : toNeuron
+  Container -up-|> Serializable
+  Container -up-|> Cloneable
+  DataImporter o-- MonsterType : type
+  DataImporter o-- MonsterAttribute : attribute
+  DataImporter o-- SpellType : spellType
+  DataImporter o-- TrapType : trapType
+  Deck -up-|> Container
+  DeckAnalysisController -up-|> Initializable
+  DeckAnalysisController o-- Deck : deck
+  DeckBuilder o-- Deck : tmpDeck
+  DeckBuilder o-- Cache : cpyCache
+  DeckBuilderController -up-|> Initializable
+  DefaultSceneController -up-|> Initializable
+  DemoController -up-|> Initializable
+  EffectMonster -up-|> MonsterCard
+  FusionMonster -up-|> EffectMonster
+  GUI o-- Windows : basicWindows
+  GUI o-- CardViewer : cardViewer
+  GUI o-- Scenes : scenes
+  GlobalSettingsController -up-|> Initializable
+  IdentityActivation -up-|> ActivationFunction
+  ImportSceneController -up-|> Initializable
+  LimitedCard -up-|> Serializable
+  LinkMonster -up-|> Card
+  LinkMonster o-- MonsterAttribute : attribute
+  LinkMonster o-- MonsterType : type
+  MonsterCard -up-|> Card
+  MonsterCard o-- MonsterAttribute : attribute
+  MonsterCard o-- MonsterType : type
+  NeuralNetwork o-- Processor : bias
+  Neuron -up-|> Processor
+  Neuron o-- Connection : biasConnection
+  Neuron o-- ActivationFunction : activationFunction
+  PasswordController -up-|> Initializable
+  PendulumMonster -up-|> EffectMonster
+  ProfileSettings -up-|> Serializable
+  ProfileSettingsController -up-|> Initializable
+  ProgramFunctions -up-|> Application
+  RitualMonster -up-|> EffectMonster
+  SceneData o-- Deck : deck
+  SceneData o-- ProfileSettings : tmpProfSettings
+  SceneData o-- DeckBuilder : cardSuggestor
+  SceneData o-- Album : album
+  Scenes o-- SceneData : dataCache
+  SearchResultController -up-|> Initializable
+  SearchResultDeckController -up-|> Initializable
+  SearchResultSystemController -up-|> Initializable
+  Series -up-|> Container
+  SetCollectedController -up-|> Initializable
+  Settings -up-|> Serializable
+  SigmoidActivation -up-|> ActivationFunction
+  SpellCard -up-|> Card
+  SpellCard o-- SpellType : spellType
+  SynchroMonster -up-|> EffectMonster
+  TrapCard -up-|> Card
+  TrapCard o-- TrapType : trapType
+  UserProfile -up-|> Serializable
+  UserProfile o-- ProfileSettings : profileSettings
+  Utils o-- Sorters : sorter
+  Utils o-- Filters : filter
+  Utils o-- Outputters : outputter
+  Utils o-- FileCollector : fileCollector
+  Utils o-- FileHandler : fileHandler
+  Utils o-- PasswordAuthenticator : authenticator
+  Utils o-- ImportExport : importExport
+  Utils o-- Checklist : checker
+  Utils o-- OnlinePricing : pricing
+  Utils o-- Generator : generator
+  WeightedSum -up-|> InputSummingFunction
+  Windows o-- Card : card
+  XYZMonster -up-|> EffectMonster
+  YesNoController -up-|> Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

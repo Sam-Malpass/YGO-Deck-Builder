@@ -1,0 +1,228 @@
+@startuml
+
+title __UTILITIES's Class Diagram__\n
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Checklist {
+          ~ Checklist()
+          + checklistCollected()
+          + checklistUncollected()
+          + checklistChecker()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class FileCollector {
+          ~ FileCollector()
+          + getVersionOnline()
+          + getSeriesList()
+          + getSeriesMasterListURLS()
+          + getMissingSeries()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class FileHandler {
+          ~ FileHandler()
+          + loadUserProfile()
+          + saveUserProfile()
+          + deleteUserProfile()
+          + searchUserFolder()
+          + loadSeries()
+          + saveSeries()
+          + deleteSeries()
+          + searchSeriesFolder()
+          + saveDeck()
+          + loadDeck()
+          + saveBanList()
+          + loadBanList()
+          + findSetName()
+          + loadArchetypeList()
+          + loadDefaultSpellList()
+          + loadDefaultTrapList()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Filters {
+          + Filters()
+          + filterSpells()
+          + filterSpellType()
+          + filterTraps()
+          + filterTrapType()
+          + filterMonsters()
+          + filterEffects()
+          + filterRituals()
+          + filterPendulums()
+          + filterFusions()
+          + filterSynchros()
+          + filterXYZs()
+          + filterLinks()
+          + filterMonsterType()
+          + filterMonsterAttribute()
+          + filterMonsterLevel()
+          + filterAttackPoints()
+          + filterDefencePoints()
+          + filterSpellArchetype()
+          + filterTrapArchetype()
+          + filterMonsterArchetype()
+          + filterAlbums()
+          + filterDecks()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Generator {
+          + Generator()
+          + genMegaAlbum()
+          + genSDREAlbum()
+          + genDemoAlbum()
+          + genBanList()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class ImportExport {
+          + ImportExport()
+          + importDeck()
+          + exportDeck()
+          - deckListChecker()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class OnlinePricing {
+          ~ OnlinePricing()
+          + findOnline()
+          - findOnCardMarket()
+          - findOnEbay()
+          - cardMarketName()
+          - ebayName()
+          - cleaner()
+          - getSeriesName()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Outputters {
+          + Outputters()
+          + outputStringList()
+          + outputCardList()
+          + outputSearchResults()
+          {static} + outputBanList()
+          + listDecks()
+          + listAlbums()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class PasswordAuthenticator {
+          {static} + ID : String
+          {static} + DEFAULT_COST : int
+          {static} - ALGORITHM : String
+          {static} - SIZE : int
+          {static} - layout : Pattern
+          - random : SecureRandom
+          - cost : int
+          + PasswordAuthenticator()
+          + PasswordAuthenticator()
+          {static} - iterations()
+          + hash()
+          + authenticate()
+          {static} - pbkdf2()
+          + hash()
+          + authenticate()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Sorters {
+          + Sorters()
+          + sortByName()
+          + invertedSortByName()
+          + sortBySet()
+          + invertedSortBySet()
+          + sortByValue()
+          + invertedSortByValue()
+      }
+    }
+  }
+  
+
+  package programFunctions {
+    package programFunctions.utilities {
+      class Utils {
+          + Utils()
+          + getFilter()
+          + getSorter()
+          + getOutputter()
+          + getFileCollector()
+          + getFileHandler()
+          + getAuthenticator()
+          + getImportExport()
+          + getChecker()
+          + getPricing()
+          + getGenerator()
+          + setFilter()
+          + setSorter()
+          + setFileCollector()
+          + setFileHandler()
+          + setAuthenticator()
+          + setOutputter()
+          + setImportExport()
+          + setChecker()
+          + setPricing()
+          + setGenerator()
+      }
+    }
+  }
+  
+
+  Utils o-- Sorters : sorter
+  Utils o-- Filters : filter
+  Utils o-- Outputters : outputter
+  Utils o-- FileCollector : fileCollector
+  Utils o-- FileHandler : fileHandler
+  Utils o-- PasswordAuthenticator : authenticator
+  Utils o-- ImportExport : importExport
+  Utils o-- Checklist : checker
+  Utils o-- OnlinePricing : pricing
+  Utils o-- Generator : generator
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

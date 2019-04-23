@@ -1,0 +1,376 @@
+@startuml
+
+title __CONTROLLERS's Class Diagram__\n
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class AlbumAnalysisController {
+            - overviewChart : PieChart
+            - spellChart : PieChart
+            - trapChart : PieChart
+            - monsterChart1 : PieChart
+            - monsterChart2 : PieChart
+            - monsterChart3 : PieChart
+            - overviewText : TextArea
+            - spellText : TextArea
+            - trapText : TextArea
+            - monsterText : TextArea
+            - numSpells : int
+            - numTraps : int
+            - numMonsters : int
+            + initialize()
+            - getOverviewData()
+            - getSpellData()
+            - getTrapData()
+            - getMonsterData()
+            - back()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class AlbumBuilderController {
+            - cardList : ListView<String>
+            - infoArea : TextArea
+            + initialize()
+            - getOverviewData()
+            - addCard()
+            - cancel()
+            - save()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class BanListController {
+            - banList : ListView<String>
+            + initialize()
+            - back()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class BeginningController {
+            - containerList : ListView<String>
+            - cardList : ListView<String>
+            - searchCard : TextField
+            - profDetailsBox : TextArea
+            - sortBox : ChoiceBox
+            {static} + deck : Deck
+            {static} + album : Album
+            + initialize()
+            - setupBox()
+            - createDeck()
+            - importButton()
+            - exportButton()
+            - createAlbum()
+            - checklistButton()
+            - profileSettings()
+            - banlistButton()
+            - search()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ChecklistController {
+            - checkList : ListView<String>
+            + initialize()
+            - back()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DeckAnalysisController {
+            - overviewChart : PieChart
+            - spellChart : PieChart
+            - trapChart : PieChart
+            - monsterChart1 : PieChart
+            - monsterChart2 : PieChart
+            - monsterChart3 : PieChart
+            - overviewText : TextArea
+            - spellText : TextArea
+            - trapText : TextArea
+            - monsterText : TextArea
+            - redraw : Button
+            - testHandText : TextArea
+            - probabilities : TextArea
+            - numSpells : int
+            - numTraps : int
+            - numMonsters : int
+            + initialize()
+            - draw()
+            - getOverviewData()
+            - getSpellData()
+            - getTrapData()
+            - getMonsterData()
+            - getProbabilities()
+            - back()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DeckBuilderController {
+            - contentsList : ListView<String>
+            - suggestionText : TextArea
+            - suggestion : ListView<String>
+            - suggestionText1 : TextArea
+            - suggestion1 : ListView<String>
+            - suggestionText2 : TextArea
+            - suggestion2 : ListView<String>
+            - infoText : TextArea
+            - suggestionList : ArrayList<Card>
+            + initialize()
+            - suggest()
+            - update()
+            - cancel()
+            - save()
+            - add()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DefaultSceneController {
+            - exitButton : Button
+            - seriesImport : Button
+            + initialize()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class DemoController {
+            - contentsList : ListView<String>
+            - suggestionText : TextArea
+            - suggestion : ListView<String>
+            - suggestionText1 : TextArea
+            - suggestion1 : ListView<String>
+            - suggestionText2 : TextArea
+            - suggestion2 : ListView<String>
+            - status : String
+            - t1 : Thread
+            - infoText : TextArea
+            - suggestionList : ArrayList<Card>
+            + initialize()
+            - suggest()
+            - ohnoes()
+            - update()
+            - cancel()
+            - save()
+            - add()
+            - addCard()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class GlobalSettingsController {
+            - siteBox : ComboBox
+            - regBox : ComboBox
+            - cancel : Button
+            - apply : Button
+            - ok : Button
+            + initialize()
+            - saveSettings()
+            - lookup()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ImportSceneController {
+            - missing : ListView
+            - using : ListView
+            - cancel : Button
+            - confirm : Button
+            + initialize()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+            - processImportResults()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class ProfileSettingsController {
+            - passwordCheck : CheckBox
+            - unownedCheck : CheckBox
+            - deckCheck : CheckBox
+            - changePass : Button
+            + initialize()
+            - cancel()
+            - delete()
+            - changePassword()
+            - rename()
+            - apply()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  package graphicalUserInterface {
+    package graphicalUserInterface.sceneHandling {
+      package graphicalUserInterface.sceneHandling.controllers {
+        class SetCollectedController {
+            - collected : ListView<String>
+            - uncollected : ListView<String>
+            + initialize()
+            - back()
+            - newProfile()
+            - loadProfile()
+            - exit()
+            - about()
+            - check()
+            - settings()
+        }
+      }
+    }
+  }
+  
+
+  AlbumAnalysisController -up-|> Initializable
+  AlbumAnalysisController o-- Album : album
+  AlbumBuilderController -up-|> Initializable
+  AlbumBuilderController o-- Album : album
+  BanListController -up-|> Initializable
+  BeginningController -up-|> Initializable
+  ChecklistController -up-|> Initializable
+  DeckAnalysisController -up-|> Initializable
+  DeckAnalysisController o-- Deck : deck
+  DeckBuilderController -up-|> Initializable
+  DefaultSceneController -up-|> Initializable
+  DemoController -up-|> Initializable
+  GlobalSettingsController -up-|> Initializable
+  ImportSceneController -up-|> Initializable
+  ProfileSettingsController -up-|> Initializable
+  SetCollectedController -up-|> Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
